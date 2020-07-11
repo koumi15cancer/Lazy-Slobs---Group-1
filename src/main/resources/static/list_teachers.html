@@ -1,0 +1,63 @@
+<h2>Add new teacher</h2>
+Name: <input type="text" id="name"/>
+<button onclick="add()">Add</button>
+
+<h2>List of teachers</h2>
+<div id="teacherList"></div>
+
+<script>
+
+getTeachers()
+
+
+    function add(){ //post
+
+      var name = document.getElementById('name').value //get value from an html element
+
+     fetch('http://localhost:8080/teachers', {
+             headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+             },
+             method: "POST",
+             body: JSON.stringify({name: name})
+
+     }).then(res => getTeachers())
+
+
+        console.log('Added')
+    }
+
+    function getTeachers(){
+
+        var teacherList = document.getElementById('teacherList')
+
+        teacherList.innerHTML = ''
+
+        fetch('http://localhost:8080/teachers')
+        .then(res => res.json())
+        .then(json => {
+
+            for(i=0; i<json.length; i++){
+
+                var id = json[i].id
+
+                var deleteLink = `<button onclick='deleteTeacher(${id})'>Delete</button>`
+
+               teacherList.innerHTML += '<div>'+ json[i].name + deleteLink + '</div>'
+
+            }
+
+        })
+
+    }
+
+
+    function deleteTeacher(id){
+          fetch('http://localhost:8080/teachers/'+id, {
+            method: 'delete'
+          })
+          .then(res=> getTeachers())
+    }
+
+</script>

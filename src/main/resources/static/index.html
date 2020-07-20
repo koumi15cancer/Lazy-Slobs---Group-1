@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lazy Slobs</title>
 
-  <!-- website icon -->
+  <!-- Website icon -->
   <link rel="icon" href="img/favicon.png">
 
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,50 +26,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
-  <!-- css code for parallax effect on this page only -->
-  <style>
-    .highlightNav {
-      background-color: rgba(238, 238, 238, 0.7);
-    }
-
-    .navbar-text {
-      color: lightpink;
-    }
-
-    .dark-text-color {
-      color: #1e1e1e;
-    }
-
-    #zael-logo-home {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      z-index: 1;
-    }
-    a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    color: initial;
-  }
-  </style>
+  <!-- This is required for Open Sans Condensed Light font to work -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-
+  <!-- START OF PAGE -->
   <div id="bg-image">
-    <!-- Top header -->
-    <div class="header w3-xlarge w3-top">
+    <!-- TOP MENU -->
+    <div class="header w3-xlarge w3-top" id="top-menu-container">
       <nav class="navbar navbar-expand-md navbar-light bg-light" id="navigation_bar">
         <ul class="navbar-nav">
-          <a href="index.html"
-            style="font-family: Open Sans Condensed Light; color:lightpink; outline-color: black; outline-width: thick; font-size: 50px;" 
-            id="lazyslobs">Lazy
-            Slobs</a>
+          <a href="index.html" id="lazyslobs">Lazy Slobs</a>
         </ul>
-        <ul class="navbar-nav navbar-right" style="font-family:Yeseva One; padding-right: 30px;">
+        <ul class="navbar-nav navbar-right" id="home-navbar">
           <li><a href="aboutus.html" class="navbar-text">About Us</a></li>
           <li><a href="menu.html" class="navbar-text">Menu</a></li>
           <li><a href="contact.html" class="navbar-text">Contact Us</a></li>
@@ -77,69 +47,35 @@
         </ul>
       </nav>
     </div>
+    <!-- END OF TOP MENU -->
+
+    <!-- Add blank space in between elements -->
     <div id="blankspace"></div>
 
-    <!-- PAGE CONTENT -->
+    <!-- ~~~~~~~~ PAGE CONTENT ~~~~~~~~ -->
     <div class="container homepage-text">
-      <h2 style="color: lightpink; font-size: 75px;">Welcome to</h2>
+      <h2 style="color: rgb(255, 216, 255); font-size: 90px;">Welcome to</h2>
       <br>
-      <h1 style="color: white; font-size: 120px;">The Slobs</h1>
+      <h1 style="color: white; font-size: 150px;">The Slobs</h1>
     </div>
 
+    <!-- Small space between giant texts and buttons -->
     <br><br><br><br><br>
 
+    <!-- Reservation and Menu buttons -->
     <span class="container" id="homepage-buttons">
       <a href="reservation.html" class="btn btn-primary" id="button1">Reservation</a>
-      <!-- <button id="button1">Reservation</button> -->
       <div style="width: 25px; display: inline-block;"></div>
       <a href="menu.html" class="btn btn-primary" id="button2">Menu</a>
-      <!-- <button id="button2">Menu</button> -->
     </span>
+    <!-- ~~~~~~~~ END OF PAGE CONTENT ~~~~~~~~ -->
 
+    <!-- Blank space to make the page prettier -->
     <div id="blankspace"></div>
-    <!-- END OF PAGE CONTENT -->
   </div>
-
+  <!-- END OF PAGE -->
 
   <script src="includes/javascript.js"></script>
-
-  <!-- script for parallax effect on this page only -->
-  <script>
-    window.addEventListener('scroll', highlightNavBar);
-
-    // Get the navbar and cinemax logo on top
-    var navBar = document.getElementById("navigation_bar");
-
-    // Get the offset position of the navbar
-    var highlight = navBar.offsetTop;
-
-    // Add the highlightNav class to the navbar when you reach its scroll position. Remove "highlightNav" when you leave the scroll position
-    function highlightNavBar() {
-      if (window.pageYOffset >= highlight + 600) {
-        navBar.classList.add("highlightNav");
-
-        var elements = document.getElementsByClassName("navbar-text");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].classList.add("dark-text-color");
-        }
-        elements = document.getElementsByClassName("icons");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].classList.remove("navbar-text");
-        }
-      } else {
-        navBar.classList.remove("highlightNav");
-
-        var elements = document.getElementsByClassName("navbar-text");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].classList.remove("dark-text-color");
-        }
-        elements = document.getElementsByClassName("icons");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].classList.add("navbar-text");
-        }
-      }
-    }
-  </script>
 </body>
 
 </html>

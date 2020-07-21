@@ -1,0 +1,111 @@
+
+@font-face {
+  font-family: "Open Sans Condensed Light";
+  src: url("../fonts/OpenSansCondensed-Light.ttf");
+}
+@font-face {
+  font-family: "Yeseva One";
+  src: url("../fonts/YesevaOne-Regular.ttf");
+}
+
+/* empty space instead of using a bunch of <br> */
+#blankspace {
+  height: 150px;
+}
+
+/* home page background image */
+#bg-image {
+  background-image: url("../img/background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* home page buttons' container */
+#homepage-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  padding-right: 25px;
+}
+
+/* reservation button */
+#button1 {
+  font-family: "Open Sans Condensed";
+  font-style:condensed;
+  font-size: 36px;
+  color: white;
+  width: 250px;
+  height: 80px;
+  padding-top: 10px;
+  border-radius: 0px;
+  border-color: white;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* menu button */
+#button2 {
+  font-family: "Open Sans Condensed";
+  font-size: 36px;
+  color: white;
+  width: 250px;
+  height: 80px;
+  padding-top: 10px;
+  border-radius: 0px;
+  border-color: white;
+  background-color: rgba(255,255,255,0.3);
+}
+
+/* home page "Welcome to The Slobs text" */
+.homepage-text {
+  font-family: "Yeseva One";
+  text-align: center;
+  text-shadow: 2px 2px 0px black; 
+}
+
+/* home page top menu */
+#top-menu-container {
+  display: inline-block;
+  background-color: rgba(15,1,1,0.5);
+}
+
+/* top left lazy slobs text */
+#lazyslobs {
+  font-family: "Open Sans Condensed";
+  color: white;
+  font-size: 45px;
+  /* text outline */
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  /* push down from the top a bit */
+  position: relative;
+  top: 15px;
+}
+
+/* navbar styling */
+#home-navbar {
+  /* correct font */
+  font-family: 'Yeseva One';
+  /* push away from the right side a bit */
+  padding-right: 100px;
+  /* push down from the top a bit */
+  position: relative;
+  top: 15px;
+}
+
+/* nav bar text */
+.navbar-text {
+  color: white;
+}
+
+/* navigation bar item spacing */
+.navbar > ul > li {
+  list-style-type: none;
+  padding-left: 40px;
+}

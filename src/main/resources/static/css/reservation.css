@@ -132,7 +132,7 @@ input {
 }
 
 /* input field text input */
-input[type="text"] {
+input[type="text"], input[type="tel"], input[type="number"] {
     font-family: 'Open Sans Condensed';
     font-size: 24px;
 }

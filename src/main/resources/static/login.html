@@ -55,7 +55,7 @@
   <!-- END OF TOP MENU -->
 
   <!-- <?php
-    // admin account list (username and password)
+    // admin account list (user-email and password)
     $login = array('admin1' => 'admin1', 'admin2' => 'admin2');
 
     if (isset($_POST['reset-login'])) {
@@ -64,15 +64,15 @@
 
     // after user presses log in button
     if (isset($_POST['login'])) {
-      // if username and password in $_POST are set then assign those values to the variable 
-      $username = isset($_POST['username']) ? $_POST['username'] : '';
+      // if user-email and password in $_POST are set then assign those values to the variable 
+      $user-email = isset($_POST['user-email']) ? $_POST['user-email'] : '';
       $password = isset($_POST['password']) ? $_POST['password'] : '';
 
-      // if username is in the admin account list and password matches, add to session and 
+      // if user-email is in the admin account list and password matches, add to session and 
       // redirects to index.php
-      if (isset($login[$username]) && $login[$username] == $password) {
+      if (isset($login[$user-email]) && $login[$user-email] == $password) {
         // add to session
-        $_SESSION['User']['username'] = $username;
+        $_SESSION['User']['user-email'] = $user-email;
 
         // redirects to index.php upon successful login
         header("location: index.php");
@@ -96,7 +96,7 @@
 
       <!-- Login Form -->
       <form action="login.html" method="post">
-        <input type="text" id="username" name="username" class="fadeIn second" placeholder="Login">
+        <input type="text" id="user-email" name="user-email" class="fadeIn second" placeholder="Email">
         <input type="password" id="password" name="password" class="fadeIn third" placeholder="Password">
         <input type="submit" name="login" class="fadeIn fourth" value="Log In">
       </form>

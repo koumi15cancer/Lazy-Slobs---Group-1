@@ -1,0 +1,68 @@
+/* Navigation bar CSS */
+@font-face {
+    font-family: "Open Sans Condensed Light";
+    src: url("../fonts/OpenSansCondensed-Light.ttf");
+}
+@font-face {
+    font-family: "Yeseva One";
+    src: url("../fonts/YesevaOne-Regular.ttf");
+}
+
+/* empty space instead of using a bunch of <br> */
+#blankspace {
+    height: 150px; 
+}
+
+/* yeseva one font family */
+.yeseva-one-font {
+    font-family: 'Yeseva One';
+}
+
+/* open sans condensed light font family */
+.open-sans-condensed-light {
+    font-family: 'Open Sans Condensed';
+}
+  
+/* home page top menu */
+#top-menu-container {
+    display: inline-block;
+    background-color: rgb(15,1,1);
+}
+
+/* top left lazy slobs text */
+#lazyslobs {
+    font-family: "Open Sans Condensed";
+    color: white;
+    font-size: 45px;
+    /* text outline */
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    /* push down from the top a bit */
+    position: relative;
+    top: 15px;
+}
+
+/* navbar styling */
+#home-navbar {
+    /* correct font */
+    font-family: 'Yeseva One';
+    /* push away from the right side a bit */
+    padding-right: 100px;
+    /* push down from the top a bit */
+    position: relative;
+    top: 15px;
+}
+
+/* nav bar text */
+.navbar-text {
+    color: white;
+}
+
+/* navigation bar item spacing */
+.navbar > ul > li {
+    list-style-type: none;
+    padding-left: 40px;
+}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
+    <link id='stylecss' type="text/css" rel="stylesheet" href="css/navbar.css" media="screen">
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/reservation.css" media="screen">
 
     <!-- Bootstrap -->
@@ -74,7 +75,7 @@
             <div style="position: relative; top: 30px;">
                 <div id="content2">
                     <h1 class="yeseva-one-font" style="font-size: 76px;">Reservation</h1>
-                    <form action="" method="get">
+                    <form action="reservation.html" method="get" name="reservation" onsubmit="validateForm(event)">
                         <!-- Name text and field -->
                         <h2 class="yeseva-one-font">Your Name</h2>
                         <input type="text" name="name" id="name" placeholder="Your Name..." pattern="^[A-Za-z]+$" required>
@@ -99,7 +100,7 @@
 
                         <!-- Amount of people text and field -->
                         <h2 class="yeseva-one-font">How many people?</h2>
-                        <input type="number" name="amount" id="amount" min="1" placeholder="How many people?" required>
+                        <input type="number" name="amount" id="amount" min="1" max="20" placeholder="How many people?" required>
 
                         <br><br><br>
                         <button type="submit" class="yeseva-one-font" id="confirm-button">Confirm</button>

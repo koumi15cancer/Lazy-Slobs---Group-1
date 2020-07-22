@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    </head>
-    <link id='stylecss' type="text/css" rel="stylesheet" href="css/login.css" media="screen">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazy Slobs</title>
 
-    <title>Login</title>
+  <!-- Website icon -->
+  <link rel="icon" href="img/favicon.png">
 
-    <!-- website icon -->
-    <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <?php
-      include('includes/tools.php');
-      include('includes/database.php');
-    ?>
+  <!-- CSS -->
+  <link id='stylecss' type="text/css" rel="stylesheet" href="css/reservation.css" media="screen">
+  <link id='stylecss' type="text/css" rel="stylesheet" href="css/login.css" media="screen">
+
+  <!-- Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Parallax.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+  <!-- This is required for Open Sans Condensed Light font to work -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1' rel='stylesheet' type='text/css'>
+
+
 </head>
-<body>
-  <?php
+
+<!-- fade in the page -->
+<body class="fadeInDown" style="background-color: white;">
+  <!-- START OF PAGE -->
+  <!-- TOP MENU -->
+  <div class="header w3-xlarge w3-top" id="top-menu-container">
+    <nav class="navbar navbar-expand-md navbar-light bg-light" id="navigation_bar">
+      <ul class="navbar-nav">
+        <a href="index.html" id="lazyslobs">Lazy Slobs</a>
+      </ul>
+      <ul class="navbar-nav navbar-right" id="home-navbar">
+        <li><a href="aboutus.html" class="navbar-text">About Us</a></li>
+        <li><a href="menu.html" class="navbar-text">Menu</a></li>
+        <li><a href="contact.html" class="navbar-text">Contact Us</a></li>
+        <li><a href="login.html" class="navbar-text">Log In</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- END OF TOP MENU -->
+
+  <!-- <?php
     // admin account list (username and password)
     $login = array('admin1' => 'admin1', 'admin2' => 'admin2');
 
@@ -50,24 +82,26 @@
           echo $Msg;
       }
     }
-  ?>
+  ?> -->
 
-  <div class="wrapper fadeInDown" id="bg-image">
+  <div class="wrapper" id="bg-image">
     <div id="formContent">
-      <button type="button" class="btn" style="position: relative; right: 140px"><a
-          href="index.php"><b>&#x1f878;</b></a></button>
+      <!-- Go backward button -->
+      <button type="button" class="btn" style="position: relative; right: 100px; bottom: 10px;">
+        <a href="index.html" style="color: rgb(15,1,1);"><b>&#x1f878;</b></a>
+      </button>
       <!-- Tabs Titles -->
-      <h2 class="active" style="position: relative; right: 22px"> Sign In </h2>
-  
+      <h2 class="yeseva-one-font" style="position: relative; right: 22px; font-size: 40px;">Log In</h2>
+
       <!-- Login Form -->
-      <form action="login.php" method="post">
+      <form action="login.html" method="post">
         <input type="text" id="username" name="username" class="fadeIn second" placeholder="Login">
         <input type="password" id="password" name="password" class="fadeIn third" placeholder="Password">
         <input type="submit" name="login" class="fadeIn fourth" value="Log In">
-        <!-- <input type="submit" name="reset-login" value="reset login"> -->
       </form>
+      <p class="open-sans-condensed-light" style="font-size: 24px">No account yet? Sign up <a href="signup.html">here</a></p>
     </div>
   </div>
-  </body>
-  
-  </html>
+</body>
+
+</html>

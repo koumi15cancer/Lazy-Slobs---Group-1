@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Lazy-Slobs---Group-1:war" />
+    </artifacts-to-build>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -32,7 +37,56 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d1c892a-2a2f-47ea-988d-7a2266a781cc" name="Default Changelist" comment="" />
+    <list default="true" id="9d1c892a-2a2f-47ea-988d-7a2266a781cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lazy_Slobs___Group_1_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lazy_Slobs___Group_1_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_javax_servlet_jsp_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/laptrinhjavaweb/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/context/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lazy-Slobs---Group-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lazy-Slobs---Group-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/WebAppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AllController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TeacherController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Receipt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ReceiptDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/AllService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/TeacherService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/MyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/TestConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/list_teachers.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,18 +95,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -80,7 +142,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.593786" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -95,7 +157,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.37">
+  <component name="RunManager">
     <configuration default="true" type="JettyConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -125,82 +187,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_SampleHibernateSpringMVC" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="59823" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 9.0.37" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" editBeforeRun="true" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/restaurant/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Lazy_Slobs___Group_1_war/" />
       <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <file path="$PROJECT_DIR$">
+        <artifact name="Lazy-Slobs---Group-1:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/restaurant" />
+            <option name="CONTEXT_PATH" value="/Lazy_Slobs___Group_1_war" />
           </settings>
-        </file>
+        </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_37_SampleHibernateSpringMVC" />
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_37_SampleHibernateSpringMVC_2" />
         <option name="DEPLOY_TOMCAT_APPS" value="true" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
@@ -258,6 +257,9 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Lazy-Slobs---Group-1:war" />
+        </option>
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" editBeforeRun="true" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false">
@@ -330,10 +332,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.37" />
-      <item itemvalue="TomEE Server.Unnamed" />
-    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -366,6 +364,9 @@
       <workItem from="1595929296252" duration="1094000" />
       <workItem from="1595934175197" duration="87000" />
       <workItem from="1595935476869" duration="37000" />
+      <workItem from="1595937644858" duration="191000" />
+      <workItem from="1595942777444" duration="956000" />
+      <workItem from="1595948190804" duration="5243000" />
     </task>
     <servers />
   </component>
@@ -389,18 +390,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="668" y="304" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1595858498182" />
-    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37" timestamp="1595919779756">
+    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37" timestamp="1595955915844">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37/0.0.1536.824@0.0.1536.824" timestamp="1595919779756" />
+    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37/0.0.1536.824@0.0.1536.824" timestamp="1595955915844" />
     <state x="685" y="294" key="#Tomcat_Server" timestamp="1595919343153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="685" y="294" key="#Tomcat_Server/0.0.1536.824@0.0.1536.824" timestamp="1595919343153" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595935497835">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595955453308">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595935497835" />
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595955453308" />
     <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1595841089940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -421,46 +422,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="592" y="308" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1595867360122" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1595919431225">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1595955242252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595919431225" />
-    <state width="1014" height="208" key="GridCell.Tab.0.bottom" timestamp="1595924806604">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595955242252" />
+    <state width="1493" height="226" key="GridCell.Tab.0.bottom" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1014" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595924806604" />
-    <state width="1014" height="208" key="GridCell.Tab.0.center" timestamp="1595924806604">
+    <state width="1493" height="226" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.0.center" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1014" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595924806604" />
-    <state width="1014" height="208" key="GridCell.Tab.0.left" timestamp="1595924806604">
+    <state width="1493" height="226" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.0.left" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1014" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595924806604" />
-    <state width="1014" height="208" key="GridCell.Tab.0.right" timestamp="1595924806604">
+    <state width="1493" height="226" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.0.right" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1014" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595924806604" />
-    <state width="1014" height="208" key="GridCell.Tab.1.bottom" timestamp="1595924806608">
+    <state width="1493" height="226" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.1.bottom" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1014" height="208" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595924806608" />
-    <state width="1014" height="208" key="GridCell.Tab.1.center" timestamp="1595924806604">
+    <state width="1493" height="226" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.1.center" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1014" height="208" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595924806604" />
-    <state width="1014" height="208" key="GridCell.Tab.1.left" timestamp="1595924806604">
+    <state width="1493" height="226" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.1.left" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1014" height="208" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595924806604" />
-    <state width="1014" height="208" key="GridCell.Tab.1.right" timestamp="1595924806608">
+    <state width="1493" height="226" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.1.right" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1014" height="208" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595924806608" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1595922363717">
+    <state width="1493" height="226" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.2.bottom" timestamp="1595955973498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595922363717" />
+    <state width="1493" height="226" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.2.center" timestamp="1595955973498">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="226" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.2.left" timestamp="1595955973498">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="226" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state width="1493" height="226" key="GridCell.Tab.2.right" timestamp="1595955973498">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="226" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1595955973498" />
+    <state x="439" y="117" key="NewModule_or_Project.wizard" timestamp="1595948653924">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="439" y="117" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1595948653924" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1595955392628">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595955392628" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1595841235823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

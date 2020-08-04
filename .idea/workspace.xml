@@ -38,10 +38,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d1c892a-2a2f-47ea-988d-7a2266a781cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/23626830-bc12-42eb-bbc5-b88b49338ba2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/dao/impl/AbstractDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/internceptor/MenuHandleInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/service/HomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/service/impl/HomeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/controller/HomeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/internceptor/MenuHandleInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/service/HomeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/service/impl/HomeServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/views/menu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/views/springmvc.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/controller/HomeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/internceptor/MenuHandleInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/service/HomeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/service/impl/HomeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Lazy-Slobs---Group-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lazy-Slobs---Group-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Lazy_Slobs___Group_1_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Lazy_Slobs___Group_1_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b1f864e3-c346-4840-aebb-1bdf1f0741ac.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b1f864e3-c346-4840-aebb-1bdf1f0741ac/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/23626830-bc12-42eb-bbc5-b88b49338ba2/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laptrinhjavaweb/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/laptrinhjavaweb/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/context/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/context/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/context/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/laptrinhjavaweb/controller/HomeController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +87,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="jsf" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -101,6 +139,9 @@
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lazyslob.controller" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\resources" />
     </key>
@@ -325,6 +366,11 @@
       <workItem from="1595948190804" duration="5243000" />
       <workItem from="1595960958556" duration="939000" />
       <workItem from="1596018661664" duration="1308000" />
+      <workItem from="1596436310274" duration="871000" />
+      <workItem from="1596447201580" duration="1041000" />
+      <workItem from="1596514649082" duration="18000" />
+      <workItem from="1596514695776" duration="604000" />
+      <workItem from="1596522329348" duration="7395000" />
     </task>
     <servers />
   </component>
@@ -348,22 +394,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="668" y="304" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1595858498182" />
-    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37" timestamp="1596019019714">
+    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37" timestamp="1596526670192">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37/0.0.1536.824@0.0.1536.824" timestamp="1596019019714" />
+    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37/0.0.1536.824@0.0.1536.824" timestamp="1596526670192" />
     <state x="685" y="294" key="#Tomcat_Server" timestamp="1595919343153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="685" y="294" key="#Tomcat_Server/0.0.1536.824@0.0.1536.824" timestamp="1595919343153" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596019112802">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596527113127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1596019112802" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1595841089940">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1596527113127" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1596530144009">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1595841089940" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596530144009" />
     <state x="506" y="51" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1595919778319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -384,54 +430,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595955242252" />
-    <state width="1493" height="226" key="GridCell.Tab.0.bottom" timestamp="1596020500063">
+    <state width="1493" height="217" key="GridCell.Tab.0.bottom" timestamp="1596526684646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596020500063" />
-    <state width="1493" height="226" key="GridCell.Tab.0.center" timestamp="1596020500063">
+    <state width="1493" height="217" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596526684646" />
+    <state width="1493" height="217" key="GridCell.Tab.0.center" timestamp="1596526684645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596020500063" />
-    <state width="1493" height="226" key="GridCell.Tab.0.left" timestamp="1596020500063">
+    <state width="1493" height="217" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596526684645" />
+    <state width="1493" height="217" key="GridCell.Tab.0.left" timestamp="1596526684645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596020500063" />
-    <state width="1493" height="226" key="GridCell.Tab.0.right" timestamp="1596020500063">
+    <state width="1493" height="217" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596526684645" />
+    <state width="1493" height="217" key="GridCell.Tab.0.right" timestamp="1596526684646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596020500063" />
-    <state width="1493" height="226" key="GridCell.Tab.1.bottom" timestamp="1596020500067">
+    <state width="1493" height="217" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596526684646" />
+    <state width="1493" height="217" key="GridCell.Tab.1.bottom" timestamp="1596526684646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596020500067" />
-    <state width="1493" height="226" key="GridCell.Tab.1.center" timestamp="1596020500063">
+    <state width="1493" height="217" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596526684646" />
+    <state width="1493" height="217" key="GridCell.Tab.1.center" timestamp="1596526684646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596020500063" />
-    <state width="1493" height="226" key="GridCell.Tab.1.left" timestamp="1596020500063">
+    <state width="1493" height="217" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596526684646" />
+    <state width="1493" height="217" key="GridCell.Tab.1.left" timestamp="1596526684646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596020500063" />
-    <state width="1493" height="226" key="GridCell.Tab.1.right" timestamp="1596020500063">
+    <state width="1493" height="217" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596526684646" />
+    <state width="1493" height="217" key="GridCell.Tab.1.right" timestamp="1596526684646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596020500063" />
-    <state width="1493" height="226" key="GridCell.Tab.2.bottom" timestamp="1596020500067">
+    <state width="1493" height="217" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596526684646" />
+    <state width="1493" height="217" key="GridCell.Tab.2.bottom" timestamp="1596526684647">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596020500067" />
-    <state width="1493" height="226" key="GridCell.Tab.2.center" timestamp="1596020500067">
+    <state width="1493" height="217" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596526684647" />
+    <state width="1493" height="217" key="GridCell.Tab.2.center" timestamp="1596526684647">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596020500067" />
-    <state width="1493" height="226" key="GridCell.Tab.2.left" timestamp="1596020500067">
+    <state width="1493" height="217" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596526684647" />
+    <state width="1493" height="217" key="GridCell.Tab.2.left" timestamp="1596526684647">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596020500067" />
-    <state width="1493" height="226" key="GridCell.Tab.2.right" timestamp="1596020500067">
+    <state width="1493" height="217" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596526684647" />
+    <state width="1493" height="217" key="GridCell.Tab.2.right" timestamp="1596526684647">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="226" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596020500067" />
+    <state width="1493" height="217" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596526684647" />
     <state x="439" y="117" key="NewModule_or_Project.wizard" timestamp="1595948653924">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,0 +1,7 @@
+net\lazyslob\reservation\ReservationService.class
+net\lazyslob\config\WebAppInitializer.class
+net\lazyslob\config\WebMvcConfig.class
+net\lazyslob\reservation\ReservationController.class
+net\lazyslob\reservation\ReservationRepository.class
+net\lazyslob\reservation\Reservation.class
+net\lazyslob\config\JpaConfig.class

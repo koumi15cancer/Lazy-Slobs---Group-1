@@ -1,4 +1,4 @@
-package com.lazyslob.Paging;
+package com.lazyslob.paging;
 
 public class Sorter {
 	

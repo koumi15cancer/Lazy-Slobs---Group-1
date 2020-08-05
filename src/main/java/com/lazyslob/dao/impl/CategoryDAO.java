@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.lazyslob.dao.ICategoryDAO;
 import com.lazyslob.mapper.CategoryMapper;
-import com.lazyslob.mapper.RowMapper;
 import com.lazyslob.model.CategoryModel;
 
 public class CategoryDAO extends AbstractDAO<CategoryModel> implements ICategoryDAO {
@@ -29,8 +28,4 @@ public class CategoryDAO extends AbstractDAO<CategoryModel> implements ICategory
 		return category.isEmpty() ? null : category.get(0);
     }
 
-	@Override
-	public <T> List<T> query(String sql, RowMapper<T> rowMapper, Object... parameters) {
-		return null;
-	}
 }

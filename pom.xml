@@ -14,6 +14,8 @@
         <jsp.api.version>2.3.1</jsp.api.version>
         <jstl.version>1.2</jstl.version>
         <spring.data>1.11.5.RELEASE</spring.data>
+        <springsecurity.version>3.2.8.RELEASE</springsecurity.version>
+        <jsp.api.version>2.3.1</jsp.api.version>
         <mysql.version>8.0.21</mysql.version>
         <hibernate.version>4.3.6.Final</hibernate.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -59,11 +61,49 @@
             <version>${springframework.version}</version>
         </dependency>
 
+        <!-- spring aspects -->
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aspects</artifactId>
+        <version>${springframework.version}</version>
+        </dependency>
+
+        <!-- spring security -->
+        <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>${springsecurity.version}</version>
+        </dependency>
+
+
+        <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+        <version>${springsecurity.version}</version>
+        </dependency>
+
+
+        <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-acl</artifactId>
+        <version>${springsecurity.version}</version>
+        </dependency>
+
+        <!-- spring secuirty taglibs -->
+
+        <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-taglibs</artifactId>
+        <version>${springsecurity.version}</version>
+        </dependency>
+
+
         <!-- servlet api -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${servlet.api.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- jsp api -->
@@ -93,12 +133,24 @@
         <version>2.4.2</version>
     </dependency>
 
+        <!-- Hibernate-->
         <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-entitymanager</artifactId>
         <version>${hibernate.version}</version>
        </dependency>
 
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.2.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
 
         <dependency>
         <groupId>org.springframework.data</groupId>
@@ -116,6 +168,41 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.6.4</version>
         </dependency>
+
+        <!-- json -->
+        <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.6.3</version>
+        </dependency>
+
+
+        <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.6.3</version>
+        </dependency>
+
+
+        <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>2.6.3</version>
+        </dependency>
+
+        <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>1.9.13</version>
+        </dependency>
+
+
+        <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-core-asl</artifactId>
+        <version>1.9.13</version>
+        </dependency>
+        <!--end json -->
 
     </dependencies>
 

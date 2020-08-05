@@ -38,109 +38,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d1c892a-2a2f-47ea-988d-7a2266a781cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_3_2_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_3_2_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_3_2_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_3_2_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_3_2_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_13_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Lazy-Slobs---Group-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lazy-Slobs---Group-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Lazy_Slobs___Group_1_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Lazy_Slobs___Group_1_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23626830-bc12-42eb-bbc5-b88b49338ba2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/23626830-bc12-42eb-bbc5-b88b49338ba2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/Paging/PageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/Paging/PageRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/Paging/Pageble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/Paging/Pageble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/Paging/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/Paging/Sorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/config/JPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/config/JPAConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/controller/admin/NewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/controller/admin/NewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/controller/web/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/controller/web/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/dao/GenericDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/dao/ICategoryDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/dao/INewDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/dao/impl/AbstractDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/dao/impl/CategoryDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/dao/impl/NewDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/entity/NewEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/entity/NewEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/internceptor/MenuHandleInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/mapper/CategoryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/mapper/NewMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/mapper/RowMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/model/AbstractModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/model/CategoryModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/model/NewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/repository/NewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lazyslob/repository/NewRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/service/HomeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/service/INewService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/service/impl/HomeServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lazyslob/service/impl/NewService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/new/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/new/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/new/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/new/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/admin/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/admin/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/admin/menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/taglib.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/taglib.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/decorators/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/decorators/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/admin/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/admin/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/web/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/web/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/laptrinhjavaweb/controller/web/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/Paging/PageRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/Paging/PageRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/Paging/Pageble.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/Paging/Pageble.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/Paging/Sorter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/Paging/Sorter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/config/JPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/config/JPAConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/controller/admin/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/controller/admin/NewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/controller/admin/NewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/dao/impl/AbstractDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/dao/impl/CategoryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/dao/impl/CategoryDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/dao/impl/NewDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/entity/NewEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/internceptor/MenuHandleInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/mapper/CategoryMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/model/NewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/service/HomeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/service/INewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/service/INewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/service/impl/HomeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/service/impl/NewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/classes/com/lazyslob/service/impl/NewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/context/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/decorators.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/decorators.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/views/admin/new/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/views/admin/new/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/views/admin/new/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/views/admin/new/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/admin/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/admin/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/admin/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/admin/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/admin/menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/taglib.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/taglib.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/decorators/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/decorators/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/laptrinhjavaweb/controller/web/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/Paging/PageRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/Paging/PageRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/Paging/Pageble.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/Paging/Pageble.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/Paging/Sorter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/Paging/Sorter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/config/JPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/config/JPAConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/controller/admin/NewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/controller/admin/NewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/dao/impl/AbstractDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/dao/impl/AbstractDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/dao/impl/CategoryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/dao/impl/CategoryDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/entity/NewEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/entity/NewEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/internceptor/MenuHandleInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/service/HomeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/service/INewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/service/INewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/service/impl/HomeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lazyslob/service/impl/NewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lazyslob/service/impl/NewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/web/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0/common/web/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -458,7 +364,7 @@
       <workItem from="1596538454062" duration="2403000" />
       <workItem from="1596541015458" duration="2243000" />
       <workItem from="1596566324979" duration="1503000" />
-      <workItem from="1596609024029" duration="7933000" />
+      <workItem from="1596609024029" duration="11158000" />
     </task>
     <servers />
   </component>
@@ -486,10 +392,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="206" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1596615234261" />
-    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37" timestamp="1596616932601">
+    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37" timestamp="1596620281241">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37/0.0.1536.824@0.0.1536.824" timestamp="1596616932601" />
+    <state x="465" y="0" width="619" height="824" key="#Tomcat_9.0.37/0.0.1536.824@0.0.1536.824" timestamp="1596620281241" />
     <state x="685" y="294" key="#Tomcat_Server" timestamp="1595919343153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -530,54 +436,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596616035876" />
-    <state width="1478" height="231" key="GridCell.Tab.0.bottom" timestamp="1596616944534">
+    <state width="1478" height="186" key="GridCell.Tab.0.bottom" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596616944534" />
-    <state width="1478" height="231" key="GridCell.Tab.0.center" timestamp="1596616944534">
+    <state width="1478" height="186" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.0.center" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596616944534" />
-    <state width="1478" height="231" key="GridCell.Tab.0.left" timestamp="1596616944533">
+    <state width="1478" height="186" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.0.left" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596616944533" />
-    <state width="1478" height="231" key="GridCell.Tab.0.right" timestamp="1596616944534">
+    <state width="1478" height="186" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.0.right" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596616944534" />
-    <state width="1478" height="231" key="GridCell.Tab.1.bottom" timestamp="1596616944531">
+    <state width="1478" height="186" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.1.bottom" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596616944531" />
-    <state width="1478" height="231" key="GridCell.Tab.1.center" timestamp="1596616944531">
+    <state width="1478" height="186" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.1.center" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596616944531" />
-    <state width="1478" height="231" key="GridCell.Tab.1.left" timestamp="1596616944531">
+    <state width="1478" height="186" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.1.left" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596616944531" />
-    <state width="1478" height="231" key="GridCell.Tab.1.right" timestamp="1596616944531">
+    <state width="1478" height="186" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.1.right" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596616944531" />
-    <state width="1478" height="231" key="GridCell.Tab.2.bottom" timestamp="1596616944531">
+    <state width="1478" height="186" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.2.bottom" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596616944531" />
-    <state width="1478" height="231" key="GridCell.Tab.2.center" timestamp="1596616944531">
+    <state width="1478" height="186" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.2.center" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596616944531" />
-    <state width="1478" height="231" key="GridCell.Tab.2.left" timestamp="1596616944531">
+    <state width="1478" height="186" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.2.left" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596616944531" />
-    <state width="1478" height="231" key="GridCell.Tab.2.right" timestamp="1596616944531">
+    <state width="1478" height="186" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
+    <state width="1478" height="186" key="GridCell.Tab.2.right" timestamp="1596620281277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="231" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596616944531" />
+    <state width="1478" height="186" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596620281277" />
     <state width="1478" height="351" key="GridCell.Tab.3.bottom" timestamp="1596613780052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

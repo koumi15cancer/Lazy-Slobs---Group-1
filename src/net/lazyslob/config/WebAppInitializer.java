@@ -9,7 +9,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 
 
-//Register the Spring Dispatcher Servlet 
+//Register the Spring Dispatcher Servlet to handle request url mapping
 
 public class WebAppInitializer implements WebApplicationInitializer {
     @Override

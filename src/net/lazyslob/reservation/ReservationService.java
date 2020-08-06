@@ -1,6 +1,7 @@
 package net.lazyslob.reservation;
 
-
+// Provide intercepted method
+//CRUD operations
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

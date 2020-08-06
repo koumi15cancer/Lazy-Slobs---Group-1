@@ -1,3 +1,4 @@
+DROP DATABASE IF EXIST `restaurant`;
 CREATE DATABASE `restaurant`;
 CREATE TABLE `reservation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

@@ -1,0 +1,63 @@
+<h2>Add new student</h2>
+Name: <input type="text" id="name"/>
+<button onclick="add()">Add</button>
+
+<h2>List of students</h2>
+<div id="studentList"></div>
+
+<script>
+
+getStudents()
+
+
+    function add(){ //post
+
+      var name = document.getElementById('name').value //get value from an html element
+
+     fetch('http://localhost:8080/students', {
+             headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+             },
+             method: "POST",
+             body: JSON.stringify({name: name})
+
+     }).then(res => getStudents())
+
+
+        console.log('Added')
+    }
+
+    function getStudents(){
+
+        var studentList = document.getElementById('studentList')
+
+        studentList.innerHTML = ''
+
+        fetch('http://localhost:8080/students')
+        .then(res => res.json())
+        .then(json => {
+
+            for(i=0; i<json.length; i++){
+
+                var id = json[i].id
+
+                var deleteLink = `<button onclick='deleteStudent(${id})'>Delete</button>`
+
+               studentList.innerHTML += '<div>'+ json[i].name + deleteLink + '</div>'
+
+            }
+
+        })
+
+    }
+
+
+    function deleteStudent(id){
+          fetch('http://localhost:8080/students/'+id, {
+            method: 'delete'
+          })
+          .then(res=> getStudents())
+    }
+
+</script>

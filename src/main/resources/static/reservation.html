@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Slobs</title>
+
+    <!-- Website icon -->
+    <link rel="icon" href="img/favicon.png">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link id='stylecss' type="text/css" rel="stylesheet" href="css/reservation.css" media="screen">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Parallax.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+    <!-- This is required for Open Sans Condensed Light font to work -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1' rel='stylesheet' type='text/css'>
+</head>
+
+<body style="background-color: white;">
+    <!-- START OF PAGE -->
+    <!-- TOP MENU -->
+    <div class="header w3-xlarge w3-top" id="top-menu-container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light" id="navigation_bar">
+            <ul class="navbar-nav">
+                <a href="index.html" id="lazyslobs">Lazy Slobs</a>
+            </ul>
+            <ul class="navbar-nav navbar-right" id="home-navbar">
+                <li><a href="aboutus.html" class="navbar-text">About Us</a></li>
+                <li><a href="menu.html" class="navbar-text">Menu</a></li>
+                <li><a href="contact.html" class="navbar-text">Contact Us</a></li>
+                <li><a href="login.html" class="navbar-text">Log In</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- END OF TOP MENU -->
+
+    <!-- Add blank space in between elements -->
+    <div id="blankspace"></div>
+
+    <!-- ~~~~~~~~ PAGE CONTENT ~~~~~~~~ -->
+    <span id="boxes-container">
+        <div class="box" id="time-open-box">
+            <div id="border">
+                <div>
+                    <h1 class="yeseva-one-font" style="font-size: 76px;">Time Open</h1>
+                    <h1 class="yeseva-one-font info-box-day">Weekday</h1>
+                    <h1 class="open-sans-condensed-light">7am-11am(Breakfast)</h1>
+                    <h1 class="open-sans-condensed-light">11am-12am(Lunch)</h1>
+                    <h1 class="open-sans-condensed-light">12am-10pm(Dinner)</h1>
+                    <br><br><br>
+                    <h1 class="yeseva-one-font info-box-day">Weekend</h1>
+                    <h1 class="open-sans-condensed-light">7am-12am(Breakfast-Lunch)</h1>
+                    <h1 class="open-sans-condensed-light">12am-10pm(Dinner)</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" id="form-box">
+            <!-- push the element down to make it in line with the other box's text (value retrieved through trial and error) -->
+            <div style="position: relative; top: 30px;">
+                <div id="content2">
+                    <h1 class="yeseva-one-font" style="font-size: 76px;">Reservation</h1>
+                    <form action="" method="get">
+                        <!-- Name text and field -->
+                        <h2 class="yeseva-one-font">Your Name</h2>
+                        <input type="text" name="name" id="name" placeholder="Your Name...">
+
+                        <!-- Email text and field -->
+                        <h2 class="yeseva-one-font">Your Email</h2>
+                        <input type="text" name="email" id="email" placeholder="Your Email...">
+
+                        <!-- Phone number text and field -->
+                        <h2 class="yeseva-one-font">Your Phone Number</h2>
+                        <input type="text" name="phone" id="phone" placeholder="Your Phone Number...">
+
+                        <!-- Date and time text and texts -->
+                        <div>
+                            <h2 id="date-text" class="yeseva-one-font">Date</h2>
+                            <h2 id="time-text" class="yeseva-one-font">Time</h2>
+                        </div>
+
+                        <!-- Date and time input fields -->
+                        <input class="date-time-input-field" type="date" name="date" id="date">
+                        <input class="date-time-input-field" type="time" name="time" id="time">
+
+                        <!-- Amount of people text and field -->
+                        <h2 class="yeseva-one-font">How many people?</h2>
+                        <input type="text" name="amount" id="amount" placeholder="How many people?">
+
+                        <br><br><br>
+                        <button type="submit" class="yeseva-one-font" id="confirm-button">Confirm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </span>
+    <!-- ~~~~~~~~ END OF PAGE CONTENT ~~~~~~~~ -->
+
+    <!-- Blank space to make the page prettier -->
+    <div id="blankspace"></div>
+    <!-- END OF PAGE -->
+
+    <script src="includes/javascript.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,9 @@
 use restaurant;
 
+insert into category(code,name) values('sport','sport');
+insert into category(code,name) values('politic','politic');
+
+
 insert into role(code,name) values('ADMIN','admin');
 insert into role(code,name) values('USER','user');
 

@@ -1,7 +1,7 @@
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\dto\CategoryDTO.java
-C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\paging\Pageble.java
+C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\Paging\Pageble.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\security\CustomSuccessHandler.java
-C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\paging\Sorter.java
+C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\Paging\Sorter.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\controller\web\HomeController.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\service\ICategoryService.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\entity\NewEntity.java
@@ -29,7 +29,7 @@ C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\dto\Abstra
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\config\JpaAuditingConfig.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\entity\BaseEntity.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\dto\NewDTO.java
-C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\paging\PageRequest.java
+C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\Paging\PageRequest.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\util\SecurityUtils.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\converter\NewConverter.java
 C:\Users\Dell\Desktop\Lazy-Slobs---Group-1\src\main\java\com\lazyslob\dao\GenericDAO.java

@@ -1,57 +1,43 @@
 package com.LazySlob.controller;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.LazySlob.model.Reservation;
 import com.LazySlob.service.ReservationService;
+import com.LazySlob.exception.ResourceNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+
+@RestController
+@RequestMapping
 public class RestAPIcontroller {
+
     @Autowired
     private  ReservationService service;
 
 
-
-    @RequestMapping()
-    public String viewHomePage(Model model) {
-        List<Reservation> listReservations = service.listAll();
-        model.addAttribute("listReservations", listReservations);
-        return "index";
+    @GetMapping("/reservations")
+    public List<Reservation> list() {
+        return service.listAll();
     }
 
-    @RequestMapping("/new")
-    public String showNewProductPage(Model model) {
-        Reservation reservation = new Reservation();
-        model.addAttribute("reservation", reservation);
-        return "new_reservation";
-    }
-
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveProduct(@ModelAttribute("reservation") Reservation reservation) {
-        service.save(reservation);
-
-        return "redirect:/";
-    }
-
-    @RequestMapping("/edit/{id}")
-    public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
-        ModelAndView mav = new ModelAndView("edit_product");
-        Reservation reservation = service.get(id);
-        mav.addObject("reservation", reservation);
-
-        return mav;
-    }
-
-    @RequestMapping("/delete/{id}")
-    public String deleteProduct(@PathVariable(name = "id") int id) {
-        service.delete(id);
-        return "redirect:/";
+    // get employee by id rest api
+    @GetMapping("/reservations/{id}")
+    public ResponseEntity < Reservation > get(@PathVariable Long id) {
+        try {
+            Reservation reservation= service.get(id);
+            return new ResponseEntity<Reservation>(reservation, HttpStatus.OK);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<Reservation>(HttpStatus.NOT_FOUND);
+        }
     }
 }

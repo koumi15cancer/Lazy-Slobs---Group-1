@@ -6,7 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.LazySlob.model.Reservation;
 import com.LazySlob.service.ReservationService;
-import com.LazySlob.exception.ResourceNotFoundException;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -39,5 +39,26 @@ public class RestAPIcontroller {
         } catch (NoSuchElementException e) {
             return new ResponseEntity<Reservation>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @PostMapping("/reservations")
+    public void add(@RequestBody Reservation reservation) {
+        service.save(reservation);
+    }
+
+    @PutMapping("/reservations/{id}")
+    public ResponseEntity<?> update(@RequestBody Reservation reservation, @PathVariable Integer id) {
+        try {
+            Reservation existProduct = service.get(id);
+            service.save(reservation);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping("/reservation/{id}")
+    public void delete(@PathVariable Integer id) {
+        service.delete(id);
     }
 }

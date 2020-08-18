@@ -16,7 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping
 public class RestAPIcontroller {

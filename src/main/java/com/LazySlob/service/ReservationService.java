@@ -20,8 +20,9 @@ public class ReservationService {
         return repo.findAll();
     }
 
-    public void save(Reservation reservation) {
+    public Reservation save(Reservation reservation) {
         repo.save(reservation);
+        return reservation;
     }
 
     public Reservation get(long id) {

@@ -2,7 +2,9 @@ package com.LazySlob.controller;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.LazySlob.model.Reservation;
 import com.LazySlob.service.ReservationService;
@@ -11,10 +13,8 @@ import com.LazySlob.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.*;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -26,13 +26,13 @@ public class RestAPIcontroller {
 
 
     @GetMapping("/reservations")
-    public List<Reservation> list() {
+    public List<Reservation> listReservation() {
         return service.listAll();
     }
 
     // get employee by id rest api
     @GetMapping("/reservations/{id}")
-    public ResponseEntity < Reservation > get(@PathVariable Long id) {
+    public ResponseEntity < Reservation > getReservation(@PathVariable Long id) {
         try {
             Reservation reservation= service.get(id);
             return new ResponseEntity<Reservation>(reservation, HttpStatus.OK);
@@ -42,23 +42,38 @@ public class RestAPIcontroller {
     }
 
     @PostMapping("/reservations")
-    public void add(@RequestBody Reservation reservation) {
+    public void addReservation(@RequestBody Reservation reservation) {
         service.save(reservation);
     }
 
     @PutMapping("/reservations/{id}")
-    public ResponseEntity<?> update(@RequestBody Reservation reservation, @PathVariable Integer id) {
+    public ResponseEntity<Reservation>updateReservation(@PathVariable Long id,@RequestBody Reservation reservation) {
         try {
-            Reservation existProduct = service.get(id);
-            service.save(reservation);
-            return new ResponseEntity<>(HttpStatus.OK);
+            Reservation existReservation = service.get(id);
+
+            existReservation.setCustomerName(reservation.getCustomerName());
+            existReservation.setEmail(reservation.getEmail());
+            existReservation.setPhoneNumber(reservation.getPhoneNumber());
+            existReservation.setQuantity(reservation.getQuantity());
+            existReservation.setDescription(reservation.getDescription());
+
+            Reservation updatedReservation = service.save(existReservation);
+            return ResponseEntity.ok(updatedReservation);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     @DeleteMapping("/reservation/{id}")
-    public void delete(@PathVariable Integer id) {
+    public ResponseEntity < Map < String, Boolean >> deleteReservation(@PathVariable Long id)  {
+       try{
+        Reservation reservation = service.get(id);
         service.delete(id);
+        Map < String, Boolean > response = new HashMap < > ();
+        response.put("deleted", Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }catch (NoSuchElementException e){
+           return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+       }
     }
 }

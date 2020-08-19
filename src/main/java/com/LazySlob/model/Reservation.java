@@ -24,14 +24,7 @@ public class Reservation  {
 
     public String description;
 
-    public Reservation( String customerName, String email, String phoneNumber, Integer quantity, String description) {
-        super();
-        this.customerName = customerName;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.quantity = quantity;
-        this.description = description;
-    }
+
 
     public long getId() {
         return id;

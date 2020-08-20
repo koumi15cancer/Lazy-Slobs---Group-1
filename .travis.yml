@@ -1,0 +1,8 @@
+language: java
+jdk:
+   - 14.0.2
+
+script: ./mvnw clean install
+
+notifications:
+  email: s3757278@rmit.edu.vn

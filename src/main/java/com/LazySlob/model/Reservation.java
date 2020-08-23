@@ -4,7 +4,7 @@ package com.LazySlob.model;
 import lombok.Data;
 
 import javax.persistence.*;
-
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -14,7 +14,7 @@ public class Reservation  {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     public long id;
 
-
+    @Size(max = 30)
     public Integer quantity;
 
     public String description;

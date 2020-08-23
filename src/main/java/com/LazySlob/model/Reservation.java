@@ -1,10 +1,10 @@
 package com.LazySlob.model;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
 
 import javax.persistence.*;
-import java.io.Serializable;
+
 
 
 @Entity
@@ -14,17 +14,22 @@ public class Reservation  {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     public long id;
 
-    public String customerName;
-
-    public String email;
-
-    public String phoneNumber;
 
     public Integer quantity;
 
     public String description;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="reservations_user")
+    private User user;
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public long getId() {
         return id;
@@ -34,29 +39,6 @@ public class Reservation  {
         this.id = id;
     }
 
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
     public Integer getQuantity() {
         return quantity;

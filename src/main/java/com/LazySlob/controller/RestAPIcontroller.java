@@ -51,9 +51,6 @@ public class RestAPIcontroller {
         try {
             Reservation existReservation = service.get(id);
 
-            existReservation.setCustomerName(reservation.getCustomerName());
-            existReservation.setEmail(reservation.getEmail());
-            existReservation.setPhoneNumber(reservation.getPhoneNumber());
             existReservation.setQuantity(reservation.getQuantity());
             existReservation.setDescription(reservation.getDescription());
 

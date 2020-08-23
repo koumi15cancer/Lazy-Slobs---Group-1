@@ -1,5 +1,6 @@
 package com.LazySlob.model;
 
+import com.LazySlob.model.Audit.DateAudit;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -12,7 +13,7 @@ import java.util.Set;
 
 @Entity
  @Table(name = "users",uniqueConstraints = {@UniqueConstraint(columnNames = {"username", "email"})})
-public class User {
+public class User extends DateAudit {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     public long id;

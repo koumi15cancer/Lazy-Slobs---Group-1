@@ -1,5 +1,9 @@
 package com.LazySlob.models;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -7,44 +11,47 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 @Entity
 @Table(	name = "users",
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = "username"),
                 @UniqueConstraint(columnNames = "email")
         })
-public class User  {
+public class User {
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    public long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotBlank
     @Size(max = 20)
-    public String username;
-
-    @NotBlank
-    @Size(max = 120)
-    public String password;
+    private String username;
 
     @NotBlank
     @Size(max = 50)
     @Email
-    public String email;
+    private String email;
 
+    @NotBlank
+    @Size(max = 120)
+    private String password;
 
-   // @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
+    @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
     public String phoneNumber;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_roles",
+    @JoinTable(	name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
+
+    public User() {
+    }
+
+    public User(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
 
     @OneToMany(
             mappedBy = "user",
@@ -53,29 +60,11 @@ public class User  {
     )
     private List<Reservation> reservationList = new ArrayList<>();
 
-    public User() {
-    }
-
-    public User( String username, String email, String password, String phoneNumber) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-    }
-
-    public List<Reservation> getReservationList() {
-        return reservationList;
-    }
-
-    public void setReservationList(List<Reservation> reservationList) {
-        this.reservationList = reservationList;
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -86,7 +75,6 @@ public class User  {
     public void setUsername(String username) {
         this.username = username;
     }
-
 
     public String getEmail() {
         return email;
@@ -118,5 +106,13 @@ public class User  {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public List<Reservation> getReservationList() {
+        return reservationList;
+    }
+
+    public void setReservationList(List<Reservation> reservationList) {
+        this.reservationList = reservationList;
     }
 }

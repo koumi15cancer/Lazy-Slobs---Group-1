@@ -1,5 +1,4 @@
 package com.LazySlob.payload.request;
-
 import java.util.Set;
 
 import javax.validation.constraints.*;
@@ -14,10 +13,9 @@ public class SignupRequest {
     @Email
     private String email;
 
-
+    @NotBlank
     @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
-    public String phoneNumber;
-
+    private String phoneNumber;
 
     private Set<String> role;
 
@@ -41,13 +39,9 @@ public class SignupRequest {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+    public String getPhoneNumber() { return phoneNumber; }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
 
     public String getPassword() {
         return password;

@@ -1,4 +1,5 @@
 package com.LazySlob.security.jwt;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -24,3 +25,4 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
     }
 
 }
+

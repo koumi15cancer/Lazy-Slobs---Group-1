@@ -1,6 +1,5 @@
 package com.LazySlob.security.jwt;
 
-
 import java.io.IOException;
 
 import javax.servlet.FilterChain;

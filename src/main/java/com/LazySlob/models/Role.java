@@ -1,6 +1,4 @@
 package com.LazySlob.models;
-
-import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
 
 @Entity
@@ -11,7 +9,6 @@ public class Role {
     private Integer id;
 
     @Enumerated(EnumType.STRING)
-    @NaturalId
     @Column(length = 20)
     private ERole name;
 
@@ -31,11 +28,11 @@ public class Role {
         this.id = id;
     }
 
-    public void setName(ERole name) {
-        this.name = name;
-    }
-
     public ERole getName() {
         return name;
+    }
+
+    public void setName(ERole name) {
+        this.name = name;
     }
 }

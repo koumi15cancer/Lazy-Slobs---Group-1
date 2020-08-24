@@ -1,37 +1,38 @@
-package com.LazySlob.model;
+package com.LazySlob.models;
 
-import com.LazySlob.model.Audit.DateAudit;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @Entity
- @Table(name = "users",uniqueConstraints = {@UniqueConstraint(columnNames = {"username", "email"})})
-public class User extends DateAudit {
+@Table(	name = "users",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "username"),
+                @UniqueConstraint(columnNames = "email")
+        })
+public class User  {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     public long id;
 
     @NotBlank
-    @Size(max = 40)
-    private String name;
-
-    @NotBlank
-    @Size(max = 15)
+    @Size(max = 20)
     public String username;
 
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 120)
     public String password;
 
     @NotBlank
-    @Size(max = 40)
+    @Size(max = 50)
     @Email
     public String email;
 
@@ -55,8 +56,7 @@ public class User extends DateAudit {
     public User() {
     }
 
-    public User(String name, String username, String email, String password, String phoneNumber) {
-        this.name = name;
+    public User( String username, String email, String password, String phoneNumber) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -87,13 +87,6 @@ public class User extends DateAudit {
         this.username = username;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;

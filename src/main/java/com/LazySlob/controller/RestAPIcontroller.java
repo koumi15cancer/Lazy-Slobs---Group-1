@@ -3,10 +3,9 @@ package com.LazySlob.controller;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import com.LazySlob.model.Reservation;
+import com.LazySlob.models.Reservation;
 import com.LazySlob.service.ReservationService;
 
 

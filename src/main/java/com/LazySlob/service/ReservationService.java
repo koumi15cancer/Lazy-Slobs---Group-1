@@ -2,7 +2,7 @@ package com.LazySlob.service;
 
 import java.util.List;
 
-import com.LazySlob.model.Reservation;
+import com.LazySlob.models.Reservation;
 import com.LazySlob.repository.ReservationRepository;
 
 

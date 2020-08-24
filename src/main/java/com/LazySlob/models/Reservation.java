@@ -1,7 +1,5 @@
-package com.LazySlob.model;
+package com.LazySlob.models;
 
-
-import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;

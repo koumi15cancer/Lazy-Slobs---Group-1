@@ -1,4 +1,4 @@
-package com.LazySlob.model;
+package com.LazySlob.models;
 
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
@@ -8,30 +8,34 @@ import javax.persistence.*;
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Enumerated(EnumType.STRING)
     @NaturalId
-    @Column(length = 60)
-    private RoleName name;
+    @Column(length = 20)
+    private ERole name;
 
     public Role() {
 
     }
 
-    public Role(RoleName name) {
+    public Role(ERole name) {
         this.name = name;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public RoleName getName() {
+    public void setName(ERole name) {
+        this.name = name;
+    }
+
+    public ERole getName() {
         return name;
     }
 }

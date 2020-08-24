@@ -1,6 +1,6 @@
 package com.LazySlob.repository;
 
-import com.LazySlob.model.Reservation;
+import com.LazySlob.models.Reservation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

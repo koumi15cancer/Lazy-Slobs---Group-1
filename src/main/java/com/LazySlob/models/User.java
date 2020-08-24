@@ -37,7 +37,7 @@ public class User  {
     public String email;
 
 
-    @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
+   // @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
     public String phoneNumber;
 
     @ManyToMany(fetch = FetchType.LAZY)

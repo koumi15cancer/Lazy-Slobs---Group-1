@@ -16,7 +16,7 @@ import BoardAdmin from "./components/board-admin.component";
 import ListReservationsComponents from './components/ListReservationsComponents';
 import CreateReservationsComponents from './components/CreateReservationsComponents';
 import ViewReservationsComponents from './components/ViewReservationsComponents';
-<<<<<<< HEAD
+
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +54,7 @@ class App extends Component {
         <div>
           <nav className="navbar navbar-expand navbar-dark bg-dark">
             <Link to={"/"} className="navbar-brand">
-   L              LazySlob
+              LazySlob
             </Link>
             <div className="navbar-nav mr-auto">
               <li className="nav-item">
@@ -144,33 +144,6 @@ class App extends Component {
       </Router>
     );
   }
-=======
-import UpdateReseravationsComponents from './components/UpdateReseravationsComponents';
-import HeaderComponent from './components/HeaderComponent';
-import FooterComponent from './components/FooterComponent';
-import Homepage from './components/Homepage';
-
-function App(){
-  return(
-    <div>
-      <HeaderComponent/>
-      <Router>
-                <div>
-                    <Switch>
-                          <Route path = "/" exact component = {Homepage}></Route>
-                          <Route path = "/home" component = {Homepage}></Route>
-                          <Route path = "/list-reservation" component = {ListReservationsComponents}></Route>
-                          <Route path = "/reservations" component = {ListReservationsComponents}></Route>
-                          <Route path = "/add-reservation" component = {CreateReservationsComponents}></Route>
-                          <Route path = "/view-reservation" component = {ViewReservationsComponents}></Route>
-                          <Route path = "/update-reservation/:id" component = {UpdateReseravationsComponents}></Route>
-                    </Switch>
-                 </div>
-      </Router>
-      <FooterComponent/>
-    </div>
-  );
->>>>>>> 2e43800668bbec9cf4b6629e6c1a55b2d52e8f9d
 }
 
 export default App;

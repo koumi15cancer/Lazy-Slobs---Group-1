@@ -12,8 +12,10 @@ public class Reservation  {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     public long id;
 
+    @Column(name="quantity")
     public Integer quantity;
 
+    @Column(name="description")
     public String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -25,7 +27,7 @@ public class Reservation  {
     }
 
     public void setUser(User user) {
-        this.user = user;
+       this.user = user;
     }
 
     public long getId() {
@@ -36,6 +38,12 @@ public class Reservation  {
         this.id = id;
     }
 
+    public Reservation(){};
+
+    public Reservation(Integer quantity, String description) {
+        this.quantity = quantity;
+        this.description = description;
+    }
 
     public Integer getQuantity() {
         return quantity;

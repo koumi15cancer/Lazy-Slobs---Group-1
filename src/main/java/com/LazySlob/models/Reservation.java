@@ -12,7 +12,6 @@ public class Reservation  {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     public long id;
 
-    @Size(max = 30)
     public Integer quantity;
 
     public String description;

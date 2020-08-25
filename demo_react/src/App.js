@@ -13,6 +13,10 @@ import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 
+import ListReservationsComponents from './components/ListReservationsComponents';
+import CreateReservationsComponents from './components/CreateReservationsComponents';
+import ViewReservationsComponents from './components/ViewReservationsComponents';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +53,7 @@ class App extends Component {
         <div>
           <nav className="navbar navbar-expand navbar-dark bg-dark">
             <Link to={"/"} className="navbar-brand">
-              bezKoder
+   L              LazySlob
             </Link>
             <div className="navbar-nav mr-auto">
               <li className="nav-item">
@@ -70,6 +74,14 @@ class App extends Component {
                 <li className="nav-item">
                   <Link to={"/admin"} className="nav-link">
                     Admin Board
+                  </Link>
+                </li>
+              )} 
+
+              {showAdminBoard && (
+                <li className="nav-item">
+                  <Link to={"/reservations"} className="nav-link">
+                   Reservations List
                   </Link>
                 </li>
               )}
@@ -122,6 +134,9 @@ class App extends Component {
               <Route path="/user" component={BoardUser} />
               <Route path="/mod" component={BoardModerator} />
               <Route path="/admin" component={BoardAdmin} />
+              <Route path = "/reservations" component = {ListReservationsComponents}></Route>
+              <Route path = "/add-reservation/:id" component = {CreateReservationsComponents}></Route>
+              <Route path = "/view-reservation/:id" component = {ViewReservationsComponents}></Route>
             </Switch>
           </div>
         </div>

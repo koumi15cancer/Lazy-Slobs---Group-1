@@ -14,7 +14,7 @@ public class SignupRequest {
     private String email;
 
     @NotBlank
-    @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
+    //@Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
     private String phoneNumber;
 
     private Set<String> role;

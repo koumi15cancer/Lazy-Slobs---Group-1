@@ -7,25 +7,26 @@ import ViewReservationsComponents from './components/ViewReservationsComponents'
 import UpdateReseravationsComponents from './components/UpdateReseravationsComponents';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
+import Homepage from './components/Homepage';
 
-
-
-function App() {
-  return (
+function App(){
+  return(
     <div>
+      <HeaderComponent/>
       <Router>
-               <HeaderComponent/>
-                 <div className="Container">
+                <div>
                     <Switch>
-                          <Route path = "/" exact component = {ListReservationsComponents}></Route>
+                          <Route path = "/" exact component = {Homepage}></Route>
+                          <Route path = "/home" component = {Homepage}></Route>
+                          <Route path = "/list-reservation" component = {ListReservationsComponents}></Route>
                           <Route path = "/reservations" component = {ListReservationsComponents}></Route>
                           <Route path = "/add-reservation" component = {CreateReservationsComponents}></Route>
                           <Route path = "/view-reservation" component = {ViewReservationsComponents}></Route>
                           <Route path = "/update-reservation/:id" component = {UpdateReseravationsComponents}></Route>
                     </Switch>
                  </div>
-               <FooterComponent/>
       </Router>
+      <FooterComponent/>
     </div>
   );
 }

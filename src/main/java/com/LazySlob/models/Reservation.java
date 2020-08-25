@@ -1,5 +1,6 @@
 package com.LazySlob.models;
 
+
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 
@@ -27,15 +28,6 @@ public class Reservation  {
         this.user = user;
     }
 
-    public Reservation(){
-    }
-
-    public Reservation(Integer quantity ,String description){
-        super();
-        this.quantity = quantity;
-        this.description = description;
-    }
-
     public long getId() {
         return id;
     }
@@ -43,6 +35,7 @@ public class Reservation  {
     public void setId(long id) {
         this.id = id;
     }
+
 
     public Integer getQuantity() {
         return quantity;

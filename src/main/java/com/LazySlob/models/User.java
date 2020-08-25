@@ -35,7 +35,7 @@ public class User {
     @Size(max = 120)
     private String password;
 
-    //@Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
+    @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
     public String phoneNumber;
 
     @ManyToMany(fetch = FetchType.LAZY)
@@ -54,12 +54,12 @@ public class User {
         this.password = password;
     }
 
- //   @OneToMany(
-   //         mappedBy = "user",
-     //       cascade = CascadeType.ALL,
-       //     orphanRemoval = true
-    //)
-    //private List<Reservation> reservationList = new ArrayList<>();
+    @OneToMany(
+            mappedBy = "user",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Reservation> reservationList = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -109,11 +109,11 @@ public class User {
         this.roles = roles;
     }
 
-    //public List<Reservation> getReservationList() {
-      //  return reservationList;
-    //}
+    public List<Reservation> getReservationList() {
+        return reservationList;
+    }
 
-    //public void setReservationList(List<Reservation> reservationList) {
-      //  this.reservationList = reservationList;
-   // }
+    public void setReservationList(List<Reservation> reservationList) {
+        this.reservationList = reservationList;
+    }
 }

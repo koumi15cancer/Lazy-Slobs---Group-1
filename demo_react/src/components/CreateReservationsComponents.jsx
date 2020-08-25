@@ -10,16 +10,9 @@ class CreateReservationsComponents extends Component {
         this.state = {
 
             id: this.props.match.params.id,
-            customerName: '',
-            email: '',
-            phoneNumber: '',
             quantity:'',
             description: '',
         }
-     
-        this.changeCustomerNameHandler = this.changeCustomerNameHandler.bind(this);
-        this.changeEmailHandler = this.changeEmailHandler.bind(this);
-        this.changePhoneNumberHandler = this.changePhoneNumberHandler.bind(this);
         this.changeQuantityHandler= this.changeQuantityHandler.bind(this);
         this.changeDescriptionHandler = this.changeDescriptionHandler.bind(this);
         this.saveOrUpdateReservation = this.saveOrUpdateReservation.bind(this);
@@ -33,9 +26,6 @@ class CreateReservationsComponents extends Component {
             ReservationService.getReservationById(this.state.id).then( (res) =>{
                 let reservation = res.data;
                 this.setState({
-                customerName: reservation.customerName,
-                email: reservation.email,
-                phoneNumber: reservation.phoneNumber,
                 quantity: reservation.quantity,
                 description: reservation.description
                 });
@@ -46,7 +36,7 @@ class CreateReservationsComponents extends Component {
 
     saveOrUpdateReservation = (e) => {
         e.preventDefault();
-        let reservation = {customerName: this.state.customerName, email: this.state.email, phoneNumber: this.state.phoneNumber, quantity: this.state.quantity,description: this.state.description};
+        let reservation = {quantity: this.state.quantity,description: this.state.description};
         console.log('reservation => ' + JSON.stringify(reservation));
 
         if(this.state.id === '0'){
@@ -61,20 +51,6 @@ class CreateReservationsComponents extends Component {
        
     }
   
-
-
-    changeCustomerNameHandler= (event) => {
-        this.setState({customerName: event.target.value});
-    }
-
-    changeEmailHandler= (event) => {
-        this.setState({email: event.target.value});
-    }
-
-    changePhoneNumberHandler= (event) => {
-        this.setState({phoneNumber: event.target.value});
-    }
-
     changeQuantityHandler= (event) => {
         this.setState({quantity: event.target.value});
     }
@@ -106,21 +82,6 @@ class CreateReservationsComponents extends Component {
                                 }
                            <div className = "card-body">
                                <form>
-                                    <div className = "form-group">
-                                            <label class="yeseva-one-font" style={{fontSize: "24px"}}> Customer Name: </label>
-                                            <input placeholder="Customer Name" name="customerName" className="form-control" 
-                                                value={this.state.customerName} onChange={this.changeCustomerNameHandler}/>
-                                        </div>
-                                        <div className = "form-group">
-                                            <label class="yeseva-one-font" style={{fontSize: "24px"}}> Email: </label>
-                                            <input placeholder=" Email" name="email" className="form-control" 
-                                                value={this.state.email} onChange={this.changeEmailHandler}/>
-                                        </div>
-                                        <div className = "form-group">
-                                            <label class="yeseva-one-font" style={{fontSize: "24px"}}> Phone Number: </label>
-                                            <input placeholder="Phone Number" name="phoneNumber" className="form-control" 
-                                                value={this.state.phoneNumber} onChange={this.changePhoneNumberHandler}/>
-                                        </div>
                                         <div className = "form-group">
                                             <label class="yeseva-one-font" style={{fontSize: "24px"}}> Quantity: </label>
                                             <input placeholder="Quantity" name="quantity" className="form-control" 

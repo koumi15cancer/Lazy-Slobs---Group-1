@@ -41,8 +41,7 @@ public class RestAPIcontroller {
     }
 
     @PostMapping("/reservations")
-    public void addReservation(@RequestBody  Reservation reservation) {
-        service.save(reservation);
+    public void addReservation(@RequestBody  Reservation reservation) {service.save(reservation);
     }
 
     @PutMapping("/reservations/{id}")

@@ -10,15 +10,15 @@ class ReservationService{
     }
 
    createReservation(reservation){
-        return axios.post(Reservation_API_Basic_Url);
+        return axios.post(Reservation_API_Basic_Url, reservation);
     }
 
     getReservationById(reservationId){
-        return axios.get(Reservation_API_Basic_Url + '/' + reservationId );
+        return axios.get(Reservation_API_Basic_Url + '/' + reservationId);
     }
 
-    updateReservationById(reservation,reservationId){
-        return axios.put(Reservation_API_Basic_Url + '/' + reservationId );
+    updateReservationById(reservation, reservationId){
+        return axios.put(Reservation_API_Basic_Url + '/' + reservationId, reservation);
     }
 }
 

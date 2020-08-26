@@ -24,6 +24,7 @@ class App extends Component {
     super(props);
     this.logOut = this.logOut.bind(this);
 
+
     this.state = {
       showModeratorBoard: false,
       showAdminBoard: false,
@@ -47,6 +48,8 @@ class App extends Component {
     AuthService.logout();
   }
 
+
+
   render() {
     const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
 
@@ -59,7 +62,6 @@ class App extends Component {
               LazySlob
             </Link>
             <div className="navbar-nav mr-auto">
-
               <li className="navbar-text">
                 <Link to={"/home"} class="navbar-text">
                   Home
@@ -77,13 +79,12 @@ class App extends Component {
               <li className="navbar-text">
               <a href="contact.html" class="navbar-text">Contact Us</a>
               </li>
-
         
 
               {showModeratorBoard && (
                 <li className="navbar-text">
                   <Link to={"/mod"} class="navbar-text">
-                    Moderator Board
+                    Moderator DashBoard
                   </Link>
                 </li>
               )}
@@ -91,7 +92,7 @@ class App extends Component {
               {showAdminBoard && (
                 <li className="navbar-text">
                   <Link to={"/admin"} class="navbar-text">
-                    Admin Board
+                    Admin DashBoard
                   </Link>
                 </li>
               )} 

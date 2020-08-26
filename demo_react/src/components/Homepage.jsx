@@ -15,7 +15,7 @@ class Homepage extends Component {
                 <div id="blankspace"></div>
 
                 <div class="container homepage-text">
-                    <h2 style={{color: "rgb(255, 216, 255)", fontSize: "90px"}}>Welcome to</h2>
+                    <h2 style={{color: "White", fontSize: "90px"}}>Welcome to</h2>
                     <h1 style={{color: "white", fontSize: "150px"}}>The Slobs</h1>
                 </div>
                 

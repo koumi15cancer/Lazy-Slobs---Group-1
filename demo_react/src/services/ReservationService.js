@@ -1,4 +1,5 @@
-import axios from 'axios'
+import axios from 'axios';
+import authHeader from './auth-header';
 
 
 const Reservation_API_Basic_Url = "http://localhost:8080/reservations"
@@ -6,23 +7,23 @@ const Reservation_API_Basic_Url = "http://localhost:8080/reservations"
 class ReservationService{
 
     getReservation(){
-        return axios.get(Reservation_API_Basic_Url);
+        return axios.get(Reservation_API_Basic_Url,{ headers: authHeader() });
     }
 
    createReservation(reservation){
-        return axios.post(Reservation_API_Basic_Url, reservation);
+        return axios.post(Reservation_API_Basic_Url, reservation,{ headers: authHeader() });
     }
 
     getReservationById(reservationId){
-        return axios.get(Reservation_API_Basic_Url + '/' + reservationId);
+        return axios.get(Reservation_API_Basic_Url + '/' + reservationId,{ headers: authHeader() });
     }
 
     updateReservationById(reservation, reservationId){
-        return axios.put(Reservation_API_Basic_Url + '/' + reservationId, reservation);
+        return axios.put(Reservation_API_Basic_Url + '/' + reservationId, reservation,{ headers: authHeader() });
     }
 
     deleteReservation(reservationId){
-        return axios.delete(Reservation_API_Basic_Url + '/' + reservationId);
+        return axios.delete(Reservation_API_Basic_Url + '/' + reservationId,{ headers: authHeader() });
     }
 }
 

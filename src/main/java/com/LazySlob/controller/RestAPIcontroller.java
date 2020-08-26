@@ -15,7 +15,7 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 
-@CrossOrigin(origins = "*", maxAge = 20000)
+@CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
 @RestController
 @RequestMapping
 public class RestAPIcontroller {
@@ -61,7 +61,7 @@ public class RestAPIcontroller {
         }
     }
 
-    @DeleteMapping("/reservation/{id}")
+    @DeleteMapping("/reservations/{id}")
     public ResponseEntity < Map < String, Boolean >> deleteReservation(@PathVariable Long id)  {
        try{
         Reservation reservation = service.get(id);

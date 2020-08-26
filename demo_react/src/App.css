@@ -30,3 +30,340 @@ label {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  background-color: black;
+  color: white
+}
+
+@font-face {
+  font-family: "Open Sans Condensed Light";
+  src: url("./Fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf");
+}
+
+@font-face {
+  font-family: "Yeseva One";
+  src: url("./Fonts/Yeseva_One/YesevaOne-Regular.ttf");
+}
+
+
+/* empty space instead of using a bunch of <br> */
+
+#blankspace {
+  height: 150px;
+}
+
+
+/* home page background image */
+
+#bg-image {
+  background-image: url("./img/background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* home page buttons' container */
+
+#homepage-buttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  padding-right: 25px;
+}
+
+
+/* reservation button */
+
+#button1 {
+  font-family: "Open Sans Condensed";
+  font-style: condensed;
+  font-size: 36px;
+  color: white;
+  width: 250px;
+  height: 80px;
+  padding-top: 10px;
+  border-radius: 0px;
+  border-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* menu button */
+
+#button2 {
+  font-family: "Open Sans Condensed";
+  font-size: 36px;
+  color: white;
+  width: 250px;
+  height: 80px;
+  padding-top: 10px;
+  border-radius: 0px;
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* home page "Welcome to The Slobs text" */
+
+.homepage-text {
+  font-family: "Yeseva One";
+  text-align: center;
+  text-shadow: 2px 2px 0px black;
+}
+
+
+/* home page top menu */
+
+#top-menu-container {
+  display: inline-block;
+  background-color: rgba(15, 1, 1, 0.5);
+}
+
+
+/* top left lazy slobs text */
+
+#lazyslobs {
+  font-family: "Open Sans Condensed";
+  color: white;
+  font-size: 45px;
+  /* text outline */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  /* push down from the top a bit */
+  position: relative;
+  top: 15px;
+}
+
+
+/* navbar styling */
+
+#home-navbar {
+  /* correct font */
+  font-family: 'Yeseva One';
+  /* push away from the right side a bit */
+  padding-right: 100px;
+  /* push down from the top a bit */
+  position: relative;
+  top: 15px;
+}
+
+
+/* nav bar text */
+
+.navbar-text {
+  color: white;
+}
+
+
+/* box container */
+
+#boxes-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+}
+
+
+/* box formatting */
+
+.box {
+  width: 600px;
+  height: 800px;
+  /* stay on the same line */
+  display: inline-block;
+  /* prevent div element from getting pushed down */
+  vertical-align: top;
+}
+
+
+/* time open info box */
+
+#time-open-box {
+  /* text color white since box is black */
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+
+/* navigation bar item spacing */
+
+.navbar>ul>li {
+  list-style-type: none;
+  padding-left: 40px;
+}
+
+#border {
+  /* top and bottom margins: 4% (trial and error), left and right margins: 10px */
+  margin: 4% 10px;
+  /* width and height finalized through trial and error */
+  width: 97%;
+  height: 94%;
+  /* white border */
+  border-style: solid;
+  border-color: white;
+}
+
+
+/* form box */
+
+#form-box {
+  display: inline-block;
+  background-color: rgb(228, 218, 216);
+}
+
+
+/* in time open info box weekday and weekend text */
+
+.info-box-day {
+  font-size: 54px;
+}
+
+
+/* reservation box css */
+
+#content2 {
+  color: rgb(15, 1, 1);
+  ;
+}
+
+
+/* input field styling */
+
+input {
+  width: 80%;
+  height: 40px;
+  text-align: center;
+  border-radius: 1px;
+  border-style: none;
+}
+
+
+/* input field text input */
+
+input[type="text"] {
+  font-family: 'Open Sans Condensed';
+  font-size: 24px;
+}
+
+
+/* date and time input fields class */
+
+.date-time-input-field {
+  font-family: 'Open Sans Condensed';
+  font-size: 20px;
+  width: 220px;
+}
+
+
+/* push date text above date input field 
+to the left (value retrieved through trial and error)  */
+
+#date-text {
+  display: inline-block;
+  position: relative;
+  right: 90px;
+}
+
+
+/* push time text above date input field 
+to the left (value retrieved through trial and error)  */
+
+#time-text {
+  display: inline-block;
+  position: relative;
+  left: 90px;
+}
+
+
+/* push date input field to the left 
+(value retrieved through trial and error) */
+
+#date {
+  position: relative;
+  right: 18px;
+}
+
+
+/* push time input field to the right 
+(value retrieved through trial and error) */
+
+#time {
+  position: relative;
+  left: 18px;
+}
+
+
+/* reservation box's confirm button */
+
+#confirm-button {
+  width: 480px;
+  height: 90px;
+  font-size: 32px;
+  color: white;
+  border-radius: 25px;
+  border-style: none;
+  background-color: rgb(125, 111, 107);
+}
+
+.yeseva-one-font {
+  font-family: 'Yeseva One';
+}
+
+
+/* open sans condensed light font family */
+
+.open-sans-condensed-light {
+  font-family: 'Open Sans Condensed';
+}

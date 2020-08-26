@@ -13,6 +13,7 @@ import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 
+import Homepage from './components/Homepage';
 import ListReservationsComponents from './components/ListReservationsComponents';
 import CreateReservationsComponents from './components/CreateReservationsComponents';
 import ViewReservationsComponents from './components/ViewReservationsComponents';
@@ -126,9 +127,9 @@ class App extends Component {
             )}
           </nav>
 
-          <div className="container mt-3">
+          <div className="">
             <Switch>
-              <Route exact path={["/", "/home"]} component={Home} />
+              <Route exact path={["/", "/home"]} component={Homepage} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/profile" component={Profile} />

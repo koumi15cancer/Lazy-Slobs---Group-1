@@ -19,7 +19,14 @@ export  class ListReservationsComponents extends Component {
         });
     }
 
-
+    deleteReservation(id){
+        ReservationService.deleteReservation(id).then( res => {
+            this.setState({reservations: this.state.reservations.filter(reservation => reservation.id !== id)});
+        });
+    }
+    viewEmployee(id){
+        this.props.history.push(`/view-reservation/${id}`);
+    }
 
     addReservation(){
         this.props.history.push(`/add-reservation/0`);
@@ -59,7 +66,9 @@ export  class ListReservationsComponents extends Component {
                                              <td> { reservation.quantity} </td> 
                                              <td> { reservation.description} </td> 
                                              <td>
-                                                 <button onClick ={ () => this.editReservation(reservation.id) } className = "btn btn-info" >Update</button>
+                                             <button style={{marginLeft: "10px"}} onClick={ () => this.viewReservation(reservation.id)} className="btn btn-info">View </button>
+                                             <button style={{marginLeft: "10px"}}onClick ={ () => this.editReservation(reservation.id) } className = "btn btn-info" >Update</button>
+                                             <button style={{marginLeft: "10px"}} onClick={ () => this.deleteReservation(reservation.id)} className="btn btn-danger">Delete </button>
                                              </td>
                                         </tr>
                                     )

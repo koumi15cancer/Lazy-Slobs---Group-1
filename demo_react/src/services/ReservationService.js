@@ -20,6 +20,10 @@ class ReservationService{
     updateReservationById(reservation, reservationId){
         return axios.put(Reservation_API_Basic_Url + '/' + reservationId, reservation);
     }
+
+    deleteReservation(reservationId){
+        return axios.delete(Reservation_API_Basic_Url + '/' + reservationId);
+    }
 }
 
 export  default new ReservationService()

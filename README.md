@@ -9,3 +9,4 @@
  - Run client side at folder demo_react : 
     * Cd to this folder 
     * type : npm start ( to run client side) 
+  - Run this sql script to insert Role in database : C:\Users\Dell\Desktop\LazySlob\src\main\resources/dataRole

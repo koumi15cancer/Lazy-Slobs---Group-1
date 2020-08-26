@@ -7,7 +7,6 @@ import AuthService from "./services/auth.service";
 
 import Login from "./components/login.component";
 import Register from "./components/register.component";
-import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
@@ -52,82 +51,100 @@ class App extends Component {
 
     return (
       <Router>
-        <div>
-          <nav className="navbar navbar-expand navbar-dark bg-dark">
-            <Link to={"/"} className="navbar-brand">
+        <div class="container-fullwidth">
+        <ul class="navbar navbar-expand navbar-dark bg-dark" id="home-navbar">
+       
+            <Link to={"/"} className="navbar-symbol">
               LazySlob
             </Link>
             <div className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link to={"/home"} className="nav-link">
+
+              <li className="navbar-text">
+                <Link to={"/home"} class="navbar-text">
                   Home
                 </Link>
               </li>
 
+              <li className="navbar-text">
+              <a href="aboutus.html" class="navbar-text">About Us</a>
+              </li>
+
+              <li className="navbar-text">
+              <a href="menu.html" class="navbar-text">Menu</a>
+              </li>
+
+              <li className="navbar-text">
+              <a href="contact.html" class="navbar-text">Contact Us</a>
+              </li>
+
+        
+
               {showModeratorBoard && (
-                <li className="nav-item">
-                  <Link to={"/mod"} className="nav-link">
+                <li className="navbar-text">
+                  <Link to={"/mod"} class="navbar-text">
                     Moderator Board
                   </Link>
                 </li>
               )}
 
               {showAdminBoard && (
-                <li className="nav-item">
-                  <Link to={"/admin"} className="nav-link">
+                <li className="navbar-text">
+                  <Link to={"/admin"} class="navbar-text">
                     Admin Board
                   </Link>
                 </li>
               )} 
 
               {showAdminBoard && (
-                <li className="nav-item">
-                  <Link to={"/reservations"} className="nav-link">
+                <li className="navbar-text">
+                  <Link to={"/reservations"} class="navbar-text">
                    Reservations List
                   </Link>
                 </li>
               )}
 
               {currentUser && (
-                <li className="nav-item">
-                  <Link to={"/user"} className="nav-link">
+                <li className="navbar-text">
+                  <Link to={"/user"} class="navbar-text">
                     User
                   </Link>
                 </li>
               )}
+              
             </div>
 
             {currentUser ? (
               <div className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link to={"/profile"} className="nav-link">
+                <li className="navbar-text">
+                  <Link to={"/profile"} class="navbar-text">
                     {currentUser.username}
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <a href="/login" className="nav-link" onClick={this.logOut}>
+                <li className="navbar-text">
+                  <a href="/login" class="navbar-text" onClick={this.logOut}>
                     LogOut
                   </a>
                 </li>
               </div>
             ) : (
               <div className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link to={"/login"} className="nav-link">
+                <li className="navbar-text">
+                  <Link to={"/login"}class="navbar-text">
                     Login
                   </Link>
                 </li>
 
-                <li className="nav-item">
-                  <Link to={"/register"} className="nav-link">
+                <li className="navbar-text">
+                  <Link to={"/register"} class="navbar-text">
                     Sign Up
                   </Link>
                 </li>
+                
               </div>
             )}
-          </nav>
-
-          <div className="">
+      
+          </ul>
+          <div>
             <Switch>
               <Route exact path={["/", "/home"]} component={Homepage} />
               <Route exact path="/login" component={Login} />

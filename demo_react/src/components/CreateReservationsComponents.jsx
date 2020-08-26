@@ -12,14 +12,12 @@ class CreateReservationsComponents extends Component {
             id: this.props.match.params.id,
             customerName: '',
             email: '',
-            phoneNumber: '',
             quantity:'',
             description: '',
         }
 
         this.changeCustomerNameHandler = this.changeCustomerNameHandler.bind(this);
         this.changeEmailHandler = this.changeEmailHandler.bind(this);
-        this.changePhoneNumberHandler = this.changePhoneNumberHandler.bind(this);
         this.changeQuantityHandler= this.changeQuantityHandler.bind(this);
         this.changeDescriptionHandler = this.changeDescriptionHandler.bind(this);
         this.saveOrUpdateReservation = this.saveOrUpdateReservation.bind(this);
@@ -45,7 +43,7 @@ class CreateReservationsComponents extends Component {
 
     saveOrUpdateReservation = (e) => {
         e.preventDefault();
-        let reservation = {customerName: this.state.customerName, email: this.state.email, quantity: this.state.phoneNumber,description: this.state.description};
+        let reservation = {customerName: this.state.customerName, email: this.state.email, quantity: this.state.quantity,description: this.state.description};
         console.log('reservation => ' + JSON.stringify(reservation));
 
         if(this.state.id === '0'){
@@ -68,10 +66,6 @@ class CreateReservationsComponents extends Component {
 
     changeEmailHandler= (event) => {
         this.setState({email: event.target.value});
-    }
-
-    changePhoneNumberHandler= (event) => {
-        this.setState({phoneNumber: event.target.value});
     }
 
     changeQuantityHandler= (event) => {
@@ -115,11 +109,7 @@ class CreateReservationsComponents extends Component {
                                     <input placeholder=" Email" name="email" className="form-control"
                                            value={this.state.email} onChange={this.changeEmailHandler}/>
                                 </div>
-                                <div className = "form-group">
-                                    <label> Phone Number: </label>
-                                    <input placeholder="Phone Number" name="phoneNumber" className="form-control"
-                                           value={this.state.phoneNumber} onChange={this.changePhoneNumberHandler}/>
-                                </div>
+
                                 <div className = "form-group">
                                     <label> Quantity: </label>
                                     <input placeholder="Quantity" name="quantity" className="form-control"

@@ -15,7 +15,7 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 20000)
 @RestController
 @RequestMapping
 public class RestAPIcontroller {

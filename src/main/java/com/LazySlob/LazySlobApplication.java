@@ -15,3 +15,4 @@ public class LazySlobApplication {
 		SpringApplication.run(LazySlobApplication.class, args);
 	}
 }
+

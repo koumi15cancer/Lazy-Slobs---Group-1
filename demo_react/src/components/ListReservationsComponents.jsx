@@ -24,6 +24,7 @@ export  class ListReservationsComponents extends Component {
             this.setState({reservations: this.state.reservations.filter(reservation => reservation.id !== id)});
         });
     }
+    
     viewEmployee(id){
         this.props.history.push(`/view-reservation/${id}`);
     }

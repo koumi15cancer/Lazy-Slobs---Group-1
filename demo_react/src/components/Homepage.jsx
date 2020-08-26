@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class Homepage extends Component {
 
     constructor(props) {
@@ -9,6 +10,8 @@ class Homepage extends Component {
                  
         }
     }
+
+
     render() {
         return (
             <div id="bg-image">
@@ -20,7 +23,7 @@ class Homepage extends Component {
                 </div>
                 
                 <span class="container" id="homepage-buttons">
-                    <a href="add-reservation" class="btn btn-primary" id="button1">Reservation</a>
+                    <a href="reservations" class="btn btn-primary" id="button1" >Reservation</a>
                     <div style={{width: "25px", display: "inline-block"}}></div>
                     <a href="menu.html" class="btn btn-primary" id="button2">Menu</a>
                 </span>

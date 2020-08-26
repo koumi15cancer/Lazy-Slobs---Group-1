@@ -199,8 +199,16 @@ label {
 
 /* nav bar text */
 
-.navbar-text {
+.navbar-text{
   color: white;
+  font-size: large;
+}
+
+
+/* nav bar Symbol */
+.navbar-symbol{
+  color: white;
+  font-size:xx-large;
 }
 
 

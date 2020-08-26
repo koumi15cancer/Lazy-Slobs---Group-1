@@ -16,7 +16,7 @@ import Homepage from './components/Homepage';
 import ListReservationsComponents from './components/ListReservationsComponents';
 import CreateReservationsComponents from './components/CreateReservationsComponents';
 import ViewReservationsComponents from './components/ViewReservationsComponents';
-
+import FooterComponent from './components/FooterComponet';
 
 class App extends Component {
   constructor(props) {
@@ -159,6 +159,7 @@ class App extends Component {
             </Switch>
           </div>
         </div>
+        <FooterComponent/>
       </Router>
     );
   }

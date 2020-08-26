@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing
 @SpringBootApplication
 @EntityScan(basePackageClasses = {
-		LazySlobApplication.class,
+		LazySlobApplication.class
 })
 public class LazySlobApplication {
 	public static void main(String[] args) {

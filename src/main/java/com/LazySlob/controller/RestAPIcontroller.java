@@ -25,14 +25,12 @@ public class RestAPIcontroller {
 
 
     @GetMapping("/reservations")
-    //@PreAuthorize("hasRole('ADMIN')")
     public List<Reservation> listReservation() {
         return service.listAll();
     }
 
     // get employee by id rest api
     @GetMapping("/reservations/{id}")
-    //@PreAuthorize("hasRole('ADMIN')or hasRole('USER')")
     public ResponseEntity < Reservation > getReservation(@PathVariable Long id) {
         try {
             Reservation reservation= service.get(id);
@@ -43,17 +41,17 @@ public class RestAPIcontroller {
     }
 
     @PostMapping("/reservations")
-    //@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public void addReservation(@RequestBody  Reservation reservation) {
         service.save(reservation);
     }
 
     @PutMapping("/reservations/{id}")
-    //@PreAuthorize("hasRole('ADMIN') or hasRole('MODERATOR')")
     public ResponseEntity<Reservation>updateReservation(@PathVariable Long id,@RequestBody Reservation reservation) {
         try {
             Reservation existReservation = service.get(id);
 
+            existReservation.setCustomerName(reservation.getCustomerName());
+            existReservation.setEmail(reservation.getEmail());
             existReservation.setQuantity(reservation.getQuantity());
             existReservation.setDescription(reservation.getDescription());
 
@@ -65,7 +63,6 @@ public class RestAPIcontroller {
     }
 
     @DeleteMapping("/reservation/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity < Map < String, Boolean >> deleteReservation(@PathVariable Long id)  {
        try{
         Reservation reservation = service.get(id);

@@ -2,7 +2,7 @@ package com.LazySlob.models;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Email;
 
 
 @Entity
@@ -11,6 +11,14 @@ public class Reservation  {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     public long id;
+
+    @Column(name = "customer_name")
+    public String customerName;
+
+
+    @Column(name = "email_customer")
+    @Email
+    public  String email;
 
     @Column(name="quantity")
     public Integer quantity;
@@ -40,9 +48,25 @@ public class Reservation  {
 
     public Reservation(){};
 
-    public Reservation(Integer quantity, String description) {
+    public Reservation(String customerName,String email,Integer quantity,String description) {
+        this.customerName = customerName;
+        this.email = email;
         this.quantity = quantity;
         this.description = description;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) { this.customerName = customerName; }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Integer getQuantity() {

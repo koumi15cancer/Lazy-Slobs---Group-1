@@ -42,6 +42,8 @@ export  class ListReservationsComponents extends Component {
                     <table className = "table table-striped table-bordered text-center">
                     <thead>
                                 <tr>
+                                    <th> Customer Name</th>
+                                    <th> Email</th>
                                     <th> Quantity</th>
                                     <th> Description</th>
                                     <th> Actions</th>
@@ -52,6 +54,8 @@ export  class ListReservationsComponents extends Component {
                                     this.state.reservations.map(
                                         reservation => 
                                         <tr key = {reservation.id}>
+                                             <td> { reservation.customerName} </td> 
+                                             <td> { reservation.email} </td> 
                                              <td> { reservation.quantity} </td> 
                                              <td> { reservation.description} </td> 
                                              <td>

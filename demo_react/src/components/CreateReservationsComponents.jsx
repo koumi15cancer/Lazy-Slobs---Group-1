@@ -77,7 +77,7 @@ class CreateReservationsComponents extends Component {
     }
 
     cancel(){
-        this.props.history.push('/reservations');
+        this.props.history.push('/home');
     }
 
 

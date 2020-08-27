@@ -98,13 +98,15 @@ class App extends Component {
                 </li>
               )} 
 
-              {showAdminBoard && (
+              {currentUser && (
                 <li className="navbar-text">
                   <Link to={"/reservations"} class="navbar-text">
                    Reservations List
                   </Link>
                 </li>
               )}
+
+
 
               {currentUser && (
                 <li className="navbar-text">

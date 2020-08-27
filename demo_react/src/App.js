@@ -11,7 +11,8 @@ import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
-
+import About from "./components/aboutus.component"
+import Contact from "./components/contactus.component"
 import Homepage from './components/Homepage';
 import ListReservationsComponents from './components/ListReservationsComponents';
 import CreateReservationsComponents from './components/CreateReservationsComponents';
@@ -69,7 +70,7 @@ class App extends Component {
               </li>
 
               <li className="navbar-text">
-              <a href="aboutus.html" class="navbar-text">About Us</a>
+              <a href="aboutus" class="navbar-text">About Us</a>
               </li>
 
               <li className="navbar-text">
@@ -77,7 +78,7 @@ class App extends Component {
               </li>
 
               <li className="navbar-text">
-              <a href="contact.html" class="navbar-text">Contact Us</a>
+              <a href="contactus" class="navbar-text">Contact Us</a>
               </li>
         
 
@@ -152,6 +153,9 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/profile" component={Profile} />
+              <Route exact path="/aboutus" component={About} />
+              <Route exact path="/contactus" component={Contact} />
+
               <Route path="/user" component={BoardUser} />
               <Route path="/mod" component={BoardModerator} />
               <Route path="/admin" component={BoardAdmin} />

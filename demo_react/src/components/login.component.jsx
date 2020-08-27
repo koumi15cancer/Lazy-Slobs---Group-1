@@ -81,13 +81,15 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="col-md-12">
-        <div className="card card-container">
+      <span id="boxes-container">
+      <div class="box" id="form-box">
+        <div style={{position: "center", top: "30px"}}>
           <img
             src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
             alt="profile-img"
             className="profile-img-card"
           />
+          <h1 class="yeseva-one-font" style={{fontSize: "76px"}}>Log In</h1>
 
           <Form
             onSubmit={this.handleLogin}
@@ -96,7 +98,7 @@ export default class Login extends Component {
             }}
           >
             <div className="form-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username" class="yeseva-one-font" style={{fontSize: "24px"}}>Username</label>
               <Input
                 type="text"
                 className="form-control"
@@ -108,7 +110,7 @@ export default class Login extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" class="yeseva-one-font" style={{fontSize: "24px"}}>Password</label>
               <Input
                 type="password"
                 className="form-control"
@@ -121,13 +123,13 @@ export default class Login extends Component {
 
             <div className="form-group">
               <button
-                className="btn btn-primary btn-block"
+                id ="confirm-button"
                 disabled={this.state.loading}
               >
                 {this.state.loading && (
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
-                <span>Login</span>
+                <span class="yeseva-one-font" style={{fontSize: "24px"}}>Login</span>
               </button>
             </div>
 
@@ -147,6 +149,8 @@ export default class Login extends Component {
           </Form>
         </div>
       </div>
+      </span>
+      
     );
   }
 }

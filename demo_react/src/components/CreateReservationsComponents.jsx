@@ -121,7 +121,6 @@ class CreateReservationsComponents extends Component {
                                             <input placeholder=" Email" name="email" className="form-control" 
                                                 value={this.state.email} onChange={this.changeEmailHandler}/>
                                         </div>
-            
                                         <div className = "form-group">
                                             <label class="yeseva-one-font" style={{fontSize: "24px"}}> Quantity: </label>
                                             <input placeholder="Quantity" name="quantity" className="form-control" 

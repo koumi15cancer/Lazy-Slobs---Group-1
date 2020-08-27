@@ -25,7 +25,7 @@ export  class ListReservationsComponents extends Component {
         });
     }
     
-    viewEmployee(id){
+    viewReservation(id){
         this.props.history.push(`/view-reservation/${id}`);
     }
 

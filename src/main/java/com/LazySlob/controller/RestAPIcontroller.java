@@ -43,7 +43,6 @@ public class RestAPIcontroller {
     }
 
     @PostMapping("/reservations")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public void addReservation(@RequestBody  Reservation reservation) {service.save(reservation);
     }
 

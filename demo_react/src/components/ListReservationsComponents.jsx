@@ -40,21 +40,21 @@ export  class ListReservationsComponents extends Component {
     render() {
         return (
             <div>
-                <h2 className="text-center">Reservations List</h2>
+                <h2 class="yeseva-one-font" style={{fontSize: "76px"}}>Reservations List</h2>
 
                 <div  row align="left" >
-                    <button className = "btn btn-primary  text-center" onClick={this.addReservation}> Add Reservation </button>
+                    <button id ="add-button" onClick={this.addReservation}> Add Reservation </button>
                 </div>
 
                 <div   className=" row " >
                     <table className = "table table-striped table-bordered text-center">
                     <thead>
                                 <tr>
-                                    <th> Customer Name</th>
-                                    <th> Email</th>
-                                    <th> Quantity</th>
-                                    <th> Description</th>
-                                    <th> Actions</th>
+                                    <th class="open-sans-condensed-light"> Customer Name</th>
+                                    <th class="open-sans-condensed-light"> Email</th>
+                                    <th class="open-sans-condensed-light"> Quantity</th>
+                                    <th class="open-sans-condensed-light"> Description</th>
+                                    <th class="open-sans-condensed-light"> Actions</th>
                                 </tr> 
                        </thead>
                        <tbody>

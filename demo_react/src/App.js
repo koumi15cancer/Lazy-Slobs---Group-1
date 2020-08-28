@@ -59,31 +59,31 @@ class App extends Component {
         <div class="container-fullwidth">
         <ul class="navbar navbar-expand navbar-dark bg-dark" id="home-navbar">
        
-            <Link to={"/"} className="navbar-symbol">
+            <Link to={"/"} class="navbar-symbol">
               LazySlob
             </Link>
-            <div className="navbar-nav mr-auto">
-              <li className="navbar-text">
+            <div class="navbar-nav mr-auto">
+              <li class="navbar-text">
                 <Link to={"/home"} class="navbar-text">
                   Home
                 </Link>
               </li>
 
-              <li className="navbar-text">
+              <li class="navbar-text">
               <a href="aboutus" class="navbar-text">About Us</a>
               </li>
 
-              <li className="navbar-text">
+              <li class="navbar-text">
               <a href="menu.html" class="navbar-text">Menu</a>
               </li>
 
-              <li className="navbar-text">
+              <li class="navbar-text">
               <a href="contactus" class="navbar-text">Contact Us</a>
               </li>
         
 
               {showModeratorBoard && (
-                <li className="navbar-text">
+                <li class="navbar-text">
                   <Link to={"/mod"} class="navbar-text">
                     Moderator DashBoard
                   </Link>
@@ -91,7 +91,7 @@ class App extends Component {
               )}
 
               {showAdminBoard && (
-                <li className="navbar-text">
+                <li class="navbar-text">
                   <Link to={"/admin"} class="navbar-text">
                     Admin DashBoard
                   </Link>
@@ -99,7 +99,7 @@ class App extends Component {
               )} 
 
               {currentUser && (
-                <li className="navbar-text">
+                <li class="navbar-text">
                   <Link to={"/reservations"} class="navbar-text">
                    Reservations List
                   </Link>
@@ -109,7 +109,7 @@ class App extends Component {
 
 
               {currentUser && (
-                <li className="navbar-text">
+                <li class="navbar-text">
                   <Link to={"/user"} class="navbar-text">
                     User
                   </Link>
@@ -119,27 +119,27 @@ class App extends Component {
             </div>
 
             {currentUser ? (
-              <div className="navbar-nav ml-auto">
-                <li className="navbar-text">
+              <div class="navbar-nav ml-auto">
+                <li class="navbar-text">
                   <Link to={"/profile"} class="navbar-text">
                     {currentUser.username}
                   </Link>
                 </li>
-                <li className="navbar-text">
+                <li class="navbar-text">
                   <a href="/login" class="navbar-text" onClick={this.logOut}>
                     LogOut
                   </a>
                 </li>
               </div>
             ) : (
-              <div className="navbar-nav ml-auto">
-                <li className="navbar-text">
+              <div class="navbar-nav ml-auto">
+                <li class="navbar-text">
                   <Link to={"/login"}class="navbar-text">
                     Login
                   </Link>
                 </li>
 
-                <li className="navbar-text">
+                <li class="navbar-text">
                   <Link to={"/register"} class="navbar-text">
                     Sign Up
                   </Link>

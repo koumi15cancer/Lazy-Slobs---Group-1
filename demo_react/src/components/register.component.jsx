@@ -164,7 +164,6 @@ export default class Register extends Component {
                   <label htmlFor="username" class="yeseva-one-font" style={{fontSize: "24px"}}>Username</label>
                   <Input
                     type="text"
-                    className="form-control"
                     name="username"
                     value={this.state.username}
                     onChange={this.onChangeUsername}
@@ -176,7 +175,6 @@ export default class Register extends Component {
                   <label htmlFor="email" class="yeseva-one-font" style={{fontSize: "24px"}}>Email</label>
                   <Input
                     type="text"
-                    className="form-control"
                     name="email"
                     value={this.state.email}
                     onChange={this.onChangeEmail}
@@ -188,7 +186,6 @@ export default class Register extends Component {
                   <label htmlFor="phoneNumber" class="yeseva-one-font" style={{fontSize: "24px"}}>Phone Number</label>
                   <Input
                     type="text"
-                    className="form-control"
                     name="phoneNumber"
                     value={this.state.phoneNumber}
                     onChange={this.onChangePhoneNumber}
@@ -200,7 +197,6 @@ export default class Register extends Component {
                   <label htmlFor="password" class="yeseva-one-font" style={{fontSize: "24px"}}>Password</label>
                   <Input
                     type="password"
-                    className="form-control"
                     name="password"
                     value={this.state.password}
                     onChange={this.onChangePassword}

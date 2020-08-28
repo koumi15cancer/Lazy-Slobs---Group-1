@@ -113,22 +113,22 @@ class CreateReservationsComponents extends Component {
                                <form>
                                     <div className = "form-group">
                                             <label class="yeseva-one-font" style={{fontSize: "24px"}}> Customer Name: </label>
-                                            <input placeholder="Customer Name" name="customerName" className="form-control" 
+                                            <input placeholder="Customer Name" name="customerName" 
                                                 value={this.state.customerName} onChange={this.changeCustomerNameHandler}/>
                                         </div>
                                         <div className = "form-group">
                                             <label class="yeseva-one-font" style={{fontSize: "24px"}}> Email: </label>
-                                            <input placeholder=" Email" name="email" className="form-control" 
+                                            <input placeholder=" Email" name="email" 
                                                 value={this.state.email} onChange={this.changeEmailHandler}/>
                                         </div>
                                         <div className = "form-group">
                                             <label class="yeseva-one-font" style={{fontSize: "24px"}}> Quantity: </label>
-                                            <input placeholder="Quantity" name="quantity" className="form-control" 
+                                            <input placeholder="Quantity" name="quantity" 
                                                 value={this.state.quantity} onChange={this.changeQuantityHandler}/>
                                         </div>
                                         <div className = "form-group">
                                             <label class="yeseva-one-font" style={{fontSize: "24px"}}> Description: </label>
-                                            <input placeholder="Description" name="description" className="form-control" 
+                                            <input placeholder="Description" name="description" 
                                                 value={this.state.description} onChange={this.changeDescriptionHandler}/>
                                         </div>
 

@@ -151,6 +151,16 @@ label {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+#add-button {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 25px;
+    border-style: none;
+    background-color: rgb(211, 200, 197);
+}
+
 
 /* home page "Welcome to The Slobs text" */
 
@@ -390,4 +400,9 @@ to the left (value retrieved through trial and error)  */
 
 .open-sans-condensed-light {
     font-family: 'Open Sans Condensed';
+}
+
+input {
+    width: 50%;
+    padding: 12px 20px;
 }

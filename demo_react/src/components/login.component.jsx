@@ -101,7 +101,6 @@ export default class Login extends Component {
               <label htmlFor="username" class="yeseva-one-font" style={{fontSize: "24px"}}>Username</label>
               <Input
                 type="text"
-                className="form-control"
                 name="username"
                 value={this.state.username}
                 onChange={this.onChangeUsername}
@@ -113,7 +112,6 @@ export default class Login extends Component {
               <label htmlFor="password" class="yeseva-one-font" style={{fontSize: "24px"}}>Password</label>
               <Input
                 type="password"
-                className="form-control"
                 name="password"
                 value={this.state.password}
                 onChange={this.onChangePassword}

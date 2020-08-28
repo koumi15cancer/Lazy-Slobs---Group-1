@@ -20,3 +20,4 @@
   - Only Admin can delete Reservations
   - Only User can edit Reservations
   
+ <a href="https://travis-ci.org/koumi15cancer/Lazy-Slobs---Group-1"><img src="https://travis-ci.org/koumi15cancer/Lazy-Slobs---Group-1.svg?branch=2.1"></a>

@@ -5,19 +5,19 @@ import "./App.css";
 
 import AuthService from "./services/auth.service";
 
-import Login from "./components/login.component";
-import Register from "./components/register.component";
-import Profile from "./components/profile.component";
-import BoardUser from "./components/board-user.component";
-import BoardModerator from "./components/board-moderator.component";
-import BoardAdmin from "./components/board-admin.component";
-import About from "./components/aboutus.component"
-import Contact from "./components/contactus.component"
-import Homepage from './components/Homepage';
-import ListReservationsComponents from './components/ListReservationsComponents';
-import CreateReservationsComponents from './components/CreateReservationsComponents';
-import ViewReservationsComponents from './components/ViewReservationsComponents';
-import FooterComponent from './components/FooterComponet';
+import Login from "./components/login.Component";
+import Register from "./components/register.Component";
+import Profile from "./components/profile.Component";
+import BoardUser from "./components/board-user.Component";
+import BoardModerator from "./components/board-moderator.Component";
+import BoardAdmin from "./components/board-admin.Component";
+import About from "./components/aboutus.Component"
+import Contact from "./components/contactus.Component"
+import Homepage from './components/Homepage.Component';
+import ListReservationsComponents from './components/ListReservations.Components';
+import CreateReservationsComponents from './components/CreateReservations.Components';
+import ViewReservationsComponents from './components/ViewReservations.Components';
+import FooterComponent from './components/Footer.Componet';
 
 
 class App extends Component {
@@ -25,7 +25,7 @@ class App extends Component {
     super(props);
     this.logOut = this.logOut.bind(this);
 
-
+// state for current user
     this.state = {
       showModeratorBoard: false,
       showAdminBoard: false,
@@ -54,11 +54,11 @@ class App extends Component {
   render() {
     const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
 
-    return (
+    return ( //Nava bar 
       <Router>
         <div class="container-fullwidth">
         <ul class="navbar navbar-expand navbar-dark bg-dark" id="home-navbar">
-       
+          {/*Default  items on bar */}
             <Link to={"/"} class="navbar-symbol">
               LazySlob
             </Link>
@@ -81,7 +81,7 @@ class App extends Component {
               <a href="contactus" class="navbar-text">Contact Us</a>
               </li>
         
-
+{/*Moderator items on bar when logged in */}
               {showModeratorBoard && (
                 <li class="navbar-text">
                   <Link to={"/mod"} class="navbar-text">
@@ -89,7 +89,7 @@ class App extends Component {
                   </Link>
                 </li>
               )}
-
+{/*Admin items on bar when logged in */}
               {showAdminBoard && (
                 <li class="navbar-text">
                   <Link to={"/admin"} class="navbar-text">
@@ -97,7 +97,7 @@ class App extends Component {
                   </Link>
                 </li>
               )} 
-
+{/*Current  items on bar when logged in */}
               {currentUser && (
                 <li class="navbar-text">
                   <Link to={"/reservations"} class="navbar-text">
@@ -107,7 +107,7 @@ class App extends Component {
               )}
 
 
-
+{/*Current  items on bar when logged in */}
               {currentUser && (
                 <li class="navbar-text">
                   <Link to={"/user"} class="navbar-text">
@@ -117,15 +117,16 @@ class App extends Component {
               )}
               
             </div>
-
+{/*Current  user info on bar when logged in */}
             {currentUser ? (
               <div class="navbar-nav ml-auto">
                 <li class="navbar-text">
                   <Link to={"/profile"} class="navbar-text">
                     {currentUser.username}
                   </Link>
-                </li>
-                <li class="navbar-text">
+                </li> 
+{/*Log out button on bar when logged in */}
+                <li class="navbar-text">  
                   <a href="/login" class="navbar-text" onClick={this.logOut}>
                     LogOut
                   </a>
@@ -138,7 +139,7 @@ class App extends Component {
                     Login
                   </Link>
                 </li>
-
+{/*Sign up on button on bar */}
                 <li class="navbar-text">
                   <Link to={"/register"} class="navbar-text">
                     Sign Up
@@ -149,7 +150,7 @@ class App extends Component {
             )}
       
           </ul>
-          <div>
+          <div> {/*Components when get call to switch from URL */}
             <Switch>
               <Route exact path={["/", "/home"]} component={Homepage} />
               <Route exact path="/login" component={Login} />
@@ -167,7 +168,7 @@ class App extends Component {
             </Switch>
           </div>
         </div>
-        <FooterComponent/>
+        <FooterComponent/> {/*Footer component */}
       </Router>
     );
   }

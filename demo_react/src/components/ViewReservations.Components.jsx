@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReservationService from '../services/ReservationService'
-
+//View detailed reservation
 class ViewReservationsComponents extends Component {
     constructor(props) {
         super(props)
@@ -10,7 +10,7 @@ class ViewReservationsComponents extends Component {
             reservation: {}
         }
     }
-
+//Get Reservation by Id
     componentDidMount(){
         ReservationService.getReservationById(this.state.id).then( res => {
             this.setState({reservation: res.data});

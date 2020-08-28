@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 class Homepage extends Component {
-
+// Homepage component
     constructor(props) {
         super(props)
 

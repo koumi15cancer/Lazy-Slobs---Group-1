@@ -4,7 +4,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import AuthService from "../services/auth.service";
-
+// Log In Component
 const required = value => {
   if (!value) {
     return (
@@ -51,7 +51,7 @@ export default class Login extends Component {
     });
 
     this.form.validateAll();
-
+//Authenticate User Account
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(this.state.username, this.state.password).then(
         () => {
@@ -96,7 +96,7 @@ export default class Login extends Component {
             ref={c => {
               this.form = c;
             }}
-          >
+          > {/* User Name and Password box with validations */}
             <div className="form-group">
               <label htmlFor="username" class="yeseva-one-font" style={{fontSize: "24px"}}>Username</label>
               <Input

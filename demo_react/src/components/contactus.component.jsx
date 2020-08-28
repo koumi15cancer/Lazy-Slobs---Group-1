@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+// Contact Us dashboard page
 export default class Contact extends Component {
 
     render() {

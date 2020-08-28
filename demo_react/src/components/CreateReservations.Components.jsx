@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReservationService from '../services/ReservationService'
 
 
-
+// Create Reservation Page
 class CreateReservationsComponents extends Component {
     constructor(props) {
         super(props)
@@ -23,11 +23,11 @@ class CreateReservationsComponents extends Component {
         this.saveOrUpdateReservation = this.saveOrUpdateReservation.bind(this);
     }
 
-
+    
     componentDidMount(){
-        if(this.state.id === '0'){
+        if(this.state.id === '0'){ // if id = 0 , return nothing
             return
-        } else {
+        } else { // if id > 0 , return the data from existing reservation
             ReservationService.getReservationById(this.state.id).then( (res) =>{
                 let reservation = res.data;
                 this.setState({
@@ -46,11 +46,11 @@ class CreateReservationsComponents extends Component {
         let reservation = {customerName: this.state.customerName, email: this.state.email, quantity: this.state.quantity,description: this.state.description};
         console.log('reservation => ' + JSON.stringify(reservation));
 
-        if(this.state.id === '0'){
+        if(this.state.id === '0'){ // Return create reservation - Post
             ReservationService.createReservation(reservation).then(res =>{
                 this.props.history.push('/reservations');
             });
-        }else{
+        }else{ // Return edit reservation - Put
             ReservationService.updateReservationById(reservation, this.state.id).then( res => {
                 this.props.history.push('/reservations');
             });
@@ -59,7 +59,7 @@ class CreateReservationsComponents extends Component {
     }
 
 
-
+    // set value
     changeCustomerNameHandler= (event) => {
         this.setState({customerName: event.target.value});
     }
@@ -75,13 +75,13 @@ class CreateReservationsComponents extends Component {
     changeDescriptionHandler= (event) => {
         this.setState({description: event.target.value});
     }
-
+   // return home page
     cancel(){
         this.props.history.push('/home');
     }
 
 
-    getTitle(){
+    getTitle(){ // Change title depend on id Url
         if(this.state.id === '0'){
             return <h3 className="text-center">Add Employee</h3>
         }else{
@@ -93,7 +93,7 @@ class CreateReservationsComponents extends Component {
             <span id="boxes-container">
                 <div class="box" id="time-open-box">
                     <div id="border">
-                        <div>
+                        <div>  {/*Form decoration */}
                             <h1 class="yeseva-one-font" style={{fontSize: "76px"}}>Time Open</h1>
                             <h1 class="yeseva-one-font info-box-day">Weekday</h1>
                             <h1 class="open-sans-condensed-light">7am-11am(Breakfast)</h1>
@@ -106,7 +106,7 @@ class CreateReservationsComponents extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="box" id="form-box">
+                <div class="box" id="form-box">  {/*Form Reservation  */}
                     <div style={{position: "relative", top: "30px"}}>
                         <div id="content2">
                             <h1 class="yeseva-one-font" style={{fontSize: "76px"}}>Reservation</h1>

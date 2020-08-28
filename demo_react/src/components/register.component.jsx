@@ -3,9 +3,9 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
-
+//Register Page
 import AuthService from "../services/auth.service";
-
+// validation require
 const required = value => {
   if (!value) {
     return (
@@ -15,7 +15,7 @@ const required = value => {
     );
   }
 };
-
+// Email validation
 const email = value => {
   if (!isEmail(value)) {
     return (
@@ -25,7 +25,7 @@ const email = value => {
     );
   }
 };
-
+// User validation
 const vusername = value => {
   if (value.length < 3 || value.length > 20) {
     return (
@@ -35,7 +35,7 @@ const vusername = value => {
     );
   }
 };
-
+//Password validation
 const vpassword = value => {
   if (value.length < 6 || value.length > 40) {
     return (
@@ -46,15 +46,7 @@ const vpassword = value => {
   }
 };
 
-const vphonenumber = value => {
-  if (value.length === 9) {
-    return (
-      <div className="alert alert-danger" role="alert">
-        The phone Number must be 10 digit number.
-      </div>
-    );
-  }
-};
+
 
 
 export default class Register extends Component {
@@ -63,13 +55,11 @@ export default class Register extends Component {
     this.handleRegister = this.handleRegister.bind(this);
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
-    this.onChangePhoneNumber = this.onChangePhoneNumber.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
 
     this.state = {
       username: "",
       email: "",
-      phoneNumber:"",
       password: "",
       successful: false,
       message: ""
@@ -88,11 +78,6 @@ export default class Register extends Component {
     });
   }
 
-  onChangePhoneNumber(e) {
-    this.setState({
-      phoneNumber: e.target.value
-    });
-  }
 
   onChangePassword(e) {
     this.setState({
@@ -114,7 +99,6 @@ export default class Register extends Component {
       AuthService.register(
         this.state.username,
         this.state.email,
-        this.state.phoneNumber,
         this.state.password
       ).then(
         response => {
@@ -181,18 +165,6 @@ export default class Register extends Component {
                     validations={[required, email]}
                   />
                 </div>
-
-                <div className="form-group">
-                  <label htmlFor="phoneNumber" class="yeseva-one-font" style={{fontSize: "24px"}}>Phone Number</label>
-                  <Input
-                    type="text"
-                    name="phoneNumber"
-                    value={this.state.phoneNumber}
-                    onChange={this.onChangePhoneNumber}
-                    validations={[required, vphonenumber]}
-                  />
-                </div>
-
                 <div className="form-group">
                   <label htmlFor="password" class="yeseva-one-font" style={{fontSize: "24px"}}>Password</label>
                   <Input

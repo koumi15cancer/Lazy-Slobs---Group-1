@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import UserService from "../services/user.service";
-
+//User dashboard page
 export default class BoardUser extends Component {
   constructor(props) {
     super(props);

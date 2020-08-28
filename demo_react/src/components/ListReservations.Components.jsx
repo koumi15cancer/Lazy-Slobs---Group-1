@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReservationService from '../services/ReservationService'
 
-
+// List Reservation component
 export  class ListReservationsComponents extends Component {
     constructor(props){
         super(props)
@@ -13,19 +13,19 @@ export  class ListReservationsComponents extends Component {
         this.editReservation = this.editReservation.bind(this);
     }
     
-    componentDidMount(){
+    componentDidMount(){ 
         ReservationService.getReservation().then((res) => {
             this.setState({ reservations: res.data});
         });
     }
 
-    deleteReservation(id){
+    deleteReservation(id){ 
         ReservationService.deleteReservation(id).then( res => {
             this.setState({reservations: this.state.reservations.filter(reservation => reservation.id !== id)});
         });
     }
     
-    viewReservation(id){
+    viewReservation(id){ 
         this.props.history.push(`/view-reservation/${id}`);
     }
 
@@ -42,7 +42,7 @@ export  class ListReservationsComponents extends Component {
             <div>
                 <h2 class="yeseva-one-font" style={{fontSize: "76px"}}>Reservations List</h2>
 
-                <div  row align="left" >
+                <div  row align="left" > {/*Button call Post method*/}
                     <button id ="add-button" onClick={this.addReservation}> Add Reservation </button>
                 </div>
 
@@ -57,7 +57,7 @@ export  class ListReservationsComponents extends Component {
                                     <th class="open-sans-condensed-light"> Actions</th>
                                 </tr> 
                        </thead>
-                       <tbody>
+                       <tbody>{/*Get all Reservations */}
                                 {
                                     this.state.reservations.map(
                                         reservation => 

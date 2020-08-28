@@ -25,9 +25,9 @@ public class UserDetailsImpl implements UserDetails {
 
     @JsonIgnore
     private String password;
-
+    //Authorization
     private Collection<? extends GrantedAuthority> authorities;
-
+    // Constructor to authorize
     public UserDetailsImpl(Long id, String username, String email, String phoneNumber,String password,
                            Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
@@ -37,6 +37,7 @@ public class UserDetailsImpl implements UserDetails {
         this.password = password;
         this.authorities = authorities;
     }
+
 
     public static UserDetailsImpl build(User user) {
         List<GrantedAuthority> authorities = user.getRoles().stream()
@@ -97,6 +98,7 @@ public class UserDetailsImpl implements UserDetails {
         return true;
     }
 
+    //compare id
     @Override
     public boolean equals(Object o) {
         if (this == o)

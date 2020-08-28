@@ -32,7 +32,7 @@ import com.LazySlob.repository.RoleRepository;
 import com.LazySlob.repository.UserRepository;
 import com.LazySlob.security.jwt.JwtUtils;
 import com.LazySlob.security.services.UserDetailsImpl;
-
+// Authenticate controller
 @CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
 @RestController
 @RequestMapping("/api/auth")
@@ -52,20 +52,20 @@ public class AuthController {
     @Autowired
     JwtUtils jwtUtils;
 
-    @PostMapping("/signin")
+    @PostMapping("/signin") // Post method to sign in
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
-
+        // Get Username - password
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
-
+       // Set authentication and generate token
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);
-
+        // Check if username exists
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
-
+        // return data if response succeed
         return ResponseEntity.ok(new JwtResponse(jwt,
                 userDetails.getId(),
                 userDetails.getUsername(),
@@ -74,14 +74,15 @@ public class AuthController {
                 roles));
     }
 
-    @PostMapping("/signup")
+    @PostMapping("/signup") // Post method to sign up
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+        // Check username exists or not
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Username is already taken!"));
         }
-
+// Check email exists or not
         if (userRepository.existsByEmail(signUpRequest.getEmail())) {
             return ResponseEntity
                     .badRequest()
@@ -95,13 +96,14 @@ public class AuthController {
 
         Set<String> strRoles = signUpRequest.getRole();
         Set<Role> roles = new HashSet<>();
-
+        // define role
         if (strRoles == null) {
             Role userRole = roleRepository.findByName(ERole.ROLE_USER)
                     .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-            roles.add(userRole);
+            roles.add(userRole); // add role if not found
         } else {
             strRoles.forEach(role -> {
+                // Get role to set from database
                 switch (role) {
                     case "admin":
                         Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
@@ -116,6 +118,7 @@ public class AuthController {
 
                         break;
                     default:
+                        // set role default as user
                         Role userRole = roleRepository.findByName(ERole.ROLE_USER)
                                 .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                         roles.add(userRole);

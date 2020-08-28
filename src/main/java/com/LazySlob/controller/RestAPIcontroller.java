@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-
+// Reservation controller
 @CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
 @RestController
 @RequestMapping
@@ -23,14 +23,14 @@ public class RestAPIcontroller {
     @Autowired
     private  ReservationService service;
 
-
+    // Get all Reservations list
     @GetMapping("/reservations")
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public List<Reservation> listReservation() {
         return service.listAll();
     }
 
-    // get employee by id rest api
+    // get reservation by id rest api
     @GetMapping("/reservations/{id}")
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity < Reservation > getReservation(@PathVariable Long id) {
@@ -41,11 +41,11 @@ public class RestAPIcontroller {
             return new ResponseEntity<Reservation>(HttpStatus.NOT_FOUND);
         }
     }
-
+    // Post new reservation
     @PostMapping("/reservations")
     public void addReservation(@RequestBody  Reservation reservation) {service.save(reservation);
     }
-
+    // Put/ eidt reservation by ID
     @PutMapping("/reservations/{id}")
     @PreAuthorize("hasRole('USER') ")
     public ResponseEntity<Reservation>updateReservation(@PathVariable Long id,@RequestBody Reservation reservation) {
@@ -63,7 +63,7 @@ public class RestAPIcontroller {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
+    //  Delete reservation by ID
     @DeleteMapping("/reservations/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity < Map < String, Boolean >> deleteReservation(@PathVariable Long id)  {

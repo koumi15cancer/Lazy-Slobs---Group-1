@@ -2,7 +2,7 @@ package com.LazySlob.payload.request;
 import java.util.Set;
 
 import javax.validation.constraints.*;
-
+//Form request to sign up
 public class SignupRequest {
     @NotBlank
     @Size(min = 3, max = 20)
@@ -13,10 +13,11 @@ public class SignupRequest {
     @Email
     private String email;
 
-    @NotBlank
-    @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
+   // @NotBlank
+   // @Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
     private String phoneNumber;
 
+   //Role when sign up
     private Set<String> role;
 
     @NotBlank

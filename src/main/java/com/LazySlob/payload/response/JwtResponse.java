@@ -1,7 +1,7 @@
 package com.LazySlob.payload.response;
 
 import java.util.List;
-
+// Jason web token response to authorize
 public class JwtResponse {
     private String token;
     private String type = "Bearer";

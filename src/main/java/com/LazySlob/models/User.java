@@ -10,7 +10,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
+// User model with constraint for database
 @Entity
 @Table(	name = "users",
         uniqueConstraints = {
@@ -37,7 +37,7 @@ public class User {
 
     //@Pattern(regexp="(^$|[0-9]{10})") //10 digits only number
     public String phoneNumber;
-
+    // Many User can have many roles
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(	name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -46,7 +46,7 @@ public class User {
 
     public User() {
     }
-
+    // User Constructor
     public User(String username, String email,String phoneNumber ,String password) {
         this.username = username;
         this.email = email;

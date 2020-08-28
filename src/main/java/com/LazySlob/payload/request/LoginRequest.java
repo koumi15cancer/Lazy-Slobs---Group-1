@@ -1,7 +1,7 @@
 package com.LazySlob.payload.request;
 
 import javax.validation.constraints.NotBlank;
-
+// Form request to log In
 public class LoginRequest {
     @NotBlank
     private String username;

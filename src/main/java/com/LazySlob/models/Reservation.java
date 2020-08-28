@@ -4,7 +4,7 @@ package com.LazySlob.models;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
-
+// Reservation class
 @Entity
 @Table(name = "Reservation")
 public class Reservation  {
@@ -47,7 +47,7 @@ public class Reservation  {
     }
 
     public Reservation(){};
-
+    // Reservation constructor
     public Reservation(String customerName,String email,Integer quantity,String description) {
         super();
         this.customerName = customerName;

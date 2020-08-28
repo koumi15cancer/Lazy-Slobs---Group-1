@@ -4,10 +4,11 @@ import javax.persistence.*;
 @Entity
 @Table(name = "roles")
 public class Role {
+    // Role Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    // Role_type
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
     private ERole name;

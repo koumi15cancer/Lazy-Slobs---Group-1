@@ -1,5 +1,5 @@
 package com.LazySlob.payload.response;
-
+// Messeage to recognize
 public class MessageResponse {
     private String message;
 

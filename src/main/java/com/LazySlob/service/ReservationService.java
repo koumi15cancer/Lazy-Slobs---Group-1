@@ -32,4 +32,14 @@ public class ReservationService {
     public void delete(long id) {
         repo.deleteById(id);
     }
+	
+    // return total reservation count from a keyword from date column
+	public List<Reservation> getReservationCountFromDate(String keyword) {
+		return repo.getReservationCountFromDate(keyword);
+	}
+	
+    // get lists of reservation from a keyword from time column
+	public List<Reservation> searchTimeFromDate(String keyword) {
+		return repo.searchTimeFromDate(keyword);
+	}
 }

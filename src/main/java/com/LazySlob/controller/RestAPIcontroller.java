@@ -25,14 +25,15 @@ public class RestAPIcontroller {
 
     // Get all Reservations list
     @GetMapping("/reservations")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+    
     public List<Reservation> listReservation() {
         return service.listAll();
     }
 
     // get reservation by id rest api
     @GetMapping("/reservations/{id}")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity < Reservation > getReservation(@PathVariable Long id) {
         try {
             Reservation reservation= service.get(id);
@@ -43,11 +44,12 @@ public class RestAPIcontroller {
     }
     // Post new reservation
     @PostMapping("/reservations")
-    public void addReservation(@RequestBody  Reservation reservation) {service.save(reservation);
+    public void addReservation(@RequestBody  Reservation reservation) {
+    	service.save(reservation);
     }
     // Put/ eidt reservation by ID
     @PutMapping("/reservations/{id}")
-    @PreAuthorize("hasRole('USER') ")
+//    @PreAuthorize("hasRole('USER') ")
     public ResponseEntity<Reservation>updateReservation(@PathVariable Long id,@RequestBody Reservation reservation) {
         try {
             Reservation existReservation = service.get(id);
@@ -65,15 +67,15 @@ public class RestAPIcontroller {
     }
     //  Delete reservation by ID
     @DeleteMapping("/reservations/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity < Map < String, Boolean >> deleteReservation(@PathVariable Long id)  {
-       try{
+       try {
         Reservation reservation = service.get(id);
         service.delete(id);
         Map < String, Boolean > response = new HashMap < > ();
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
-    }catch (NoSuchElementException e){
+    } catch (NoSuchElementException e){
            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
        }
     }

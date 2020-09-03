@@ -4,6 +4,9 @@ package com.LazySlob.models;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 // Reservation class
 @Entity
 @Table(name = "Reservation")
@@ -25,6 +28,14 @@ public class Reservation  {
 
     @Column(name="description")
     public String description;
+
+    @Column(name="date")
+    @JsonFormat(pattern = "dd-mm-yyyy")
+    public String date;
+
+    @Column(name="time")
+    @JsonFormat(pattern = "HH:mm")
+    public String time;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="reservations_user")
@@ -48,41 +59,61 @@ public class Reservation  {
 
     public Reservation(){};
     // Reservation constructor
-    public Reservation(String customerName,String email,Integer quantity,String description) {
+    public Reservation(String customerName, String email, Integer quantity, String description, String date, String time) {
         super();
         this.customerName = customerName;
         this.email = email;
         this.quantity = quantity;
         this.description = description;
+        this.date = date;
+        this.time = time;
     }
 
     public String getCustomerName() {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) { this.customerName = customerName; }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
-
     public String getDescription() {
         return description;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setCustomerName(String customerName) {
+    	this.customerName = customerName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

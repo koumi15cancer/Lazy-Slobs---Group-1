@@ -14,6 +14,16 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+
+import javax.mail.MessagingException;
+
+import org.springframework.mail.MailException;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.LazySlob.models.UserToEmail;
+import com.LazySlob.service.EmailService;
+
 // Reservation controller
 @CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
 @RestController
@@ -22,6 +32,12 @@ public class RestAPIcontroller {
 
     @Autowired
     private  ReservationService service;
+    
+	@Autowired
+	private EmailService notificationService;
+
+	@Autowired
+	private UserToEmail user;
 
     // Get all Reservations list
     @GetMapping("/reservations")
@@ -42,12 +58,14 @@ public class RestAPIcontroller {
             return new ResponseEntity<Reservation>(HttpStatus.NOT_FOUND);
         }
     }
-    // Post new reservation
+    
+    // Add new reservation
     @PostMapping("/reservations")
     public void addReservation(@RequestBody  Reservation reservation) {
     	service.save(reservation);
     }
-    // Put/ eidt reservation by ID
+    
+    // Edit reservation by ID
     @PutMapping("/reservations/{id}")
 //    @PreAuthorize("hasRole('USER') ")
     public ResponseEntity<Reservation>updateReservation(@PathVariable Long id,@RequestBody Reservation reservation) {
@@ -65,6 +83,7 @@ public class RestAPIcontroller {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    
     //  Delete reservation by ID
     @DeleteMapping("/reservations/{id}")
 //    @PreAuthorize("hasRole('ADMIN')")
@@ -79,4 +98,60 @@ public class RestAPIcontroller {
            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
        }
     }
+    
+
+	/////////////////
+	// Email stuff //
+	/////////////////
+	/**
+	 * 
+	 * @return
+	 */
+	@RequestMapping("send-mail")
+	public String send() {
+
+		/*
+		 * Creating a User with the help of EmailToUser class that we have declared and setting
+		 * Email address of the sender.
+		 */
+		user.setEmailAddress("");  //Receiver's email address
+		/*
+		 * Here we will call sendEmail() for Sending mail to the sender.
+		 */
+		try {
+			notificationService.sendEmail(user);
+		} catch (MailException mailException) {
+			System.out.println(mailException);
+		}
+		return "Congratulations! Your mail has been send to the user.";
+	}
+
+	/**
+	 * 
+	 * @return
+	 * @throws MessagingException
+	 */
+	@RequestMapping("send-mail-attachment")
+	public String sendWithAttachment() throws MessagingException {
+
+		/*
+		 * Creating a User with the help of EmailToUser class that we have declared and setting
+		 * Email address of the sender.
+		 */
+		user.setEmailAddress(""); //Receiver's email address
+
+		/*
+		 * Here we will call sendEmailWithAttachment() for Sending mail to the sender
+		 * that contains a attachment.
+		 */
+		try {
+			notificationService.sendEmailWithAttachment(user);
+		} catch (MailException mailException) {
+			System.out.println(mailException);
+		}
+		return "Congratulations! Your mail has been send to the user.";
+	}
+	////////////////////////
+	// End of email stuff //
+	////////////////////////
 }

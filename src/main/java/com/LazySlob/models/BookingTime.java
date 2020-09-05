@@ -13,7 +13,6 @@ public class BookingTime {
     @Id
     public long id;
 
-
   @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
     private LocalDate BookedDate;
 
@@ -53,5 +52,13 @@ public class BookingTime {
 
     public void setBookedTime(LocalTime bookedTime) {
         BookedTime = bookedTime;
+    }
+
+    public Reservation getReservation() {
+        return reservation;
+    }
+
+    public void setReservation(Reservation reservation) {
+        this.reservation = reservation;
     }
 }

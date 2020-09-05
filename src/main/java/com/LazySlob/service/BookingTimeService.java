@@ -2,7 +2,6 @@ package com.LazySlob.service;
 
 import java.util.List;
 import java.util.Optional;
-
 import com.LazySlob.models.BookingTime;
 import com.LazySlob.repository.BookingTimeRepository;
 
@@ -22,5 +21,22 @@ public class BookingTimeService {
     // Find  List of Time not available from date
     public Optional<BookingTime> CheckBookedTime(String BookedDate) {
         return repo.CheckBookedTime(BookedDate);
+    }
+
+    // save/ create Booking Date
+    public BookingTime save(BookingTime bookingTime) {
+        repo.save(bookingTime);
+        return bookingTime;
+    }
+
+    // get Booking Date by Id
+    public BookingTime get(long id) {
+        return repo.findById(id).get();
+    }
+
+
+    // delete Booking Date by Id
+    public void delete(long id) {
+        repo.deleteById(id);
     }
 }

@@ -12,6 +12,6 @@ import java.util.Optional;
 // Repository for basic script for database
 @Repository
 public interface BookingTimeRepository extends JpaRepository<BookingTime,Long> {
-   @Query(value = "SELECT t FROM Booking_Time t WHERE booked_date = :BookedDate GROUP BY booked_time HAVING COUNT(booked_time)>=3",nativeQuery = true)
+   @Query(value = "SELECT * FROM Booking_Time t WHERE t.booked_date = :BookedDate GROUP BY t.booked_time HAVING COUNT(t.booked_time)>=3",nativeQuery = true)
     Optional<BookingTime> CheckBookedTime(@Param("BookedDate") String BookedDate);
 }

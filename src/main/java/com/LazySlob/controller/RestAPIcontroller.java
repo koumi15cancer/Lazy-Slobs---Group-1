@@ -76,6 +76,7 @@ public class RestAPIcontroller {
             existReservation.setEmail(reservation.getEmail());
             existReservation.setQuantity(reservation.getQuantity());
             existReservation.setDescription(reservation.getDescription());
+            existReservation.setStatus(reservation.getStatus());
 
             Reservation updatedReservation = service.save(existReservation);
             return ResponseEntity.ok(updatedReservation);

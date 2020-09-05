@@ -1,8 +1,8 @@
 package com.LazySlob.service;
 
 import java.util.List;
-import java.util.Optional;
 import com.LazySlob.models.BookingTime;
+import com.LazySlob.models.FullSlotTime;
 import com.LazySlob.repository.BookingTimeRepository;
 
 
@@ -19,7 +19,7 @@ public class BookingTimeService {
     private BookingTimeRepository repo;
 
     // Find  List of Time not available from date
-    public Optional<BookingTime> CheckBookedTime(String BookedDate) {
+    public List<FullSlotTime> CheckBookedTime(String BookedDate) {
         return repo.CheckBookedTime(BookedDate);
     }
 

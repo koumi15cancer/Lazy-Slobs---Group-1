@@ -7,16 +7,20 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity(name = "BookingTime")
-@Table(name = "BookingTime")
+@Table(name = "Booking_Time")
 public class BookingTime {
 
     @Id
     public long id;
 
-  @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
+    @Column(name = "BookedDate")
     private LocalDate BookedDate;
 
-   @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="HH:mm")
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="HH:mm")
+    @Column(name = "BookedTime")
     private LocalTime BookedTime;
 
     @OneToOne(fetch = FetchType.LAZY)
@@ -25,10 +29,6 @@ public class BookingTime {
 
     public BookingTime(){};
 
-    public BookingTime(LocalDate bookedDate, LocalTime bookedTime) {
-        BookedDate = bookedDate;
-        BookedTime = bookedTime;
-    }
 
     public long getId() {
         return id;
@@ -38,25 +38,18 @@ public class BookingTime {
         this.id = id;
     }
 
-    public LocalDate getBookedDate() {
-        return BookedDate;
+    public LocalDate getBookedDate() { return BookedDate; }
+
+    public void setBookedDate(LocalDate BookedDate) {
+        this.BookedDate = BookedDate;
     }
 
-    public void setBookedDate(LocalDate bookedDate) {
-        BookedDate = bookedDate;
+    public LocalTime getBookedTime() { return BookedTime; }
+
+    public void setBookedTime(LocalTime BookedTime) {
+        this.BookedTime = BookedTime;
     }
 
-    public LocalTime getBookedTime() {
-        return BookedTime;
-    }
-
-    public void setBookedTime(LocalTime bookedTime) {
-        BookedTime = bookedTime;
-    }
-
-    public Reservation getReservation() {
-        return reservation;
-    }
 
     public void setReservation(Reservation reservation) {
         this.reservation = reservation;

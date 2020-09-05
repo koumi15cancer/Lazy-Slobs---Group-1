@@ -2,8 +2,8 @@ package com.LazySlob.controller;
 
 
 import com.LazySlob.models.BookingTime;
+import com.LazySlob.models.FullSlotTime;
 import com.LazySlob.models.Reservation;
-import com.LazySlob.repository.ReservationRepository;
 import com.LazySlob.service.BookingTimeService;
 import com.LazySlob.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 
 // BookingTime controller
 @CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
@@ -52,7 +49,7 @@ public class BookingTimeController {
 
     // Get the available time in chosen Day
     @GetMapping("/reservations/Date")
-    public Optional<BookingTime> getAvailableTime(@RequestParam String BookedDate){
+    public List<FullSlotTime> getAvailableTime(@RequestParam String BookedDate){
             return service.CheckBookedTime(BookedDate);
     }
 }

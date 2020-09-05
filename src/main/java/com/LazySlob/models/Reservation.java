@@ -41,6 +41,9 @@ public class Reservation  {
     @JoinColumn(name="reservations_user")
     private User user;
 
+    @Column(name="status")
+    public String status;
+
     public User getUser() {
         return user;
     }
@@ -59,7 +62,7 @@ public class Reservation  {
 
     public Reservation(){};
     // Reservation constructor
-    public Reservation(String customerName, String email, Integer quantity, String description, String date, String time) {
+    public Reservation(String customerName, String email, Integer quantity, String description, String date, String time, String status) {
         super();
         this.customerName = customerName;
         this.email = email;
@@ -67,6 +70,7 @@ public class Reservation  {
         this.description = description;
         this.date = date;
         this.time = time;
+        this.status = status;
     }
 
     public String getCustomerName() {
@@ -93,6 +97,10 @@ public class Reservation  {
         return time;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
     public void setCustomerName(String customerName) {
     	this.customerName = customerName;
     }
@@ -115,5 +123,9 @@ public class Reservation  {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

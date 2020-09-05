@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
  * @version 1.0
  *
  */
+
 @Component
 public class UserToEmail {
 

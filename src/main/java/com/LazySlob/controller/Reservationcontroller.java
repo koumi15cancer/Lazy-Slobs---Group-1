@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
 @RestController
 @RequestMapping
-public class RestAPIcontroller {
+public class Reservationcontroller {
 
     @Autowired
     private  ReservationService service;

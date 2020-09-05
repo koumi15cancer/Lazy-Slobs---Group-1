@@ -51,6 +51,13 @@ public class Reservation  {
         this.id = id;
     }
 
+    public BookingTime getTime() {
+        return time;
+    }
+
+    public void setTime(BookingTime time) {
+        this.time = time;
+    }
 
     public Reservation(){};
     // Reservation constructor

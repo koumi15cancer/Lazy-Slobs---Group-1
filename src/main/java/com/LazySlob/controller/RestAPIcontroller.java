@@ -109,49 +109,56 @@ public class RestAPIcontroller {
 	 * @return
 	 */
 	@RequestMapping("send-mail")
-	public String send() {
+	public String Approve(@PathVariable Long id,@RequestBody Reservation reservation) {
+        Reservation existReservation = service.get(id);
 
+        existReservation.setStatus("Approved");
 		/*
 		 * Creating a User with the help of EmailToUser class that we have declared and setting
 		 * Email address of the sender.
 		 */
-		user.setEmailAddress("");  //Receiver's email address
+		user.setEmailAddress(reservation.getEmail());  //Receiver's email address
 		/*
-		 * Here we will call sendEmail() for Sending mail to the sender.
+		 * Here we will call sendEmail() to send the email
 		 */
 		try {
 			notificationService.sendEmail(user);
 		} catch (MailException mailException) {
 			System.out.println(mailException);
 		}
-		return "Congratulations! Your mail has been send to the user.";
+		return "Congratulations! Your email has been sent to the user.";
 	}
 
+	
+	// Use this if our email has attachment
 	/**
 	 * 
 	 * @return
 	 * @throws MessagingException
 	 */
-	@RequestMapping("send-mail-attachment")
-	public String sendWithAttachment() throws MessagingException {
-
-		/*
-		 * Creating a User with the help of EmailToUser class that we have declared and setting
-		 * Email address of the sender.
-		 */
-		user.setEmailAddress(""); //Receiver's email address
-
-		/*
-		 * Here we will call sendEmailWithAttachment() for Sending mail to the sender
-		 * that contains a attachment.
-		 */
-		try {
-			notificationService.sendEmailWithAttachment(user);
-		} catch (MailException mailException) {
-			System.out.println(mailException);
-		}
-		return "Congratulations! Your mail has been send to the user.";
-	}
+//	@RequestMapping("send-mail-attachment")
+//	public String Approve(@PathVariable Long id,@RequestBody Reservation reservation) throws MessagingException {
+//        Reservation existReservation = service.get(id);
+//
+//        existReservation.setStatus("Approved");
+//
+//		/*
+//		 * Creating a User with the help of EmailToUser class that we have declared and setting
+//		 * Email address of the sender.
+//		 */
+//		user.setEmailAddress(reservation.getEmail()); //Receiver's email address
+//
+//		/*
+//		 * Here we will call sendEmailWithAttachment() to send the email
+//		 * that contains a attachment.
+//		 */
+//		try {
+//			notificationService.sendEmailWithAttachment(user);
+//		} catch (MailException mailException) {
+//			System.out.println(mailException);
+//		}
+//		return "Congratulations! Your email has been sent to the user.";
+//	}
 	////////////////////////
 	// End of email stuff //
 	////////////////////////

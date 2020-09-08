@@ -34,7 +34,7 @@ public class RestAPIcontroller {
     private  ReservationService service;
     
 	@Autowired
-	private EmailService notificationService;
+	private EmailService emailService;
 
 	@Autowired
 	private UserToEmail user;
@@ -108,26 +108,51 @@ public class RestAPIcontroller {
 	 * 
 	 * @return
 	 */
-	@RequestMapping("send-mail")
-	public String Approve(@PathVariable Long id,@RequestBody Reservation reservation) {
-        Reservation existReservation = service.get(id);
+    @GetMapping("/email/{id}/approve")
+    public ResponseEntity<Reservation>approveReservation(@PathVariable Long id) {
+        try {
+            Reservation existReservation = service.get(id);
+            // set status to approved
+            existReservation.setStatus("Approved");
+            // get receiver's email address
+            user.setEmailAddress(existReservation.getEmail());
+            // save database status column
+            Reservation updatedReservation = service.save(existReservation);
+            // call send email function to send email
+            emailService.sendEmail(user);
+            Reservation reservation= service.get(id);
+            return new ResponseEntity<Reservation>(reservation, HttpStatus.OK);
+        }
+//        catch (MailException mailException) {
+//            System.out.println(mailException);
+//      }
+        catch (NoSuchElementException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 
-        existReservation.setStatus("Approved");
-		/*
-		 * Creating a User with the help of EmailToUser class that we have declared and setting
-		 * Email address of the sender.
-		 */
-		user.setEmailAddress(reservation.getEmail());  //Receiver's email address
-		/*
-		 * Here we will call sendEmail() to send the email
-		 */
-		try {
-			notificationService.sendEmail(user);
-		} catch (MailException mailException) {
-			System.out.println(mailException);
-		}
-		return "Congratulations! Your email has been sent to the user.";
-	}
+    @GetMapping("/email/{id}/decline")
+    public ResponseEntity<Reservation>declineReservation(@PathVariable Long id) {
+        try {
+            Reservation existReservation = service.get(id);
+            // set status to approved
+            existReservation.setStatus("Declined");
+            // get receiver's email address
+            user.setEmailAddress(existReservation.getEmail());
+            // save database status column
+            Reservation updatedReservation = service.save(existReservation);
+            // call send email function to send email
+            emailService.sendEmail(user);
+            Reservation reservation= service.get(id);
+            return new ResponseEntity<Reservation>(reservation, HttpStatus.OK);
+        }
+//        catch (MailException mailException) {
+//            System.out.println(mailException);
+//      }
+        catch (NoSuchElementException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 
 	
 	// Use this if our email has attachment
@@ -153,7 +178,7 @@ public class RestAPIcontroller {
 //		 * that contains a attachment.
 //		 */
 //		try {
-//			notificationService.sendEmailWithAttachment(user);
+//			emailService.sendEmailWithAttachment(user);
 //		} catch (MailException mailException) {
 //			System.out.println(mailException);
 //		}

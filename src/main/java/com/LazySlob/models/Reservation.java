@@ -42,7 +42,7 @@ public class Reservation  {
     private User user;
 
     @Column(name="status")
-    public String status;
+    public String status = "Pending";
 
     public User getUser() {
         return user;

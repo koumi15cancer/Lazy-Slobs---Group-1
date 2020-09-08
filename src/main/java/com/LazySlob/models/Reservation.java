@@ -30,6 +30,11 @@ public class Reservation  {
     @JoinColumn(name="reservations_user")
     private User user;
 
+    @OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY, optional = false)
+    private BookingTime time;
+
+
     public User getUser() {
         return user;
     }
@@ -44,6 +49,12 @@ public class Reservation  {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public BookingTime getTime() { return time; }
+
+    public void setTime(BookingTime time) {
+        this.time = time;
     }
 
     public Reservation(){};
@@ -85,4 +96,5 @@ public class Reservation  {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

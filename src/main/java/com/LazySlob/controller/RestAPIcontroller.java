@@ -14,15 +14,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-
-import javax.mail.MessagingException;
-
-import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.LazySlob.models.UserToEmail;
-import com.LazySlob.service.EmailService;
 
 // Reservation controller
 @CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
@@ -32,12 +25,6 @@ public class RestAPIcontroller {
 
     @Autowired
     private  ReservationService service;
-    
-	@Autowired
-	private EmailService emailService;
-
-	@Autowired
-	private UserToEmail user;
 
     // Get all Reservations list
     @GetMapping("/reservations")
@@ -90,101 +77,12 @@ public class RestAPIcontroller {
 //    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity < Map < String, Boolean >> deleteReservation(@PathVariable Long id)  {
        try {
-        Reservation reservation = service.get(id);
         service.delete(id);
         Map < String, Boolean > response = new HashMap < > ();
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
-    } catch (NoSuchElementException e){
-           return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-       }
+	    } catch (NoSuchElementException e) {
+	           return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	    }
     }
-    
-
-	/////////////////
-	// Email stuff //
-	/////////////////
-	/**
-	 * 
-	 * @return
-	 */
-    @GetMapping("/email/{id}/approve")
-    public ResponseEntity<Reservation>approveReservation(@PathVariable Long id) {
-        try {
-            Reservation existReservation = service.get(id);
-            // set status to approved
-            existReservation.setStatus("Approved");
-            // get receiver's email address
-            user.setEmailAddress(existReservation.getEmail());
-            // save database status column
-            Reservation updatedReservation = service.save(existReservation);
-            // call send email function to send email
-            emailService.sendEmail(user);
-            Reservation reservation= service.get(id);
-            return new ResponseEntity<Reservation>(reservation, HttpStatus.OK);
-        }
-//        catch (MailException mailException) {
-//            System.out.println(mailException);
-//      }
-        catch (NoSuchElementException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
-    @GetMapping("/email/{id}/decline")
-    public ResponseEntity<Reservation>declineReservation(@PathVariable Long id) {
-        try {
-            Reservation existReservation = service.get(id);
-            // set status to approved
-            existReservation.setStatus("Declined");
-            // get receiver's email address
-            user.setEmailAddress(existReservation.getEmail());
-            // save database status column
-            Reservation updatedReservation = service.save(existReservation);
-            // call send email function to send email
-            emailService.sendEmail(user);
-            Reservation reservation= service.get(id);
-            return new ResponseEntity<Reservation>(reservation, HttpStatus.OK);
-        }
-//        catch (MailException mailException) {
-//            System.out.println(mailException);
-//      }
-        catch (NoSuchElementException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
-	
-	// Use this if our email has attachment
-	/**
-	 * 
-	 * @return
-	 * @throws MessagingException
-	 */
-//	@RequestMapping("send-mail-attachment")
-//	public String Approve(@PathVariable Long id,@RequestBody Reservation reservation) throws MessagingException {
-//        Reservation existReservation = service.get(id);
-//
-//        existReservation.setStatus("Approved");
-//
-//		/*
-//		 * Creating a User with the help of EmailToUser class that we have declared and setting
-//		 * Email address of the sender.
-//		 */
-//		user.setEmailAddress(reservation.getEmail()); //Receiver's email address
-//
-//		/*
-//		 * Here we will call sendEmailWithAttachment() to send the email
-//		 * that contains a attachment.
-//		 */
-//		try {
-//			emailService.sendEmailWithAttachment(user);
-//		} catch (MailException mailException) {
-//			System.out.println(mailException);
-//		}
-//		return "Congratulations! Your email has been sent to the user.";
-//	}
-	////////////////////////
-	// End of email stuff //
-	////////////////////////
 }

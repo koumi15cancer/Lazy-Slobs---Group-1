@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.PushBuilder;
+
 // Reservation controller
 @CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
 @RestController
@@ -29,6 +31,12 @@ public class Reservationcontroller {
     public List<Reservation> listReservation() {
         return service.listAll();
     }
+
+    // Get Reservation by email
+    @GetMapping("/reservations/user")
+   // @PreAuthorize("hasRole('USER')")
+    public  List<Reservation> ListByEmail(String email){return service.ListByEmail(email);}
+
 
     // get reservation by id rest api
     @GetMapping("/reservations/{id}")

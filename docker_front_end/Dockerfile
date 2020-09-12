@@ -1,0 +1,16 @@
+# Dockerfile for lazyslobs spring boot web application's frontend
+FROM ubuntu:latest
+
+# open port 8080 for webserver
+EXPOSE 8080
+
+# for jre installation
+RUN mkdir -p /usr/share/man/man1
+
+# install necessary packages
+RUN apt-get update
+RUN apt-get install -y nano
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+RUN cd Lazy-Slobs---Group-1/demo_react/
+RUN npm start

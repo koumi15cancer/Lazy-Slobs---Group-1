@@ -1,8 +1,6 @@
-FROM openjdk:14
-ADD target/LazySlob-server.war LazySlob-server.war
-EXPOSE 8081
-ENTRYPOINT {"java" ,"war","LazySlob-server.war"}
-
-
-
-FROM node:12.18.3
+FROM openjdk:8-jdk-alpine
+RUN addgroup -S spring && adduser -S spring -G spring
+USER spring:spring
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]

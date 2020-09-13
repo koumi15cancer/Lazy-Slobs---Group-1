@@ -25,6 +25,10 @@ class ReservationService{
     deleteReservation(reservationId){ // Delete reservation by ID
         return axios.delete(Reservation_API_Basic_Url + '/' + reservationId,{ headers: authHeader() });
     }
+
+    findReservationByEmail(email){// Find Reservation based on email registered
+        return axios.get(Reservation_API_Basic_Url + '/user', { headers: authHeader() , params: { email :email } });
+    }
 }
 
 export  default new ReservationService()

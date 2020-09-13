@@ -38,13 +38,13 @@ public class BookingTime {
         this.id = id;
     }
 
-    public LocalDate getBookedDate() { return BookedDate; }
+ //   public LocalDate getBookedDate() { return BookedDate; }
 
     public void setBookedDate(LocalDate BookedDate) {
         this.BookedDate = BookedDate;
     }
 
-    public LocalTime getBookedTime() { return BookedTime; }
+//    public LocalTime getBookedTime() { return BookedTime; }
 
     public void setBookedTime(LocalTime BookedTime) {
         this.BookedTime = BookedTime;

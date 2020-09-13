@@ -33,4 +33,7 @@ public class ReservationService {
     public void delete(long id) {
         repo.deleteById(id);
     }
+
+    // find rseservation by register Email
+    public List<Reservation> ListByEmail(String email){ return  repo.findByEmail(email);}
 }

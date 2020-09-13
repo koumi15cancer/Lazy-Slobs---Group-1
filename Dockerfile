@@ -17,3 +17,7 @@ RUN apt-get update
 RUN apt-get install -y nano
 RUN apt-get install -y nodejs
 RUN apt-get install -y maven
+RUN apt-get install -y git
+RUN git clone https://github.com/koumi15cancer/Lazy-Slobs---Group-1
+RUN cd Lazy-Slobs---Group-1
+RUN mvn clean && mvn install

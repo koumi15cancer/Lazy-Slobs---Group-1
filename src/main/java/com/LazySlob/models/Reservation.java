@@ -1,13 +1,19 @@
 package com.LazySlob.models;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.util.Date;
 
 // Reservation class
 @Entity
 @Table(name = "Reservation")
 public class Reservation  {
+
+
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     public long id;
@@ -34,9 +40,9 @@ public class Reservation  {
     @JoinColumn(name="reservations_user")
     private User user;
 
-    @OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY, optional = false)
-    private BookingTime time;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm",timezone = "VST")
+    @Column(name = "BookingTime")
+    private Date BookingTime;
 
 
     public User getUser() {
@@ -55,21 +61,18 @@ public class Reservation  {
         this.id = id;
     }
 
-    public BookingTime getTime() { return time; }
 
-    public void setTime(BookingTime time) {
-        this.time = time;
-    }
 
     public Reservation(){};
     // Reservation constructor
-    public Reservation(String customerName,String email,Integer quantity,String description,String status) {
+    public Reservation(String customerName,String email,Integer quantity,String description,String status,Date BookingTime) {
         super();
         this.customerName = customerName;
         this.email = email;
         this.quantity = quantity;
         this.description = description;
         this.status = status;
+        this.BookingTime = BookingTime;
     }
 
     public String getCustomerName() {
@@ -109,4 +112,9 @@ public class Reservation  {
         this.status = status;
     }
 
+  //  public Date getBookingTime() { return BookingTime; }
+
+    public void setBookingTime(Date bookingTime) {
+        BookingTime = bookingTime ;
+    }
 }

@@ -54,6 +54,7 @@ export  class ListReservationsComponents extends Component {
                                     <th class="open-sans-condensed-light"> Email</th>
                                     <th class="open-sans-condensed-light"> Quantity</th>
                                     <th class="open-sans-condensed-light"> Description</th>
+                                    <th class="open-sans-condensed-light"> Status</th>
                                     <th class="open-sans-condensed-light"> Actions</th>
                                 </tr> 
                        </thead>
@@ -66,6 +67,7 @@ export  class ListReservationsComponents extends Component {
                                              <td> { reservation.email} </td> 
                                              <td> { reservation.quantity} </td> 
                                              <td> { reservation.description} </td> 
+                                             <td> { reservation.status} </td> 
                                              <td>
                                              <button style={{marginLeft: "10px"}} onClick={ () => this.viewReservation(reservation.id)} className="btn btn-info">View </button>
                                              <button style={{marginLeft: "10px"}}onClick ={ () => this.editReservation(reservation.id) } className = "btn btn-info" >Update</button>

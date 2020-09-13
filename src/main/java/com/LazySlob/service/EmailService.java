@@ -38,7 +38,7 @@ public class EmailService {
      * @throws MailException
      */
 
-    public void sendEmail(UserToEmail user) throws MailException {
+    public void sendEmailApproved(UserToEmail user) throws MailException {
 
         /*
          * This JavaMailSender Interface is used to send Mail in Spring Boot. This
@@ -49,8 +49,29 @@ public class EmailService {
 
         SimpleMailMessage mail = new SimpleMailMessage();
         mail.setTo(user.getEmailAddress());
-        mail.setSubject("Testing Mail API");
-        mail.setText("Hurray ! You have done that dude...");
+        mail.setSubject("Your reservation in Lazy Slobs restaurant");
+        mail.setText("Your reservation has been approved by admin");
+
+        /*
+         * This send() contains an Object of SimpleMailMessage as an Parameter
+         */
+        javaMailSender.send(mail);
+    }
+
+
+    public void sendEmailDeclined(UserToEmail user) throws MailException {
+
+        /*
+         * This JavaMailSender Interface is used to send Mail in Spring Boot. This
+         * JavaMailSender extends the MailSender Interface which contains send()
+         * function. SimpleMailMessage Object is required because send() function uses
+         * object of SimpleMailMessage as a Parameter
+         */
+
+        SimpleMailMessage mail = new SimpleMailMessage();
+        mail.setTo(user.getEmailAddress());
+        mail.setSubject("Your reservation in Lazy Slobs restaurant");
+        mail.setText("Your reservation has been declined by admin");
 
         /*
          * This send() contains an Object of SimpleMailMessage as an Parameter

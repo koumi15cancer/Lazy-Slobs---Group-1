@@ -47,7 +47,7 @@ public class EmailController {
             // save database status column
             Reservation updatedReservation = service.save(existReservation);
             // call send email function to send email
-            emailService.sendEmail(user);
+            emailService.sendEmailApproved(user);
             Reservation reservation= service.get(id);
             return new ResponseEntity<Reservation>(reservation, HttpStatus.OK);
         }
@@ -71,7 +71,7 @@ public class EmailController {
             // save database status column
             Reservation updatedReservation = service.save(existReservation);
             // call send email function to send email
-            emailService.sendEmail(user);
+            emailService.sendEmailDeclined(user);
             Reservation reservation= service.get(id);
             return new ResponseEntity<Reservation>(reservation, HttpStatus.OK);
         }

@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.LazySlob.models.FullSlotTime;
 import com.LazySlob.models.Reservation;
 import com.LazySlob.service.ReservationService;
 
@@ -25,9 +26,11 @@ public class Reservationcontroller {
     @Autowired
     private  ReservationService service;
 
+
+
     // Get all Reservations list
     @GetMapping("/reservations")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+  //  @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public List<Reservation> listReservation() {
         return service.listAll();
     }
@@ -37,6 +40,11 @@ public class Reservationcontroller {
    // @PreAuthorize("hasRole('USER')")
     public  List<Reservation> ListByEmail(String email){return service.ListByEmail(email);}
 
+    // Get Unavailable Time
+    @GetMapping("/reservations/unvailableBookedTime")
+    public List<FullSlotTime> getAvailableTime(){
+        return service.CheckBookedTime();
+    }
 
     // get reservation by id rest api
     @GetMapping("/reservations/{id}")

@@ -2,6 +2,7 @@ package com.LazySlob.service;
 
 import java.util.List;
 
+import com.LazySlob.models.FullSlotTime;
 import com.LazySlob.models.Reservation;
 import com.LazySlob.repository.ReservationRepository;
 
@@ -36,4 +37,9 @@ public class ReservationService {
 
     // find rseservation by register Email
     public List<Reservation> ListByEmail(String email){ return  repo.findByEmail(email);}
+
+    // Find  List of Time not available from date
+    public List<FullSlotTime> CheckBookedTime() {
+        return repo.CheckBookedTime();
+    }
 }

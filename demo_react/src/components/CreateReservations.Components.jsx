@@ -8,7 +8,6 @@ class CreateReservationsComponents extends Component {
         super(props)
 
         this.state = {
-
             id: this.props.match.params.id,
             customerName: '',
             email: '',
@@ -23,7 +22,6 @@ class CreateReservationsComponents extends Component {
         this.saveOrUpdateReservation = this.saveOrUpdateReservation.bind(this);
     }
 
-    
     componentDidMount(){
         if(this.state.id === '0'){ // if id = 0 , return nothing
             return
@@ -45,10 +43,9 @@ class CreateReservationsComponents extends Component {
         e.preventDefault();
         let reservation = {customerName: this.state.customerName, email: this.state.email, quantity: this.state.quantity,description: this.state.description};
         console.log('reservation => ' + JSON.stringify(reservation));
-
         if(this.state.id === '0'){ // Return create reservation - Post
             ReservationService.createReservation(reservation).then(res =>{
-                this.props.history.push('/reservations');
+                this.props.history.push('/reservations');  
             });
         }else{ // Return edit reservation - Put
             ReservationService.updateReservationById(reservation, this.state.id).then( res => {
@@ -57,7 +54,6 @@ class CreateReservationsComponents extends Component {
         }
 
     }
-
 
     // set value
     changeCustomerNameHandler= (event) => {
@@ -79,7 +75,6 @@ class CreateReservationsComponents extends Component {
     cancel(){
         this.props.history.push('/home');
     }
-
 
     getTitle(){ // Change title depend on id Url
         if(this.state.id === '0'){
@@ -131,7 +126,6 @@ class CreateReservationsComponents extends Component {
                                             <input placeholder="Description" name="description" 
                                                 value={this.state.description} onChange={this.changeDescriptionHandler}/>
                                         </div>
-
                                         <button id ="confirm-button2" onClick={this.saveOrUpdateReservation}>Save</button>
                                         <button id ="confirm-button2" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                                </form>

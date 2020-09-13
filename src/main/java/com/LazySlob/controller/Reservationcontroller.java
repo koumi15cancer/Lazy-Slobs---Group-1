@@ -25,14 +25,14 @@ public class Reservationcontroller {
 
     // Get all Reservations list
     @GetMapping("/reservations")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+  //  @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public List<Reservation> listReservation() {
         return service.listAll();
     }
 
     // get reservation by id rest api
     @GetMapping("/reservations/{id}")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+ //   @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity < Reservation > getReservation(@PathVariable Long id) {
         try {
             Reservation reservation= service.get(id);
@@ -46,9 +46,9 @@ public class Reservationcontroller {
     @PostMapping("/reservations")
     public void addReservation(@RequestBody  Reservation reservation) {service.save(reservation);
     }
-    // Put/ eidt reservation by ID
+    // Put/ edit reservation by ID
     @PutMapping("/reservations/{id}")
-    @PreAuthorize("hasRole('USER') ")
+  //  @PreAuthorize("hasRole('USER') ")
     public ResponseEntity<Reservation>updateReservation(@PathVariable Long id,@RequestBody Reservation reservation) {
         try {
             Reservation existReservation = service.get(id);
@@ -67,7 +67,7 @@ public class Reservationcontroller {
     }
     //  Delete reservation by ID
     @DeleteMapping("/reservations/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+ //   @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity < Map < String, Boolean >> deleteReservation(@PathVariable Long id)  {
        try{
         Reservation reservation = service.get(id);

@@ -6,7 +6,9 @@ import com.LazySlob.models.FullSlotTime;
 import com.LazySlob.models.Reservation;
 import com.LazySlob.service.BookingTimeService;
 import com.LazySlob.service.ReservationService;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,10 +1,16 @@
 package com.LazySlob.models;
 
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+
 import javax.persistence.*;
+
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Date;
+
 
 @Entity(name = "BookingTime")
 @Table(name = "Booking_Time")
@@ -14,20 +20,20 @@ public class BookingTime {
     public long id;
 
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Column(name = "BookedDate")
-    private LocalDate BookedDate;
+    private Date BookedDate;
 
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="HH:mm")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH-mm")
     @Column(name = "BookedTime")
-    private LocalTime BookedTime;
+    private Date BookedTime;
 
     @OneToOne(fetch = FetchType.LAZY)
     @MapsId
     private Reservation reservation;
 
-    public BookingTime(){};
+    public BookingTime(){}
 
 
     public long getId() {
@@ -38,15 +44,15 @@ public class BookingTime {
         this.id = id;
     }
 
-    public LocalDate getBookedDate() { return BookedDate; }
+    public Date getBookedDate() { return BookedDate; }
 
-    public void setBookedDate(LocalDate BookedDate) {
+    public void setBookedDate(Date BookedDate) {
         this.BookedDate = BookedDate;
     }
 
-    public LocalTime getBookedTime() { return BookedTime; }
+    public Date  getBookedTime() { return BookedTime; }
 
-    public void setBookedTime(LocalTime BookedTime) {
+    public void setBookedTime(Date BookedTime) {
         this.BookedTime = BookedTime;
     }
 

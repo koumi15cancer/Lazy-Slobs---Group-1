@@ -7,10 +7,12 @@ export  class ListReservationsComponents extends Component {
         super(props)
 
         this.state ={
-            reservations: []
+            reservations: [],
+            date:[]
         }
         this.addReservation = this.addReservation.bind(this);
         this.editReservation = this.editReservation.bind(this);
+        this.addDate= this.addDate.bind(this);
     }
     
     componentDidMount(){ 
@@ -37,7 +39,12 @@ export  class ListReservationsComponents extends Component {
         this.props.history.push(`/add-reservation/${id}`);
     }
 
+    addDate(id){
+        this.props.history.push(`/date/${id}`)
+    }
+
     render() {
+        const id = this.state.reservations.id
         return (
             <div>
                 <h2 class="yeseva-one-font" style={{fontSize: "76px"}}>Reservations List</h2>
@@ -54,6 +61,7 @@ export  class ListReservationsComponents extends Component {
                                     <th class="open-sans-condensed-light"> Email</th>
                                     <th class="open-sans-condensed-light"> Quantity</th>
                                     <th class="open-sans-condensed-light"> Description</th>
+                                    <th class="open-sans-condensed-light"> Date</th>
                                     <th class="open-sans-condensed-light"> Actions</th>
                                 </tr> 
                        </thead>
@@ -61,15 +69,17 @@ export  class ListReservationsComponents extends Component {
                                 {
                                     this.state.reservations.map(
                                         reservation => 
-                                        <tr key = {reservation.id}>
+                                        <tr key = {id} >
                                              <td> { reservation.customerName} </td> 
                                              <td> { reservation.email} </td> 
                                              <td> { reservation.quantity} </td> 
                                              <td> { reservation.description} </td> 
+                                             <td> { } </td> 
                                              <td>
                                              <button style={{marginLeft: "10px"}} onClick={ () => this.viewReservation(reservation.id)} className="btn btn-info">View </button>
                                              <button style={{marginLeft: "10px"}}onClick ={ () => this.editReservation(reservation.id) } className = "btn btn-info" >Update</button>
                                              <button style={{marginLeft: "10px"}} onClick={ () => this.deleteReservation(reservation.id)} className="btn btn-danger">Delete </button>
+                                             <button style={{marginLeft: "10px"}}onClick ={ () => this.addDate(reservation.id) } className = "btn btn-info" >Date</button>
                                              </td>
                                         </tr>
                                     )

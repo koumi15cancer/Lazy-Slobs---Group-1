@@ -5,19 +5,20 @@ import "./App.css";
 
 import AuthService from "./services/auth.service";
 
-import Login from "./components/login.Component";
-import Register from "./components/register.Component";
-import Profile from "./components/profile.Component";
-import BoardUser from "./components/board-user.Component";
-import BoardModerator from "./components/board-moderator.Component";
-import BoardAdmin from "./components/board-admin.Component";
-import About from "./components/aboutus.Component"
-import Contact from "./components/contactus.Component"
+import Login from "./components/login.component";
+import Register from "./components/register.component";
+import Profile from "./components/profile.component";
+import BoardUser from "./components/board-user.component";
+import BoardModerator from "./components/board-moderator.component";
+import BoardAdmin from "./components/board-admin.component";
+import About from "./components/aboutus.component"
+import Contact from "./components/contactus.component"
 import Homepage from './components/Homepage.Component';
 import ListReservationsComponents from './components/ListReservations.Components';
 import CreateReservationsComponents from './components/CreateReservations.Components';
 import ViewReservationsComponents from './components/ViewReservations.Components';
 import FooterComponent from './components/Footer.Componet';
+import ReserveDate from './components/CreateReservationDate';
 
 
 class App extends Component {
@@ -165,6 +166,7 @@ class App extends Component {
               <Route path = "/reservations" component = {ListReservationsComponents}></Route>
               <Route path = "/add-reservation/:id" component = {CreateReservationsComponents}></Route>
               <Route path = "/view-reservation/:id" component = {ViewReservationsComponents}></Route>
+              <Route path = "/date/:id" component = {ReserveDate}></Route>
             </Switch>
           </div>
         </div>

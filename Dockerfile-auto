@@ -18,6 +18,7 @@ RUN apt-get install -y git
 RUN git clone https://github.com/koumi15cancer/Lazy-Slobs---Group-1
 RUN cd Lazy-Slobs---Group-1 && mvn clean && mvn install
 
-ARG JAR_FILE=Lazy-Slobs---Group-1/target/LazySlob-0.0.1-SNAPSHOT.war
+ARG JAR_FILE=target/LazySlob-0.0.1-SNAPSHOT.war
+VOLUME /tmp
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]

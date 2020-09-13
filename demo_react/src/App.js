@@ -15,6 +15,7 @@ import About from "./components/aboutus.Component"
 import Contact from "./components/contactus.Component"
 import Homepage from './components/Homepage.Component';
 import ListReservationsComponents from './components/ListReservations.Components';
+import ListReservationsUserComponents from './components/ListReservationsUser.Components';
 import CreateReservationsComponents from './components/CreateReservations.Components';
 import ViewReservationsComponents from './components/ViewReservations.Components';
 import FooterComponent from './components/Footer.Componet';
@@ -97,15 +98,23 @@ class App extends Component {
                   </Link>
                 </li>
               )} 
-{/*Current  items on bar when logged in */}
+{/*Current  items on bar when logged in }
               {currentUser && (
                 <li class="navbar-text">
                   <Link to={"/reservations"} class="navbar-text">
                    Reservations List
                   </Link>
                 </li>
-              )}
+              )*/}
 
+{/*Current  items on bar when logged in */}
+{currentUser && (
+                <li class="navbar-text">
+                  <Link to={"/reservations/user"} class="navbar-text">
+                   Reservations User List
+                  </Link>
+                </li>
+              )}              
 
 {/*Current  items on bar when logged in */}
               {currentUser && (
@@ -158,7 +167,7 @@ class App extends Component {
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/aboutus" component={About} />
               <Route exact path="/contactus" component={Contact} />
-
+              <Route path = "/reservations/user" component = {ListReservationsUserComponents}></Route>
               <Route path="/user" component={BoardUser} />
               <Route path="/mod" component={BoardModerator} />
               <Route path="/admin" component={BoardAdmin} />

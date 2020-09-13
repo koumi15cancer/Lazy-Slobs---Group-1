@@ -1,8 +1,8 @@
 # Dockerfile for lazyslobs spring boot web application's frontend
 FROM ubuntu:latest
 
-# open port 80 for webserver
-EXPOSE 80
+# open port 80, 8080, 8081 for webserver
+EXPOSE 80 8080 8081
 
 # for jre installation
 RUN mkdir -p /usr/share/man/man1
@@ -14,5 +14,19 @@ RUN apt-get install -y nano
 RUN apt-get install -y nodejs
 RUN apt-get install -y npm
 RUN apt-get install -y git
+
+# clone github repo
 RUN git clone https://github.com/koumi15cancer/Lazy-Slobs---Group-1
+
+# rename the files to match ones in App.js (janky fix)
+RUN cd Lazy-Slobs---Group-1/demo_react/src/components/ && mv aboutus.component.jsx aboutus.Component.jsx
+RUN cd Lazy-Slobs---Group-1/demo_react/src/components/ && mv board-admin.component.jsx board-admin.Component.jsx
+RUN cd Lazy-Slobs---Group-1/demo_react/src/components/ && mv board-moderator.component.jsx board-moderator.Component.jsx
+RUN cd Lazy-Slobs---Group-1/demo_react/src/components/ && mv board-user.component.jsx board-user.Component.jsx
+RUN cd Lazy-Slobs---Group-1/demo_react/src/components/ && mv contactus.component.jsx contactus.Component.jsx
+RUN cd Lazy-Slobs---Group-1/demo_react/src/components/ && mv login.component.jsx login.Component.jsx
+RUN cd Lazy-Slobs---Group-1/demo_react/src/components/ && mv profile.component.jsx profile.Component.jsx
+RUN cd Lazy-Slobs---Group-1/demo_react/src/components/ && mv register.component.jsx register.Component.jsx
+
+# run front end web server
 RUN cd Lazy-Slobs---Group-1/demo_react/ && npm install && npm start

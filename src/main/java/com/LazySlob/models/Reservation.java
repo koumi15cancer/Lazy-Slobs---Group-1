@@ -26,6 +26,10 @@ public class Reservation  {
     @Column(name="description")
     public String description;
 
+    @Column(name="status")
+    public String status = "Pending";
+
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="reservations_user")
     private User user;
@@ -59,12 +63,13 @@ public class Reservation  {
 
     public Reservation(){};
     // Reservation constructor
-    public Reservation(String customerName,String email,Integer quantity,String description) {
+    public Reservation(String customerName,String email,Integer quantity,String description,String status) {
         super();
         this.customerName = customerName;
         this.email = email;
         this.quantity = quantity;
         this.description = description;
+        this.status = status;
     }
 
     public String getCustomerName() {
@@ -95,6 +100,13 @@ public class Reservation  {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 }

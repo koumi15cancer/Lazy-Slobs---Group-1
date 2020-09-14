@@ -43,13 +43,16 @@ public class Reservation  {
     @JoinColumn(name="reservations_user")
     private User user;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd",timezone = "Asia/Ho_Chi_Minh")
-    @Column(name = "BookingDate")
-    private Date BookingDate;
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
+    @Column(name = "BookedDate")
+    private LocalDate BookedDate;
 
- //   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm",timezone = "VST")
-  //  @Column(name = "BookingTime")
-//    private LocalTime BookingTime;
+
+
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="HH:mm")
+    @Column(name = "BookedTime")
+    private LocalTime BookedTime;
 
 
     public User getUser() {
@@ -72,15 +75,15 @@ public class Reservation  {
 
     public Reservation(){};
     // Reservation constructor
-    public Reservation(String customerName,String email,Integer quantity,String description,String status,Date BookingDate) {
+    public Reservation(String customerName,String email,Integer quantity,String description,String status,LocalDate BookedDate,LocalTime BookedTime) {
         super();
         this.customerName = customerName;
         this.email = email;
         this.quantity = quantity;
         this.description = description;
         this.status = status;
-      //  this.BookingTime = BookingTime;
-        this.BookingDate = BookingDate;
+        this.BookedTime = BookedTime;
+        this.BookedDate = BookedDate;
     }
 
     public String getCustomerName() {
@@ -120,9 +123,15 @@ public class Reservation  {
         this.status = status;
     }
 
-  //  public Date getBookingTime() { return BookingTime; }
 
-    public void setBookingDate(Date bookingDate) { BookingDate= bookingDate ; }
 
-  //  public void setBookingTime(LocalTime bookingTime) { BookingTime = bookingTime ; }
+    public void setBookedDate(LocalDate bookedDate) {
+        BookedDate = bookedDate;
+    }
+
+
+
+    public void setBookedTime(LocalTime bookedTime) {
+        BookedTime = bookedTime;
+    }
 }

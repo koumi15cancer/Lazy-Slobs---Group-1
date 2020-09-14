@@ -39,7 +39,7 @@ public class ReservationService {
     public List<Reservation> ListByEmail(String email){ return  repo.findByEmail(email);}
 
     // Find  List of Time not available from date
-    public List<FullSlotTime> CheckBookedTime() {
-        return repo.CheckBookedTime();
+    public List<FullSlotTime> CheckBookedTime(String FullDate) {
+        return repo.CheckBookedTime(FullDate);
     }
 }

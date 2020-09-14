@@ -42,8 +42,8 @@ public class Reservationcontroller {
 
     // Get Unavailable Time
     @GetMapping("/reservations/unvailableBookedTime")
-    public List<FullSlotTime> getAvailableTime(){
-        return service.CheckBookedTime();
+    public List<FullSlotTime> getAvailableTime(@RequestParam String FullDate){
+        return service.CheckBookedTime(FullDate);
     }
 
     // get reservation by id rest api

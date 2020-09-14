@@ -6,7 +6,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
+
 
 // Reservation class
 @Entity
@@ -40,9 +43,13 @@ public class Reservation  {
     @JoinColumn(name="reservations_user")
     private User user;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm",timezone = "VST")
-    @Column(name = "BookingTime")
-    private Date BookingTime;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd",timezone = "Asia/Ho_Chi_Minh")
+    @Column(name = "BookingDate")
+    private Date BookingDate;
+
+ //   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm",timezone = "VST")
+  //  @Column(name = "BookingTime")
+//    private LocalTime BookingTime;
 
 
     public User getUser() {
@@ -65,14 +72,15 @@ public class Reservation  {
 
     public Reservation(){};
     // Reservation constructor
-    public Reservation(String customerName,String email,Integer quantity,String description,String status,Date BookingTime) {
+    public Reservation(String customerName,String email,Integer quantity,String description,String status,Date BookingDate) {
         super();
         this.customerName = customerName;
         this.email = email;
         this.quantity = quantity;
         this.description = description;
         this.status = status;
-        this.BookingTime = BookingTime;
+      //  this.BookingTime = BookingTime;
+        this.BookingDate = BookingDate;
     }
 
     public String getCustomerName() {
@@ -114,7 +122,7 @@ public class Reservation  {
 
   //  public Date getBookingTime() { return BookingTime; }
 
-    public void setBookingTime(Date bookingTime) {
-        BookingTime = bookingTime ;
-    }
+    public void setBookingDate(Date bookingDate) { BookingDate= bookingDate ; }
+
+  //  public void setBookingTime(LocalTime bookingTime) { BookingTime = bookingTime ; }
 }

@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 // Repository for basic script for database
@@ -14,7 +15,7 @@ import java.util.List;
 public interface ReservationRepository extends JpaRepository<Reservation,Long> {
   List<Reservation> findByEmail(String email);
 
-  @Query(value = "SELECT r.BookingTime  AS time FROM reservation  r GROUP BY BookingTime HAVING COUNT(r.BookingTime)>=3",nativeQuery = true)
-  List<FullSlotTime> CheckBookedTime();
+  @Query(value = "SELECT r.BookingTime  AS time FROM reservation  r WHERE  r.BookingDate =:BookingDate GROUP BY BookingTime HAVING COUNT(r.BookingTime)>=3",nativeQuery = true)
+  List<FullSlotTime> CheckBookedTime(@Param("BookingDate") String FullDate);
 }
 

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
@@ -45,14 +46,12 @@ public class Reservation  {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
     @Column(name = "BookedDate")
-    private LocalDate BookedDate;
+    private Date BookedDate;
 
 
-
-
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="HH:mm")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="HH:mm",timezone= "Asia/Bangkok")
     @Column(name = "BookedTime")
-    private LocalTime BookedTime;
+    private Date BookedTime;
 
 
     public User getUser() {
@@ -75,7 +74,7 @@ public class Reservation  {
 
     public Reservation(){};
     // Reservation constructor
-    public Reservation(String customerName,String email,Integer quantity,String description,String status,LocalDate BookedDate,LocalTime BookedTime) {
+    public Reservation(String customerName,String email,Integer quantity,String description,String status,Date BookedDate,Date BookedTime) {
         super();
         this.customerName = customerName;
         this.email = email;
@@ -125,13 +124,13 @@ public class Reservation  {
 
 
 
-    public void setBookedDate(LocalDate bookedDate) {
+    public void setBookedDate(Date bookedDate) {
         BookedDate = bookedDate;
     }
 
 
 
-    public void setBookedTime(LocalTime bookedTime) {
+    public void setBookedTime(Date bookedTime) {
         BookedTime = bookedTime;
     }
 }

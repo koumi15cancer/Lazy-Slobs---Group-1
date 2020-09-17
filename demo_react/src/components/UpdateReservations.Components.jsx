@@ -45,7 +45,7 @@ class CreateReservationsComponents extends Component {
 
      // Return edit reservation - Put
             ReservationService.updateReservationById(reservation, this.state.id).then( res => {
-                this.props.history.push('/reservations');
+                this.props.history.push('/reservations/user');
             });
 
 
@@ -74,13 +74,7 @@ class CreateReservationsComponents extends Component {
     }
 
 
-    getTitle(){ // Change title depend on id Url
-        if(this.state.id === '0'){
-            return <h3 className="text-center">Add Employee</h3>
-        }else{
-            return <h3 className="text-center">Update Employee</h3>
-        }
-    }
+
     render() {
         return (
             <span id="boxes-container">

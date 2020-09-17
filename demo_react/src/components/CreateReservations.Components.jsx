@@ -31,25 +31,7 @@ class CreateReservationsComponents extends Component {
     }
 
     
-    componentDidMount(){
-        if(this.state.id === '0'){ // if id = 0 , return nothing
-            //get list of full time of a date
-            return
-        } else { // if id > 0 , return the data from existing reservation
-            ReservationService.getReservationById(this.state.id).then( (res) =>{
-                let reservation = res.data;
-                this.setState({
-                    customerName: reservation.customerName,
-                    email: reservation.email,
-                    quantity: reservation.quantity,
-                    description: reservation.description,
-                    BookedDate: reservation.BookedDate,
-                    BookedTime: reservation.BookedTime,
-                });
-            });
-        }
-    }
-
+    
     componentDidUpdate(prevProps, prevState){
         let a = this.state.BookedDate.toLocaleDateString();
         if(prevState.BookedDate !== this.state.BookedDate){
@@ -64,16 +46,9 @@ class CreateReservationsComponents extends Component {
         let reservation = {customerName: this.state.customerName, email: this.state.email, quantity: this.state.quantity,description: this.state.description ,BookedDate: this.state.BookedDate.toLocaleDateString(), BookedTime: this.state.BookedTime.toLocaleTimeString()};
         console.log('reservation => ' + JSON.stringify(reservation));
 
-        if(this.state.id === '0'){ // Return create reservation - Post
             ReservationService.createReservation(reservation).then(res =>{
                 this.props.history.push('/reservations');
             });
-        }else{ // Return edit reservation - Put
-            ReservationService.updateReservationById(reservation, this.state.id).then( res => {
-                this.props.history.push('/reservations');
-            });
-        }
-
     }
 
 
@@ -233,7 +208,7 @@ class CreateReservationsComponents extends Component {
                                         <div className="form-group">
                                         <label className="yeseva-one-font" style={{fontSize: "24px"}}> Time: </label>
                                         <DatePicker
-                                            selected={this.state.BookedDate}
+                                            selected={this.state.BookedTime}
                                             onChange={this.changeBookedTimeHandler}
                                             minTime={setHours(setMinutes(new Date(), 0), 7)}
                                             maxTime={setHours(setMinutes(new Date(), 0), 22)}

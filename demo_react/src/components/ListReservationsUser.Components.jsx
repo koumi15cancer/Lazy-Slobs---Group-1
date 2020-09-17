@@ -44,7 +44,7 @@ export  class ListReservationsComponents extends Component {
     }   
 
     editReservation(id){
-        this.props.history.push(`/add-reservation/${id}`);
+        this.props.history.push(`/update-reservation/${id}`);
     }
 
     render() {

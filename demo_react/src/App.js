@@ -15,6 +15,7 @@ import Homepage from './components/Homepage.Component';
 import ListReservationsComponents from './components/ListReservations.Components';
 import ListReservationsUserComponents from './components/ListReservationsUser.Components';
 import CreateReservationsComponents from './components/CreateReservations.Components';
+import UpdateReservationsComponents from './components/UpdateReservations.Components';
 import ViewReservationsComponents from './components/ViewReservations.Components';
 import FooterComponent from './components/Footer.Component';
 
@@ -158,7 +159,8 @@ class App extends Component {
               <Route path="/mod" component={BoardModerator} />
               <Route path="/admin" component={BoardAdmin} />
               <Route path = "/reservations" component = {ListReservationsComponents}></Route>
-              <Route path = "/add-reservation/:id" component = {CreateReservationsComponents}></Route>
+              <Route path = "/add-reservation" component = {CreateReservationsComponents}></Route>
+              <Route path = "/update-reservation/:id" component = {UpdateReservationsComponents}></Route>
               <Route path = "/view-reservation/:id" component = {ViewReservationsComponents}></Route>
             </Switch>
           </div>

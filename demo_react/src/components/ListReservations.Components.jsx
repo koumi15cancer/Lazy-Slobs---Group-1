@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReservationService from '../services/ReservationService'
+import ApproveService from '../services/approve.service'
+import ApproveButton from'./ApproveButton.Component'
 
 // List Reservation component
 export  class ListReservationsComponents extends Component {
@@ -10,7 +12,6 @@ export  class ListReservationsComponents extends Component {
             reservations: []
         }
         this.addReservation = this.addReservation.bind(this);
-        this.editReservation = this.editReservation.bind(this);
     }
     
     componentDidMount(){ 
@@ -24,7 +25,15 @@ export  class ListReservationsComponents extends Component {
             this.setState({reservations: this.state.reservations.filter(reservation => reservation.id !== id)});
         });
     }
-    
+
+    approveReservation(id){
+        ApproveService.Approve(id).then( res => {this.props.history.push('/reservations')});
+    }
+
+    declineReservation(id){
+        ApproveService.Decline(id).then( res => {this.props.history.push('/reservations')});
+    }
+
     viewReservation(id){ 
         this.props.history.push(`/view-reservation/${id}`);
     }
@@ -33,9 +42,7 @@ export  class ListReservationsComponents extends Component {
         this.props.history.push(`/add-reservation/0`);
     }   
 
-    editReservation(id){
-        this.props.history.push(`/add-reservation/${id}`);
-    }
+
 
     render() {
         return (
@@ -56,6 +63,7 @@ export  class ListReservationsComponents extends Component {
                                     <th class="open-sans-condensed-light"> Description</th>
                                     <th class="open-sans-condensed-light"> Status</th>
                                     <th class="open-sans-condensed-light"> Actions</th>
+                                    <th class="open-sans-condensed-light"> Admin</th>
                                 </tr> 
                        </thead>
                        <tbody>{/*Get all Reservations */}
@@ -70,9 +78,12 @@ export  class ListReservationsComponents extends Component {
                                              <td> { reservation.status} </td> 
                                              <td>
                                              <button style={{marginLeft: "10px"}} onClick={ () => this.viewReservation(reservation.id)} className="btn btn-info">View </button>
-                                             <button style={{marginLeft: "10px"}}onClick ={ () => this.editReservation(reservation.id) } className = "btn btn-info" >Update</button>
                                              <button style={{marginLeft: "10px"}} onClick={ () => this.deleteReservation(reservation.id)} className="btn btn-danger">Delete </button>
                                              </td>
+                                            <td>
+                                                <button style={{marginLeft: "10px"}} onClick={ () => this.approveReservation(reservation.id)} className="btn btn-info">Approve</button>
+                                                <button style={{marginLeft: "10px"}} onClick={ () => this.declineReservation(reservation.id)} className="btn btn-danger">Deny</button>
+                                            </td>
                                         </tr>
                                     )
                                 }

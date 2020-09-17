@@ -44,14 +44,14 @@ public class Reservation  {
     @JoinColumn(name="reservations_user")
     private User user;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
+    //@JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd", timezone = "Asia/Bangkok")
     @Column(name = "BookedDate")
-    private Date BookedDate;
+    public String BookedDate;
 
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="HH:mm",timezone= "Asia/Bangkok")
+    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm", timezone = "Asia/Bangkok")
     @Column(name = "BookedTime")
-    private Date BookedTime;
+    public String BookedTime;
 
 
     public User getUser() {
@@ -74,7 +74,7 @@ public class Reservation  {
 
     public Reservation(){};
     // Reservation constructor
-    public Reservation(String customerName,String email,Integer quantity,String description,String status,Date BookedDate,Date BookedTime) {
+    public Reservation(String customerName,String email,Integer quantity,String description,String status,String BookedDate,String BookedTime) {
         super();
         this.customerName = customerName;
         this.email = email;
@@ -122,15 +122,19 @@ public class Reservation  {
         this.status = status;
     }
 
+    public String getBookedDate() {
+        return BookedDate;
+    }
 
-
-    public void setBookedDate(Date bookedDate) {
+    public void setBookedDate(String bookedDate) {
         BookedDate = bookedDate;
     }
 
+    public String getBookedTime() {
+        return BookedTime;
+    }
 
-
-    public void setBookedTime(Date bookedTime) {
+    public void setBookedTime(String bookedTime) {
         BookedTime = bookedTime;
     }
 }

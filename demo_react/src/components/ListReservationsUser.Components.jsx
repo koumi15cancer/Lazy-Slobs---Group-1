@@ -33,11 +33,7 @@ export  class ListReservationsComponents extends Component {
         }); 
     }
 
-    deleteReservation(id){ 
-        ReservationService.deleteReservation(id).then( res => {
-            this.setState({reservations: this.state.reservations.filter(reservation => reservation.id !== id)});
-        });
-    }
+
     
     viewReservation(id){ 
         this.props.history.push(`/view-reservation/${id}`);
@@ -91,7 +87,6 @@ export  class ListReservationsComponents extends Component {
                                              <td>
                                              <button style={{marginLeft: "10px"}} onClick={ () => this.viewReservation(reservation.id)} className="btn btn-info">View </button>
                                              <button style={{marginLeft: "10px"}}onClick ={ () => this.editReservation(reservation.id) } className = "btn btn-info" >Update</button>
-                                             <button style={{marginLeft: "10px"}} onClick={ () => this.deleteReservation(reservation.id)} className="btn btn-danger">Delete </button>
                                              </td>
                                         </tr>
                                     )

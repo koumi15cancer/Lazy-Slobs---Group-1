@@ -11,14 +11,12 @@ import Profile from "./components/profile.Component";
 import BoardUser from "./components/board-user.Component";
 import BoardModerator from "./components/board-moderator.Component";
 import BoardAdmin from "./components/board-admin.Component";
-import About from "./components/aboutus.Component"
-import Contact from "./components/contactus.Component"
 import Homepage from './components/Homepage.Component';
 import ListReservationsComponents from './components/ListReservations.Components';
 import ListReservationsUserComponents from './components/ListReservationsUser.Components';
 import CreateReservationsComponents from './components/CreateReservations.Components';
 import ViewReservationsComponents from './components/ViewReservations.Components';
-import FooterComponent from './components/Footer.Componet';
+import FooterComponent from './components/Footer.Component';
 
 
 class App extends Component {
@@ -63,6 +61,8 @@ class App extends Component {
             <Link to={"/"} class="navbar-symbol">
               LazySlob
             </Link>
+
+
             <div class="navbar-nav mr-auto">
               <li class="navbar-text">
                 <Link to={"/home"} class="navbar-text">
@@ -70,18 +70,6 @@ class App extends Component {
                 </Link>
               </li>
 
-              <li class="navbar-text">
-              <a href="aboutus" class="navbar-text">About Us</a>
-              </li>
-
-              <li class="navbar-text">
-              <a href="menu.html" class="navbar-text">Menu</a>
-              </li>
-
-              <li class="navbar-text">
-              <a href="contactus" class="navbar-text">Contact Us</a>
-              </li>
-        
 {/*Moderator items on bar when logged in */}
               {showModeratorBoard && (
                 <li class="navbar-text">
@@ -98,14 +86,14 @@ class App extends Component {
                   </Link>
                 </li>
               )} 
-{/*Current  items on bar when logged in }
-              {currentUser && (
+{/*Current  items on bar when logged in */}
+              {showAdminBoard && (
                 <li class="navbar-text">
                   <Link to={"/reservations"} class="navbar-text">
                    Reservations List
                   </Link>
                 </li>
-              )*/}
+              )}
 
 {/*Current  items on bar when logged in */}
 {currentUser && (
@@ -165,8 +153,6 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/profile" component={Profile} />
-              <Route exact path="/aboutus" component={About} />
-              <Route exact path="/contactus" component={Contact} />
               <Route path = "/reservations/user" component = {ListReservationsUserComponents}></Route>
               <Route path="/user" component={BoardUser} />
               <Route path="/mod" component={BoardModerator} />

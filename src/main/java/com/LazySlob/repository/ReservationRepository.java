@@ -14,7 +14,6 @@ import java.util.List;
 public interface ReservationRepository extends JpaRepository<Reservation,Long> {
   List<Reservation> findByEmail(String email);
 
-  @Query(value = "SELECT r.BookingTime  AS time FROM reservation  r GROUP BY BookingTime HAVING COUNT(r.BookingTime)>=3",nativeQuery = true)
-  List<FullSlotTime> CheckBookedTime();
+  @Query(value = "SELECT r.BookedTime  AS time FROM reservation  r WHERE  r.BookedDate =:BookingDate GROUP BY BookedTime HAVING COUNT(r.BookedTime)>=3",nativeQuery = true)
+  List<FullSlotTime> CheckBookedTime(@Param("BookingDate") String FullDate);
 }
-

@@ -261,6 +261,7 @@ label {
 }
 
 
+
 /* navigation bar item spacing */
 
 .navbar>ul>li {
@@ -395,6 +396,11 @@ to the left (value retrieved through trial and error)  */
     font-family: 'Yeseva One';
 }
 
+.yeseva-one-font-info{
+    font-family: 'Yeseva One';
+    align-self: center;
+   align-content: center;
+}
 
 /* open sans condensed light font family */
 
@@ -408,6 +414,55 @@ input {
 }
 
 
-.form-group {
-    width: 90%;
-  }
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+    display : block;
+    margin: auto;
+    width: 70%;
+
+}
+
+
+.profile-reservation-card {
+
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+/* reservation info box */
+.reservation-info-box {
+    max-width: 350px !important;
+    height: 500px;
+    margin: auto;
+    padding: 40px 40px;
+    align-self: center;
+    color: black;
+    background-color: rgb(187, 185, 181);
+    text-align: center;
+}
+
+
+.profile{
+    font-family: 'Yeseva One';
+    align-self: center;
+   align-content: center;
+   font-size: xx-large;
+   display: inline;
+}
+
+.profile-info{
+    display: inline;
+    margin: 50px;
+    font-family: 'Yeseva One';
+    align-self: center;
+   align-content: center;
+    font-Size: x-large;
+}
+

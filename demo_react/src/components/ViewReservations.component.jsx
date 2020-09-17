@@ -21,24 +21,24 @@ class ViewReservationsComponents extends Component {
         return (
             <div>
                 <br></br>
-                <div className = "card col-md-6 offset-md-3">
-                    <h3 className = "text-center"> View Reservation Details</h3>
+                <div class="reservation-info-box">
+                    <h3 className = "yeseva-one-font-info" style={{fontSize: "40px"}}> View Reservation Details</h3>
                     <div className = "card-body">
-                        <div className = "row">
-                            <label> Customer Name: </label>
-                            <div> { this.state.reservation.customerName }</div>
+                    <div className = "card-title">
+                        <label class="yeseva-one-font-info" style={{fontSize: "20px"}}> customer Name: </label>
+                            <div style={{fontSize: "20px"}}> { this.state.reservation.customerName }</div>
                         </div>
-                        <div className = "row">
-                            <label> Email: </label>
-                            <div> { this.state.reservation.email }</div>
+                        <div className = "card-title">
+                        <label class="yeseva-one-font-info" style={{fontSize: "20px"}}> Email: </label>
+                        <div style={{fontSize: "20px"}}> { this.state.reservation.email }</div>
                         </div>
-                        <div className = "row">
-                            <label> Quantity: </label>
-                            <div> { this.state.reservation.quantity}</div>
+                        <div className = "card-title">
+                        <label class="yeseva-one-font-info" style={{fontSize: "20px"}}> Quantity: </label>
+                        <div style={{fontSize: "20px"}}> { this.state.reservation.quantity}</div>
                         </div>
-                        <div className = "row">
-                            <label> Description: </label>
-                            <div> { this.state.reservation.description}</div>
+                        <div className = "card-title">
+                        <label class="yeseva-one-font-info" style={{fontSize: "20px"}}> Description: </label>
+                        <div style={{fontSize: "20px"}}> { this.state.reservation.description}</div>
                         </div>
                     </div>
 

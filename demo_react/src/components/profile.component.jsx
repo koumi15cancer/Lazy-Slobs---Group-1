@@ -32,28 +32,25 @@ export default class Profile extends Component {
         {(this.state.userReady) ?
         <div>
         <header className="jumbotron">
-          <h3>
+        <h3 className = "yeseva-one-font-info" style={{fontSize: "50px"}}> 
             <strong>{currentUser.username}</strong> Profile
           </h3>
         </header>
-        <p>
-          <strong>Token:</strong>{" "}
-          {currentUser.accessToken.substring(0, 20)} ...{" "}
-          {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
-        </p>
-        <p>
-          <strong>Id:</strong>{" "}
-          {currentUser.id}
-        </p>
-        <p>
-          <strong>Email:</strong>{" "}
-          {currentUser.email}
-        </p>
-        <strong>Authorities:</strong>
-        <ul>
+        <div className = "card-body">
+        <div className = "card-title">
+        <label class="profile">ID user:</label>{" "}
+        <div class="profile-info">  {currentUser.id}</div>
+          </div>
+        <div className = "card-title">
+        <label class="profile">Email:</label>{" "}
+        <div class="profile-info"> {currentUser.email}</div>
+          </div>
+          <label class="profile">Authorities:</label>
+        <ul class="profile-info" style={{fontSize: "large"}}>
           {currentUser.roles &&
             currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
         </ul>
+        </div>
       </div>: null}
       </div>
     );

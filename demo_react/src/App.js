@@ -5,9 +5,9 @@ import "./App.css";
 
 import AuthService from "./services/Auth.service";
 
-import Login from "./components/LogIn.component";
-import Register from "./components/Register.component";
-import Profile from "./components/Profile.component";
+import Login from "./components/login.component";
+import Register from "./components/register.component";
+import Profile from "./components/profile.component";
 import BoardUser from "./components/BoardUser.component";
 import BoardModerator from "./components/BoardModerator.component";
 import BoardAdmin from "./components/BoardAdmin.component";

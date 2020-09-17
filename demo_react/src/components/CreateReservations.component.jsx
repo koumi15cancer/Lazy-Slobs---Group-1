@@ -3,6 +3,7 @@ import ReservationService from '../services/Reservation.service'
 import DatePicker from 'react-datepicker';
 import { addDays, subDays, setHours, setMinutes } from "date-fns";
 import "react-datepicker/dist/react-datepicker.css";
+import { rest } from 'lodash';
 
 // Create Reservation Page
 class CreateReservationsComponents extends Component {
@@ -24,10 +25,20 @@ class CreateReservationsComponents extends Component {
         this.changeEmailHandler = this.changeEmailHandler.bind(this);
         this.changeQuantityHandler= this.changeQuantityHandler.bind(this);
         this.changeDescriptionHandler = this.changeDescriptionHandler.bind(this);
-        
+        this.changeBookedDateHandler = this.changeBookedDateHandler.bind(this);
         this.changeBookedTimeHandler = this.changeBookedTimeHandler.bind(this);
         this.saveOrUpdateReservation = this.saveOrUpdateReservation.bind(this);
     }
+
+    componentDidMount(){
+        let a = this.state.BookedDate.toLocaleDateString();
+        ReservationService.getUnavailableTime(a).then( (res) =>{
+        this.setState({fullList : res.data});})
+        }
+
+
+
+
 
     componentDidUpdate(prevProps, prevState){
         let a = this.state.BookedDate.toLocaleDateString();
@@ -43,7 +54,7 @@ class CreateReservationsComponents extends Component {
         let reservation = {customerName: this.state.customerName, email: this.state.email, quantity: this.state.quantity,description: this.state.description, BookedDate: this.state.BookedDate.toLocaleDateString(), BookedTime: this.state.BookedTime.toLocaleTimeString()};
         console.log('reservation => ' + JSON.stringify(reservation));
         ReservationService.createReservation(reservation).then(res =>{
-            this.props.history.push('/reservations');
+            this.props.history.push('/home');
         });
         }
     

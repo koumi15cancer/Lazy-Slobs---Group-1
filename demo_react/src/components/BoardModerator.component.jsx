@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import UserService from "../services/User.service";
+import UserService from "../services/user.service";
 // Moderator dashboard page
 export default class BoardModerator extends Component {
   constructor(props) {

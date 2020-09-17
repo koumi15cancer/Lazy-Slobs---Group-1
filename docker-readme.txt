@@ -6,8 +6,14 @@
 # (this is purely due to preference)
 # create 3 screens for back-end, front-end, and mysql
 screen -S backend
+# CTRL + A + D to detach from screen
+
 screen -S frontend
+# CTRL + A + D to detach from screen
+
 screen -S mysql
+# CTRL + A + D to detach from screen
+
 
 # if screen is not installed, use the following
 apt-get install screen
@@ -17,6 +23,15 @@ apt-get install screen
 # INSTALL NECESSARY PACKAGES #
 # ========================== #
 apt-get install maven
+apt install openjdk-11-jdk
+
+# if package openjdk-11-jdk isn't available
+# use the following 
+sudo apt upgrade
+# to get new packages then retry the installation
+
+# install docker using this guide
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 
 
 # =================== #
@@ -24,6 +39,9 @@ apt-get install maven
 # =================== #
 # clone repo
 git clone https://github.com/koumi15cancer/Lazy-Slobs---Group-1
+
+# go into repository directory
+cd Lazy-Slobs---Group-1
 
 # check current branch
 git branch
@@ -52,7 +70,7 @@ docker run --name=mysql -e MYSQL_ROOT_HOST=% -p 3306:3306 -d mysql/mysql-server
 # to get the auto-generated root password
 docker logs mysql
 
-# go into 
+# go into the container and login as root using root password
 docker exec -it mysql mysql -u root -p
 
 # before being able to make any sql query,
@@ -82,16 +100,19 @@ nano Lazy-Slobs---Group-1/src/main/resources/application.properties
 # replace the x.x.x.x with the correct IP
 jdbc:mysql://x.x.x.x:3306/restaurant
 
-# go into the repo directory
+# change pom.xml's java version to 11
+nano Lazy-Slobs---Group-1/src/main/resources/application.properties
+
+# go into the repository directory
 cd Lazy-Slobs---Group-1
 
 # perform maven clean and maven install
 mvn clean && mvn install
 
-# build spring boot web application named 'backend' with tag 'latest'
+# build spring boot web application image named 'backend' with tag 'latest'
 docker build -t backend:latest .
 
-# finally, run the spring boot web application's backend
+# finally, run the spring boot web application's backend image in a container
 docker run --name=backend -it -p 8080:8080 backend:latest
 
 # CTRL + A + D to detach
@@ -103,7 +124,7 @@ docker run --name=backend -it -p 8080:8080 backend:latest
 # attach to 'frontend' screen we created earlier
 screen -r frontend
 
-# go to the correct Dockerfile directory
+# go into the repository directory
 cd Lazy-Slobs---Group-1
 
 # build spring boot web application named 'frontend' with tag 'latest'
@@ -113,6 +134,6 @@ docker build -f Dockerfile2 -t frontend:latest .
 docker run --name=frontend -it -p 80:80 -p 8081:8081 frontend:latest
 
 # start the front end web server
-cd Lazy-Slobs---Group-1/demo_react/ && npm install && npm start
+cd demo_react && npm install && npm start
 
 # CTRL + A + D to detach

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReservationService from '../services/ReservationService'
+import ReservationService from '../services/Reservation.service'
 //View detailed reservation
 class ViewReservationsComponents extends Component {
     constructor(props) {

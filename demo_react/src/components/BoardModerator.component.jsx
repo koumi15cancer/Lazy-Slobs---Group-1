@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import UserService from "../services/user.service";
-//User dashboard page
-export default class BoardUser extends Component {
+import UserService from "../services/User.service";
+// Moderator dashboard page
+export default class BoardModerator extends Component {
   constructor(props) {
     super(props);
 
@@ -12,7 +12,7 @@ export default class BoardUser extends Component {
   }
 
   componentDidMount() {
-    UserService.getUserBoard().then(
+    UserService.getModeratorBoard().then(
       response => {
         this.setState({
           content: response.data

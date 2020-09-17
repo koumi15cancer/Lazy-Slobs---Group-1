@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import UserService from "../services/user.service";
-// Admin dashboard page
-export default class BoardAdmin extends Component {
+import UserService from "../services/User.service";
+//User dashboard page
+export default class BoardUser extends Component {
   constructor(props) {
     super(props);
 
@@ -12,7 +12,7 @@ export default class BoardAdmin extends Component {
   }
 
   componentDidMount() {
-    UserService.getAdminBoard().then(
+    UserService.getUserBoard().then(
       response => {
         this.setState({
           content: response.data
@@ -35,7 +35,7 @@ export default class BoardAdmin extends Component {
     return (
       <div className="container">
         <header className="jumbotron">
-          <h3>{this.state.content}</h3>
+        <h2 class="yeseva-one-font" style={{fontSize: "76px"}}>{this.state.content}</h2>
         </header>
       </div>
     );

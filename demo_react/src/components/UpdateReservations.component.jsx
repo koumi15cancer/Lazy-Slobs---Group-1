@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReservationService from '../services/ReservationService'
+import ReservationService from '../services/Reservation.service'
 
 
 // Create Reservation Page
@@ -45,7 +45,7 @@ class CreateReservationsComponents extends Component {
 
      // Return edit reservation - Put
             ReservationService.updateReservationById(reservation, this.state.id).then( res => {
-                this.props.history.push('/reservations');
+                this.props.history.push('/reservations/user');;
             });
 
 

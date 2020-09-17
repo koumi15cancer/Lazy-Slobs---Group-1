@@ -1,5 +1,5 @@
 import axios from 'axios';
-import authHeader from './auth-header';
+import authHeader from './AuthHeader.service';
 
 // Reservation CRUD method
 const Approve_API_Basic_Url = "http://localhost:8080/email"

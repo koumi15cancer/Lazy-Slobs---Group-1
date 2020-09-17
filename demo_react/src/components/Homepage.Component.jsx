@@ -23,9 +23,8 @@ class Homepage extends Component {
                 </div>
                 
                 <span class="container" id="homepage-buttons">
-                    <a href="add-reservation/0" class="btn btn-primary" id="button1" >Reservation</a>
-                    <div style={{width: "25px", display: "inline-block"}}></div>
-                    <a href="menu.html" class="btn btn-primary" id="button2">Menu</a>
+                    <a href="add-reservation/0" class="btn btn-primary" id="button1" >Make Reservation</a>
+                    
                 </span>
             </div>
         );

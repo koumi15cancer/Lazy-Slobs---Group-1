@@ -3,20 +3,22 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import AuthService from "./services/auth.service";
+import AuthService from "./services/Auth.service";
 
-import Login from "./components/login.Component";
-import Register from "./components/register.Component";
-import Profile from "./components/profile.Component";
-import BoardUser from "./components/board-user.Component";
-import BoardModerator from "./components/board-moderator.Component";
-import BoardAdmin from "./components/board-admin.Component";
-import Homepage from './components/Homepage.Component';
-import ListReservationsComponents from './components/ListReservations.Components';
-import ListReservationsUserComponents from './components/ListReservationsUser.Components';
-import CreateReservationsComponents from './components/CreateReservations.Components';
-import ViewReservationsComponents from './components/ViewReservations.Components';
-import FooterComponent from './components/Footer.Component';
+import Login from "./components/LogIn.component";
+import Register from "./components/Register.component";
+import Profile from "./components/Profile.component";
+import BoardUser from "./components/BoardUser.component";
+import BoardModerator from "./components/BoardModerator.component";
+import BoardAdmin from "./components/BoardAdmin.component";
+
+import Homepage from './components/Homepage.component';
+import ListReservationsComponents from './components/ListReservations.component';
+import ListReservationsUserComponents from './components/ListReservationsUser.component';
+import CreateReservationsComponents from './components/CreateReservations.component';
+import UpdateReservationsComponents from './components/UpdateReservations.component';
+import ViewReservationsComponents from './components/ViewReservations.component';
+import FooterComponent from './components/Footer.component';
 
 
 class App extends Component {
@@ -158,7 +160,8 @@ class App extends Component {
               <Route path="/mod" component={BoardModerator} />
               <Route path="/admin" component={BoardAdmin} />
               <Route path = "/reservations" component = {ListReservationsComponents}></Route>
-              <Route path = "/add-reservation/:id" component = {CreateReservationsComponents}></Route>
+              <Route path = "/add-reservation" component = {CreateReservationsComponents}></Route>
+              <Route path = "/update-reservation/:id" component = {UpdateReservationsComponents}></Route>
               <Route path = "/view-reservation/:id" component = {ViewReservationsComponents}></Route>
             </Switch>
           </div>

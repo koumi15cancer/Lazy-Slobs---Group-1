@@ -1,5 +1,5 @@
 # Dockerfile for lazyslobs spring boot web application's backend
-FROM openjdk:11-jdk
+FROM openjdk:14-jdk
 FROM mysql/mysql-server:latest
 FROM ubuntu:latest
 ARG JAR_FILE=target/LazySlob-0.0.1-SNAPSHOT.war

@@ -2,7 +2,7 @@ import axios from 'axios';
 import authHeader from './AuthHeader.service';
 
 // Reservation CRUD method
-const Reservation_API_Basic_Url = "http://localhost:8080/reservations"
+const Reservation_API_Basic_Url = "http://lazyslobs.ddns.net:8080/reservations"
 
 class ReservationService {
 

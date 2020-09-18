@@ -2,7 +2,7 @@ import axios from 'axios';
 import authHeader from './AuthHeader.service';
 
 // Reservation CRUD method
-const Approve_API_Basic_Url = "http://lazyslobs.ddns.net/:8080/email"
+const Approve_API_Basic_Url = "http://lazyslobs.ddns.net:8080/email"
 
 class ApproveService {
 

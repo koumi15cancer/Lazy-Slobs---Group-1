@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/auth/";
+const API_URL = "http://lazyslobs.ddns.net:8080/api/auth/";
 /*Get the username - password to post and Jason web token*/
 class AuthService {
   login(username, password) {

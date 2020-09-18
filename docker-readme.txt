@@ -46,8 +46,8 @@ cd Lazy-Slobs---Group-1
 # check current branch
 git branch
 
-# if not restfulAPI branch, switch to restfulAPI branch
-git checkout restfulAPI
+# if is not Final branch, switch to Final branch
+git checkout Final
 
 
 # ================================= #

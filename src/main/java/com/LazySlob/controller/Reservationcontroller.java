@@ -30,14 +30,14 @@ public class Reservationcontroller {
 
     // Get all Reservations list
     @GetMapping("/reservations")
-  //  @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public List<Reservation> listReservation() {
         return service.listAll();
     }
 
     // Get Reservation by email
     @GetMapping("/reservations/user")
-   // @PreAuthorize("hasRole('USER')")
+	@PreAuthorize("hasRole('USER')")
     public  List<Reservation> ListByEmail(String email){return service.ListByEmail(email);}
 
     // Get Unavailable Time
@@ -47,7 +47,7 @@ public class Reservationcontroller {
     }
     // get reservation by id rest api
     @GetMapping("/reservations/{id}")
-   // @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity < Reservation > getReservation(@PathVariable Long id) {
         try {
             Reservation reservation= service.get(id);

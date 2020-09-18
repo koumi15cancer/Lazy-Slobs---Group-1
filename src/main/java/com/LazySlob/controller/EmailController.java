@@ -36,7 +36,7 @@ public class EmailController {
      * @return
      */
     @GetMapping("/email/{id}/approve")
-//	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
+	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<Reservation>approveReservation(@PathVariable Long id) {
         try {
             Reservation existReservation = service.get(id);
@@ -60,7 +60,7 @@ public class EmailController {
     }
 
     @GetMapping("/email/{id}/decline")
-//	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
+	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<Reservation>declineReservation(@PathVariable Long id) {
         try {
             Reservation existReservation = service.get(id);

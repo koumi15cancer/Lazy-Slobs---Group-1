@@ -3,7 +3,6 @@ import ReservationService from '../services/Reservation.service'
 import DatePicker from 'react-datepicker';
 import { addDays, subDays, setHours, setMinutes } from "date-fns";
 import "react-datepicker/dist/react-datepicker.css";
-import { rest } from 'lodash';
 
 // Create Reservation Page
 class CreateReservationsComponents extends Component {
@@ -126,7 +125,7 @@ class CreateReservationsComponents extends Component {
     //get list of date objects, which will be excluded
     getListTime(data){
         var output = [];
-        var array = [];
+        // var array = [];
         for (var i = 0; i < data.length; i++){
             var array = data[i].split(":");
             var h = parseInt(array[0], 10);

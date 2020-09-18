@@ -199,6 +199,8 @@ class CreateReservationsComponents extends Component {
                                                 maxDate={addDays(new Date(), 7)}
                                                 minDate={subDays(new Date(), 0)}
                                                 dateFormat="yyyy-MM-dd"
+                                                withPortal
+                                                
                                         />
                                         </div>
                                         <div className = "form-group">
@@ -213,6 +215,7 @@ class CreateReservationsComponents extends Component {
                                             excludeTimes ={excludedTime}
                                             timeIntervals={30}
                                             dateFormat="HH:mm"
+                                            withPortal
                                         />
                                         </div>
                                         

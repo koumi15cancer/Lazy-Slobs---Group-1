@@ -419,8 +419,7 @@ input {
 .react-datepicker__input-container input {
     display : block;
     margin: auto;
-    width: 70%;
-
+    width: 50%;
 }
 
 
@@ -465,4 +464,3 @@ input {
    align-content: center;
     font-Size: x-large;
 }
-

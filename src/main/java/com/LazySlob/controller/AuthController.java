@@ -33,7 +33,7 @@ import com.LazySlob.repository.UserRepository;
 import com.LazySlob.security.jwt.JwtUtils;
 import com.LazySlob.security.services.UserDetailsImpl;
 // Authenticate controller
-@CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
+@CrossOrigin(origins = "http://lazyslobs.ddns.net/:8081",maxAge = 20000)
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {

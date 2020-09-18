@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.PushBuilder;
 
 // Reservation controller
-@CrossOrigin(origins = "http://localhost:8081",maxAge = 20000)
+@CrossOrigin(origins = "http://lazyslobs.ddns.net/:8081",maxAge = 20000)
 @RestController
 @RequestMapping
 public class Reservationcontroller {

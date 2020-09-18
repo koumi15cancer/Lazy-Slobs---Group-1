@@ -134,6 +134,6 @@ docker build -f Dockerfile2 -t frontend:latest .
 docker run --name=frontend -it -p 80:80 -p 8081:8081 frontend:latest
 
 # start the front end web server
-cd demo_react && npm install && npm start
+cd /Lazy-Slobs---Group-1/demo_react && npm install && npm start
 
 # CTRL + A + D to detach

@@ -27,17 +27,14 @@ class CreateReservationsComponents extends Component {
         this.changeBookedDateHandler = this.changeBookedDateHandler.bind(this);
         this.changeBookedTimeHandler = this.changeBookedTimeHandler.bind(this);
         this.saveOrUpdateReservation = this.saveOrUpdateReservation.bind(this);
-    }
-
+    }  
+    
     componentDidMount(){
         let a = this.state.BookedDate.toLocaleDateString();
         ReservationService.getUnavailableTime(a).then( (res) =>{
         this.setState({fullList : res.data});})
         }
-
-
-
-
+     
 
     componentDidUpdate(prevProps, prevState){
         let a = this.state.BookedDate.toLocaleDateString();
@@ -53,11 +50,9 @@ class CreateReservationsComponents extends Component {
         let reservation = {customerName: this.state.customerName, email: this.state.email, quantity: this.state.quantity,description: this.state.description, BookedDate: this.state.BookedDate.toLocaleDateString(), BookedTime: this.state.BookedTime.toLocaleTimeString()};
         console.log('reservation => ' + JSON.stringify(reservation));
         ReservationService.createReservation(reservation).then(res =>{
-            this.props.history.push('/home');
+            this.props.history.push('/reservations');
         });
         }
-    
-
 
     // set value
     changeCustomerNameHandler= (event) => {
@@ -77,19 +72,13 @@ class CreateReservationsComponents extends Component {
     }
 
     changeDescriptionHandler= (event) => {
-        this.setState({description: event.target.value});}
+        this.setState({description: event.target.value});
+    }
 
 
     changeBookedDateHandler = date => {
         this.setState({BookedDate: date });
-        
     };
-
-    updateDate(){
-        let a = this.state.BookedDate.toLocaleDateString();
-        ReservationService.getUnavailableTime(a).then( (res) =>{
-        this.setState({fullList : res.data});})
-    }
 
     changeBookedTimeHandler = date => {
         this.setState({BookedTime: date});
@@ -125,14 +114,13 @@ class CreateReservationsComponents extends Component {
     //get list of date objects, which will be excluded
     getListTime(data){
         var output = [];
-        // var array = [];
+        //var array = [];
         for (var i = 0; i < data.length; i++){
             var array = data[i].split(":");
             var h = parseInt(array[0], 10);
             var m = parseInt(array[1], 10);
-            if (array[0].substr(-2)==='PM'){
-                return h = h+12;
-            }
+            if (data[i].substr(-2)==='PM'){
+                h = h+12;}
             var ftime =  setHours(setMinutes(new Date(), m), h);
             output.push(ftime)
         }
@@ -148,6 +136,7 @@ class CreateReservationsComponents extends Component {
     render() {
         let excludedTime = this.getListOfUnavailableTime();
         console.log(this.state.BookedDate);
+        console.log(this.state.fullList);
         return (
             <span id="boxes-container">
                 <div class="box" id="time-open-box">
@@ -198,8 +187,6 @@ class CreateReservationsComponents extends Component {
                                                 maxDate={addDays(new Date(), 7)}
                                                 minDate={subDays(new Date(), 0)}
                                                 dateFormat="yyyy-MM-dd"
-                                                withPortal
-                                                
                                         />
                                         </div>
                                         <div className = "form-group">
@@ -214,7 +201,6 @@ class CreateReservationsComponents extends Component {
                                             excludeTimes ={excludedTime}
                                             timeIntervals={30}
                                             dateFormat="HH:mm"
-                                            withPortal
                                         />
                                         </div>
                                         

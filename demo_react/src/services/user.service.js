@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './AuthHeader.service';
 
-const API_URL = 'http://localhost:8080/api/test/';
+const API_URL = 'http://lazyslobs.ddns.net:8080/api/test/';
 
 class UserService {
     getPublicContent() {

@@ -10,7 +10,7 @@ import java.util.Date;
 
 // Reservation class
 @Entity
-@Table(name = "Reservation")
+@Table(name = "reservation")
 public class Reservation  {
 
 

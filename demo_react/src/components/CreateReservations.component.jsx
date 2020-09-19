@@ -50,7 +50,7 @@ class CreateReservationsComponents extends Component {
         let reservation = {customerName: this.state.customerName, email: this.state.email, quantity: this.state.quantity,description: this.state.description, BookedDate: this.state.BookedDate.toLocaleDateString(), BookedTime: this.state.BookedTime.toLocaleTimeString()};
         console.log('reservation => ' + JSON.stringify(reservation));
         ReservationService.createReservation(reservation).then(res =>{
-            this.props.history.push('/reservations');
+            this.props.history.push('/home');
         });
         }
 

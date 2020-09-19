@@ -47,7 +47,7 @@ public class Reservationcontroller {
     }
     // get reservation by id rest api
     @GetMapping("/reservations/{id}")
-	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
+	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity < Reservation > getReservation(@PathVariable Long id) {
         try {
             Reservation reservation= service.get(id);
